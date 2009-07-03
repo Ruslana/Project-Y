@@ -1,0 +1,29 @@
+body
+{
+  font: 85%/130% Georgia,Serif;
+  color:white;
+	
+}
+h1, h2, h3, h4
+{
+	font: 110% Georgia,Serif;
+}
+p
+{
+	font: 80% "Trebuchet MS",Verdana, Arial, Helvetica,Sans-Serif;color:#F0F0F0;
+}
+a:link,
+a:visited 
+{ 
+	text-decoration: underline; 
+	color: #005574;
+	
+}
+
+a:hover, 
+a:active 
+{ 
+	text-decoration: none; 
+	color: #02496D;
+	
+}

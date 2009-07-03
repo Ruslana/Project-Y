@@ -1,0 +1,235 @@
+body{background:#101010 url(../design/body-background.jpg) repeat-x top left;color:white;margin:0;padding:0;text-align:center;}
+#wrapper{margin:0 auto;padding:0;width:700px;border-left:#151515 solid 1px;border-right:#151515 solid 1px;}
+#wrapper-in{background:#000 url(../design/big-jack-bg.jpg) no-repeat top right; background-position:0px 120px;margin:0 auto;padding:0;width:700px;float:left}
+/* for IE, with IE5/Mac backslash filter \*/
+	* html #wrapper-in {height:720px;}
+/* end filter */
+#wrapper-in-subs{background:#000 url(../design/download-page-bg.jpg) no-repeat top right; background-position:0px 114px;margin:0 auto;padding:0;width:700px;float:left}
+/* for IE, with IE5/Mac backslash filter \*/
+	* html #wrapper-in-subs {height:380px;}
+/* end filter */
+#wrapper-in-sub-band{background:#000 url(../design/bandsub1.jpg) no-repeat top right; background-position:0px 54px;margin:0 auto;padding:0;width:700px;float:left}
+/* for IE, with IE5/Mac backslash filter \*/
+	* html #wrapper-in-sub-band {height:380px;}
+/* end filter */
+#wrapper-in-sub-band1{background:#000 url(../design/bandsub1a.jpg) no-repeat top right; background-position:0px 45px;margin:0 auto;padding:0;width:700px;float:left}
+/* for IE, with IE5/Mac backslash filter \*/
+	* html #wrapper-in-sub-band1 {height:380px;}
+/* end filter */
+#wrapper-in-sub-band2{background:#000 url(../design/bandsub2.jpg) no-repeat top right; background-position:0px 45px;margin:0 auto;padding:0;width:700px;float:left}
+/* for IE, with IE5/Mac backslash filter \*/
+	* html #wrapper-in-sub-band1 {height:380px;}
+/* end filter */
+#wrapper-in-sub-band3{background:#000 url(../design/bandsub32.jpg) no-repeat top right; background-position:0px 45px;margin:0 auto;padding:0;width:700px;float:left}
+/* for IE, with IE5/Mac backslash filter \*/
+	* html #wrapper-in-sub-band1 {height:380px;}
+/* end filter */
+/* =============
+   header 
+   ============= */
+#header{margin:0 auto;padding:0;text-align:left;width:700px;}
+#header h1{margin:0;padding:0 0 0 1px;width:419px;height:140px;float:left}
+#header h1 a {
+	display:block;width:419px;height:140px;
+	text-indent: -2000em;text-decoration: none;
+	background:url(../design/logo-jack-brothers.gif) no-repeat;
+	padding:0;margin:0;
+}
+#header p.flash{margin:0 0 5px 0;padding:19px 0 0 15px;color:white;width:265px;height:86px;float:left;background:#000 url(../design/player-bg.gif) no-repeat top right; background-position:9px 14px;}
+#header p.flash img{margin:0;padding:0;width:255px;height:74px;border:0}
+#header ul{padding:13px 0 0 0px;margin:0;width:275px;float:left; text-align:right; height:22px;}
+#header li{padding:0;margin:0 3px 0 3px;display:inline;}
+#header li img{padding:0;margin:0;border:0;}
+
+#header h2 span
+{
+	background:url(../_design/topimage.jpg) no-repeat top right;
+	display:block;width:455px;height:72px;
+	text-indent: -2000em;text-decoration: none;
+}
+#header h2.trade{margin:0;padding:0;width:199px;height:72px;float:left}
+
+#header h2.trade a{
+	display: block;
+	width: 199px;
+	height: 72px;
+	background: url(../_design/rightimage.jpg) no-repeat;
+	text-indent: -2000em;
+	text-decoration: none;
+	padding:0;
+	margin:0;
+}
+#header h3{margin:0;padding:0;width:143px;height:38px;float:left}
+#header h3 span
+{
+	background:url(../_design/toptree.gif) no-repeat;
+	display:block;width:143px;height:38px;
+	text-indent: -2000em;text-decoration: none;
+}
+#header h3.products{margin:0;padding:0;width:191px;height:38px;float:left}
+#header h3.products span
+{
+	background:url(../_design/products.jpg) no-repeat;
+	display:block;width:191px;height:38px;
+	text-indent: -2000em;text-decoration: none;
+}
+/* =============
+   content 
+   ============= */
+#content-home{width:700px;margin:0;padding:375px 0 30px 0;}
+#content-sub{width:700px;text-align:left;margin:0;padding:55px 0 30px 0;}
+#content-sub a{text-decoration:none;}
+/* for IE, with IE5/Mac backslash filter \*/
+	* html #content-sub{width:700px;text-align:left;margin:0;padding:45px 0 30px 0;}
+	* html #content-discography{width:690px;text-align:left;margin:0;padding:45px 0 30px 10px;}
+	* html #content-band{width:690px;text-align:left;margin:0;padding:45px 0 30px 10px;}
+	* html #content-discography{width:690px;text-align:left;margin:0;padding:55px 0 30px 10px;}
+	* html #content-lyrics{width:690px;text-align:left;margin:0;padding:55px 0 30px 10px;}	
+	* html #content-blog{width:690px;text-align:left;margin:0;padding:55px 0 30px 10px;}
+/* end filter */
+
+#content-discography{width:690px;text-align:left;margin:0;padding:55px 0 30px 10px;}
+#content-reviews{width:690px;text-align:left;margin:0;padding:55px 0 30px 10px;}
+#content-band{width:690px;text-align:left;margin:0;padding:55px 0 30px 10px;}
+#content-lyrics{width:690px;min-height:700px;text-align:left;margin:0;padding:55px 0 30px 10px;}
+#content-blog{width:690px;text-align:left;margin:0;padding:55px 0 30px 10px;}
+#content-sub a{text-decoration:none;}
+#content-listing{float:left;width:775px;text-align:center;margin:0;padding:0px 0 20px 0;}
+
+#reviews-home{float:right;width:350px;text-align:center;margin:0;padding:0px 0 20px 0;background:url(../design/horizontal-rule.gif) no-repeat bottom center;}
+#reviews-home p{padding:12px 0 0 0px;margin:0;color:white;font: 16px Georgia,Serif;font-weight:normal;text-align:left;}
+#reviews-home p em{font-weight:bold;}
+#reviews-home p span{font-weight:bold;padding:8px 0 0 100px;font-style:italic}
+
+#footy-home{float:left;width:350px;text-align:center;margin:0;padding:0px 0 20px 0;}
+#footy-home p{padding:25px 10px 0 0px;margin:0;color:white;font:14px Georgia,Serif;font-weight:normal;text-align:left;}
+#footy-home p em{font-weight:bold;}
+#footy-home p span{font-weight:bold;padding:8px 0 0 100px;font-style:italic}
+#footy-home p img{margin:0;padding:0px 10px 20px 0px; border:0;float:left;}
+
+#news-home{float:left;width:350px;text-align:left;margin:0;padding:0px 0 20px 0;}
+#news-home p{width:330px;text-align:left;margin:0;padding:12px 10px 0 14px;}
+#news-home p img{margin:75px 0 0 0;padding:0px 0 0px 0px; border:0;}
+#news-home p{padding:12px 0 0 14px;margin:0;color:white;font:14px Georgia,Serif;font-weight:normal;text-align:left;}
+#news-home p a{padding:10px 0 0 0;margin:0;color:#C27C04;font-weight:normal;text-decoration:underline;}
+#news-home p a:hover{text-decoration:none;}
+#news-home h3{margin:20px 0 0 0;padding:0px 0 0px 14px; border:0;font-size:20px; font-weight:bold;color:#C27C04}
+/* =============
+   DOWNLOADS
+   ============= */
+#downloads-tables{margin:0;padding:0 10px 20px 10px}
+#downloads-tables h3{margin:0;padding:10px 6px 2px 6px;border-top:1px solid #CDCDCD;border-right:1px solid #CDCDCD;border-left:1px solid #CDCDCD;font:18px Georgia,Serif;font-weight:bold;text-align:left;color:#C78C03; background-color:#000;width:200px}
+
+#downloads-tables table{margin:0;padding:0;width:678px;background:url(../design/table-bg.jpg) no-repeat top;font:14px Georgia,Serif;}
+#downloads-tables table th{margin:0;padding:17px 5px 6px 5px;color:white;font-weight:bold;border-top:1px solid #CDCDCD;border-bottom:1px solid #CDCDCD;}
+#downloads-tables table th.first{margin:0;padding:17px 5px 6px 5px;color:white;font-weight:bold;border-top:1px solid #CDCDCD;border-bottom:1px solid #CDCDCD;border-left:1px solid #CDCDCD;}
+#downloads-tables table th.last{margin:0;padding:17px 5px 6px 5px;color:white;font-weight:bold;border-top:1px solid #CDCDCD;border-bottom:1px solid #CDCDCD;border-right:1px solid #CDCDCD;}
+#downloads-tables table td{margin:0;padding:0px 5px 0px 5px;height:36px;color:white;font-weight:normal}
+#downloads-tables table td strong{color:#C78C03;font-weight:bold}
+#downloads-tables table td span{font-weight:bold}
+#downloads-tables table td a{text-decoration:none;}
+#downloads-tables table td img{border:0;width:21px;height:22px;}
+#downloads-tables table tr.one{background:#101010}
+#downloads-tables table tr.two{background:black}
+#downloads-tables table td.two-last{background:#818181;height:1px}
+#downloads-tables form{margin:0;padding:0;}
+#downloads-tables input{width:45px;margin:0;padding:0;}
+#downloads-tables input.box{width:15px;margin:0;padding:0;}
+#downloads-tables input.buy{width:75px;height:29px;border:0;margin:0;padding:0;background:url(../design/buy-button.gif) no-repeat top;cursor:pointer}
+
+/* =============
+   Discography
+   ============= */
+#content-discography h3{margin:0 10px 10px 0;padding:10px 20px 2px 0px;font:18px Georgia,Serif;font-weight:bold;text-align:left;color:#FFB304;border-bottom:1px dotted #FFB304;}
+#content-discography h4{margin:0;padding:10px 20px 2px 0px;font:16px Georgia,Serif;font-weight:bold;text-align:left;color:#FFB304;}
+#content-discography p{margin:0;padding:0 20px 20px 0;font:14px Georgia,Serif;}
+#content-discography p a{color:#C78C03;text-decoration:underline;}
+#content-discography p a:hover{color:#EBAD1C;text-decoration:none;}
+
+/* =============
+   Reviews
+   ============= */
+#content-reviews h3{margin:0 10px 10px 0;padding:10px 20px 2px 0px;font:18px Georgia,Serif;font-weight:bold;text-align:left;color:#FFB304;}
+#content-reviews h3 a{color:#C78C03;text-decoration:none;border-bottom:1px dotted #FFB304;}
+#content-reviews h3 a:hover{color:#EBAD1C;text-decoration:none;border-bottom:none}
+#content-reviews h4{margin:0;padding:10px 20px 2px 0px;font:16px Georgia,Serif;font-weight:bold;text-align:left;color:#FFB304;}
+#content-reviews p{margin:0;padding:0 20px 20px 0;font:14px Georgia,Serif;}
+#content-reviews p a{color:#C78C03;text-decoration:underline;}
+#content-reviews p a:hover{color:#EBAD1C;text-decoration:none;}
+a.tip span{ display: none;z-index:100}
+a.tip {position: relative;} 
+a.tip:hover{background-color: #111;z-index:100}
+/* The above hover change defeats the
+  IE/Win display changing bug */
+a.tip:hover span {position: absolute; top: 30px; left: 0px; display: block; background: #222; padding:5px; border:3px solid #F4F5EB; font-size:11px;float:left;font-weight:normal;color:white;width:680px;z-index:100}
+a.tip:hover span p{font-size:11px;font-weight:normal;color:white;z-index:100}
+/* =============
+   Lyrics
+   ============= */
+#content-lyrics h3{margin:0 10px 10px 0;padding:10px 20px 2px 0px;font:18px Georgia,Serif;font-weight:bold;text-align:left;color:#FFB304;border-bottom:1px dotted #FFB304;}
+#content-lyrics h3 a{color:#C78C03;text-decoration:none;border-bottom:1px dotted #FFB304;}
+#content-lyrics h3 a:hover{color:#EBAD1C;text-decoration:none;border-bottom:none}
+#content-lyrics h4{margin:0;padding:10px 20px 2px 0px;font:16px Georgia,Serif;font-weight:bold;text-align:left;color:#FFB304;}
+#content-lyrics p{margin:0;padding:5px 0px 5px 0;font:14px Georgia,Serif;}
+#content-lyrics p a{color:#C78C03;text-decoration:underline;}
+#content-lyrics p a:hover{color:#EBAD1C;text-decoration:none;}
+
+#links{z-index: 100;width:height:90px;padding:0;margin:0;float:left;text-align: left;font-size:10px;}
+#links a img{padding:0;margin:0;border:0;}
+#links img.holders{padding:0;margin:5px 0 10px 0;background-color:#AD0;border:1px solid #00226E;float:left;width:200px;height:63px;}
+#links a {display: block; padding-left: 5px; margin: 0px; text-align: left; text-decoration: none}
+#links a span {display: none;}
+#links a:hover {padding:0;padding-left: 5px;margin:0;text-decoration: none;color:#D86A00;z-index: 100;}
+#links a:hover span {display: block;position: absolute; top: 290px; left: 365px; width: 255px; padding: 15px; margin: 5px; z-index: 700;
+				color: white; background: #333; border-right:1px solid #AFAFAF;border-bottom:3px double #AFAFAF;
+   border-left:1px solid #EDEDED;border-top:1px solid #EDEDED;font: 10px Georgia, sans-serif; text-align: left;float:left}
+
+/* =============
+   Blog
+   ============= */
+#content-blog h3{margin:0 10px 10px 0;padding:10px 20px 2px 0px;font:18px Georgia,Serif;font-weight:bold;text-align:left;color:#FFB304;border-bottom:1px dotted #FFB304;}
+#content-blog h3 a{color:#C78C03;text-decoration:none;border-bottom:1px dotted #FFB304;}
+#content-blog h3 a:hover{color:#EBAD1C;text-decoration:none;border-bottom:none}
+#content-blog h4{margin:0;padding:10px 20px 2px 0px;font:16px Georgia,Serif;font-weight:bold;text-align:left;color:#FFB304;}
+#content-blog p{margin:0;padding:5px 5px 5px 0;font:14px Georgia,Serif;}
+#content-blog p.footy{margin:0;padding:15px 0px 5px 0;font:14px Georgia,Serif;}
+#content-blog p a{color:#C78C03;text-decoration:underline;}
+#content-blog p a:hover{color:#EBAD1C;text-decoration:none;}
+#content-blog hr{margin:10px 10px 10px 0;padding:0px;color:#FFB304;height:1px;background:#FFB304;border:none;}
+#content-blog p.footyl{margin:0;padding:5px 10px 5px 0;float:left; height:350px;}
+#content-blog p img{margin:0;padding:5px 10px 5px 0;float:left;}
+	
+#content-blog form{margin:0;padding:0;}
+#content-blog form label{margin:0;padding:0;width:150px;float:left}
+#content-blog form input{margin:0;padding:0;width:180px;background:#666;border:2px solid #999;color:white}
+#content-blog form input.submit{margin:0;padding:0;width:80px;background:#999;color:white;border-bottom:1px solid #ccc;border-right:1px solid #ccc;}
+/* =============
+   Band
+   ============= */
+#content-band h3{margin:0;padding:10px 20px 2px 0px;font:18px Georgia,Serif;font-weight:bold;text-align:left;color:#FFB304;}
+#content-band h4{margin:0;padding:10px 20px 2px 0px;font:16px Georgia,Serif;font-weight:bold;text-align:left;color:#FFB304;}
+#content-band p{margin:0;padding:5px 20px 20px 0;font:14px Georgia,Serif;}
+#content-band p a{color:#C78C03;text-decoration:underline;}
+#content-band p a:hover{color:#EBAD1C;text-decoration:none;}
+#content-band div.card {float:left; margin: 0 10px 10px 0;padding:6px;text-align: center;background: #373737;border-right: 1px solid #555;border-bottom: 1px solid #555;}
+#content-band p.card-photo {margin:0 auto; padding:0;border: none;text-align:center;float:left;}
+#content-band p.card-photo img{margin:0 auto;padding:0;border: none;text-align:center;float:left;}
+
+/* for IE, with IE5/Mac backslash filter \*/
+	* html #content-band div.card {float:left; margin: 0 6px 6px 0;padding:6px;text-align: center;background: #373737;border-right: 1px solid #555;border-bottom: 1px solid #555;}
+/* end filter */
+
+.biophoto{float:right; margin: 0 0 0 10px;padding:6px;text-align: center;background: #373737;border-right: 1px solid #555;border-bottom: 1px solid #555;}
+/* =============
+   footer
+   ============= */
+#footer{width:700px;height:25px;margin:0;padding:180px 0 25px 0;background:url(../design/bottom-jack.jpg) no-repeat top left}
+#footer p{float:right; margin:0; padding:0 20px 0 0}
+#footer p a{float:left;border:2px solid white; margin:0 5px 0 5px; padding:0px 1px 0px 1px; font-size:18px; font-weight:bold; color:#C78C03;text-decoration:none;}
+#footer p a:hover{color:#EBAD1C}
+/* =============
+   misc 
+   ============= */
+.cleaner{clear:both;padding:0;margin:0;border:0;font-size:1px;}
+br{padding:0;margin:0;border:0;font-size:1px;}
+div{padding:0;margin:0;border:0;}

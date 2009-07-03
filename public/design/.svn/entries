@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="3"
+   name=""
+   committed-date="2005-07-26T10:01:26.570587Z"
+   url="svn+ssh://muravey.net/home/repo/projects/trunk/jack-howard.com/public/screens/design"
+   last-author="ilya"
+   kind="dir"
+   revision="59"/>
+<entry
+   committed-rev="3"
+   name="bandsub1a.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="0eaefe26dbd6b472001bfb09328bfae2"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="barrybio.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="94128249f1c89c36633cde50cd2262db"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="email.gif"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="70850e0208e3f50e472c409ae976179c"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="table-bg.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="6f95b9280d64c290c5504f058d87f6ec"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="nicky.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="f4b9470440fb3265f988529e5e898e1d"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="home.gif"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="5ff10bdefb98826350f0d53ad8edf7ac"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="player.gif"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="bc127e3df902ce5159f52eb405f13557"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="bandsub32.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="4842b673f2adf8e7a3c45906e65d1791"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="horizontal-rule.gif"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="38924b654e116e24990a94365dc30ef1"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="footy-songs-ball.gif"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="b54621652c56a829203006c374560e38"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="logo-jack-brothers.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="111c823889bb805c5322897e176b066c"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="buy-button.gif"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="f574c535f40b01eed29168ab843a74f2"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="big-jack-bg.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="529a5008a9001a7d21cce449e6871bfe"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="bandsub1.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="61e1b08c6330f3833fb75f41081c7872"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="bandsub2.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="bc8038b8c8c40639ad7de9eab25ed244"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="sharky.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="d6272ef867b13084a6df20bd504e7638"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="headerbg.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="d1d032a10a50d085a9458648b1ff50a1"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="aidanbio.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="eb5ffb2332013f121c4a1b51292c149b"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="download-page-bg.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="4643038f0f9fd5ccb3c52187ba7a5ac5"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="player-bg.gif"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="9fc210e6a0b6f72a381ffeb38431790e"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="jack.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="127720a2900cf98520fe53552d3c28c7"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="bottom-jack.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="dde42d187cd50ab2dbcbd6c896e250f8"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="aidan.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="2f7564918ab36f5ec683759f9f9b43ea"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="nickbio.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="310549655524e6753b04df22807a5014"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="speaker.gif"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="f0b0e62e944aa182bb1701f27abc8267"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="barry.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="ca85b837bb692c5f9e34ad639b2928c9"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="logo-jack-brothers.gif"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="469e13b787d2da17bdde14759414b231"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="anavbg.gif"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="a925c59f6bf36e2bc0557726b9eddccb"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="buy-now.gif"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="854a3783687836203e7d0826c3b9d3e3"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="sharkybio.jpg"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="a78487fd10d7ad1fcf9e47761154d8b0"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="container-bg.gif"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="72c3b57bb33b51fc506ddae86f002b37"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+<entry
+   committed-rev="3"
+   name="star.gif"
+   text-time="2005-07-26T11:34:08.000000Z"
+   committed-date="2005-07-26T10:01:26.570587Z"
+   checksum="4d7eba8c1845e6a08f682f60ac4a0c02"
+   last-author="ilya"
+   kind="file"
+   prop-time="2005-07-26T11:34:52.000000Z"/>
+</wc-entries>

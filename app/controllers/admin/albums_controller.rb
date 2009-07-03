@@ -1,2 +1,2 @@
-class Admin::AlbumsController < ApplicationController
+class Admin::AlbumsController < ProtectedController
 end

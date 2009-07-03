@@ -1,2 +1,2 @@
-class Admin::LyricsController < ApplicationController
+class Admin::LyricsController < ProtectedController
 end

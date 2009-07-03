@@ -1,4 +1,4 @@
-class Admin::PostsController < ApplicationController
+class Admin::PostsController < ProtectedController
   def new
     @post = Post.new
   end
@@ -40,4 +40,4 @@ class Admin::PostsController < ApplicationController
      redirect_to :action => 'index'
    end
 end
-end
+

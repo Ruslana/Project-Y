@@ -1,2 +1,2 @@
-class Admin::ReviewsController < ApplicationController
+class Admin::ReviewsController < ProtectedController
 end

@@ -1,0 +1,10 @@
+<% for post in @posts %>
+<div id="content-blog">
+	<h3 title="Blog Entries">Blog Entries</h3>
+	<h4><%= post.title %></h4>
+	<p><%= post.date %><br />
+	<%= post.body %>
+	<hr />
+</div>
+<% end %>
+<%= will_paginate @posts %>

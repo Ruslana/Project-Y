@@ -1,2 +1,2 @@
-class Admin::ParticipantsController < ApplicationController
+class Admin::ParticipantsController < ProtectedController
 end

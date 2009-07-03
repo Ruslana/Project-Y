@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090703141150) do
+ActiveRecord::Schema.define(:version => 20090703151456) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20090703141150) do
     t.text     "text_song"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "album_id"
   end
 
   create_table "participants", :force => true do |t|

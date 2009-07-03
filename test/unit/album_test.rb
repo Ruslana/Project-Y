@@ -2,7 +2,9 @@ require 'test_helper'
 
 class AlbumTest < ActiveSupport::TestCase
   # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  context "album" do
+    should_have_many :lyrics
+    should_validate_presence_of :title
   end
+  
 end

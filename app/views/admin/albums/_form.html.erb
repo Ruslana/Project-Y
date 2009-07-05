@@ -1,0 +1,12 @@
+<% form_for [:admin, album] do |f| %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  
+  <div class="submit">
+    <%= f.submit "Go" %>
+  </div>
+  
+<% end %>

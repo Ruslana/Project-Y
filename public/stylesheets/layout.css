@@ -1,26 +1,26 @@
-body{background:#101010 url(../design/body-background.jpg) repeat-x top left;color:white;margin:0;padding:0;text-align:center;}
+body{background:#101010 url(/design/body-background.jpg) repeat-x top left;color:white;margin:0;padding:0;text-align:center;}
 #wrapper{margin:0 auto;padding:0;width:700px;border-left:#151515 solid 1px;border-right:#151515 solid 1px;}
-#wrapper-in{background:#000 url(../design/big-jack-bg.jpg) no-repeat top right; background-position:0px 120px;margin:0 auto;padding:0;width:700px;float:left}
+#wrapper-in{background:#000 url(/design/big-jack-bg.jpg) no-repeat top right; background-position:0px 120px;margin:0 auto;padding:0;width:700px;float:left}
 /* for IE, with IE5/Mac backslash filter \*/
 	* html #wrapper-in {height:720px;}
 /* end filter */
-#wrapper-in-subs{background:#000 url(../design/download-page-bg.jpg) no-repeat top right; background-position:0px 114px;margin:0 auto;padding:0;width:700px;float:left}
+#wrapper-in-subs{background:#000 url(/design/download-page-bg.jpg) no-repeat top right; background-position:0px 114px;margin:0 auto;padding:0;width:700px;float:left}
 /* for IE, with IE5/Mac backslash filter \*/
 	* html #wrapper-in-subs {height:380px;}
 /* end filter */
-#wrapper-in-sub-band{background:#000 url(../design/bandsub1.jpg) no-repeat top right; background-position:0px 54px;margin:0 auto;padding:0;width:700px;float:left}
+#wrapper-in-sub-band{background:#000 url(/design/bandsub1.jpg) no-repeat top right; background-position:0px 54px;margin:0 auto;padding:0;width:700px;float:left}
 /* for IE, with IE5/Mac backslash filter \*/
 	* html #wrapper-in-sub-band {height:380px;}
 /* end filter */
-#wrapper-in-sub-band1{background:#000 url(../design/bandsub1a.jpg) no-repeat top right; background-position:0px 45px;margin:0 auto;padding:0;width:700px;float:left}
+#wrapper-in-sub-band1{background:#000 url(/design/bandsub1a.jpg) no-repeat top right; background-position:0px 45px;margin:0 auto;padding:0;width:700px;float:left}
 /* for IE, with IE5/Mac backslash filter \*/
 	* html #wrapper-in-sub-band1 {height:380px;}
 /* end filter */
-#wrapper-in-sub-band2{background:#000 url(../design/bandsub2.jpg) no-repeat top right; background-position:0px 45px;margin:0 auto;padding:0;width:700px;float:left}
+#wrapper-in-sub-band2{background:#000 url(/design/bandsub2.jpg) no-repeat top right; background-position:0px 45px;margin:0 auto;padding:0;width:700px;float:left}
 /* for IE, with IE5/Mac backslash filter \*/
 	* html #wrapper-in-sub-band1 {height:380px;}
 /* end filter */
-#wrapper-in-sub-band3{background:#000 url(../design/bandsub32.jpg) no-repeat top right; background-position:0px 45px;margin:0 auto;padding:0;width:700px;float:left}
+#wrapper-in-sub-band3{background:#000 url(/design/bandsub32.jpg) no-repeat top right; background-position:0px 45px;margin:0 auto;padding:0;width:700px;float:left}
 /* for IE, with IE5/Mac backslash filter \*/
 	* html #wrapper-in-sub-band1 {height:380px;}
 /* end filter */
@@ -32,7 +32,7 @@ body{background:#101010 url(../design/body-background.jpg) repeat-x top left;col
 #header h1 a {
 	display:block;width:419px;height:140px;
 	text-indent: -2000em;text-decoration: none;
-	background:url(../design/logo-jack-brothers.gif) no-repeat;
+	background:url(/design/logo-jack-brothers.gif) no-repeat;
 	padding:0;margin:0;
 }
 #header p.flash{margin:0 0 5px 0;padding:19px 0 0 15px;color:white;width:265px;height:86px;float:left;background:#000 url(../design/player-bg.gif) no-repeat top right; background-position:9px 14px;}
@@ -43,7 +43,7 @@ body{background:#101010 url(../design/body-background.jpg) repeat-x top left;col
 
 #header h2 span
 {
-	background:url(../_design/topimage.jpg) no-repeat top right;
+	background:url(/_design/topimage.jpg) no-repeat top right;
 	display:block;width:455px;height:72px;
 	text-indent: -2000em;text-decoration: none;
 }
@@ -53,7 +53,7 @@ body{background:#101010 url(../design/body-background.jpg) repeat-x top left;col
 	display: block;
 	width: 199px;
 	height: 72px;
-	background: url(../_design/rightimage.jpg) no-repeat;
+	background: url(/_design/rightimage.jpg) no-repeat;
 	text-indent: -2000em;
 	text-decoration: none;
 	padding:0;

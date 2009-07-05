@@ -1,8 +1,104 @@
 require 'test_helper'
 
 class Admin::PostsControllerTest < ActionController::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
+  context "Admin Posts controller" do
+
+     setup do
+      @post = Factory(:post)
+     end
+
+     context "on GET to :new" do
+       setup do
+         get :new
+       end
+
+       should_respond_with :success
+       should_assign_to :post
+       should_render_template :new
+       should_render_a_form
+     end
+
+     context "on POST to :create" do
+       setup do
+         post :create, :post => {:title => 'post', :body => 'body_post', :date => Date.new(2009,6,25)}
+       end
+
+       teardown do
+         Post.destroy_all
+       end
+
+       should_redirect_to "Admin::Posts#show" do
+         admin_post_path(Post.first)
+       end
+
+       should "create post" do
+         assert Post.exists?(:title => 'post')
+       end
+     end
+
+     context "on GET to :show" do
+       setup do
+         get :show, :id => @post.id
+       end
+
+       should_respond_with :success
+       should_assign_to :post
+       should_render_template :show
+     end
+
+     context "on GET :index" do
+       setup do
+         get :index
+       end
+
+       should_respond_with :success
+       should_assign_to :posts
+       should_render_template :index
+     end
+
+     context "on GET to :edit" do
+        setup do
+          get :edit, :id => @post.id
+        end
+
+        should_respond_with :success
+        should_assign_to :post
+        should_render_template :edit
+        should_render_a_form
+      end
+
+      context "on PUT to :update" do
+      setup do
+        @post = Factory(:post, :title => "old", :body => "old", :date => Date.new(2009,6,24))
+        put :update, :id => @post.id, :post => {:title => "new", :body => "new", :date => Date.new(2008,5,23)}
+      end
+
+      should_redirect_to "Admin::Post#show" do
+        admin_post_path(@post)
+      end
+
+      should "update post" do
+        @post.reload
+        assert_equal "new", @post.title
+        assert_equal "new", @post.body
+        assert_equal Date.new(2008,5,23), @post.date
+      end
+    end
+
+     context "on DELETE to :destroy" do
+       setup do
+         delete :destroy, :id => @post.id
+       end
+
+       should "destroy post" do
+         assert ! Post.exists?(@post.id)
+       end
+
+       should_redirect_to "Admin::Post#index" do
+         admin_posts_path
+       end
+     end
+
+   end
+  
 end

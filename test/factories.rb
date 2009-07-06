@@ -6,3 +6,7 @@ end
 Factory.define :album do |p|
   p.title "Title"
 end
+Factory.define :lyric do |p|
+  p.title "Title"
+  p.text_song "text_song"
+end

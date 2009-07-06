@@ -24,11 +24,11 @@ class Admin::AlbumsControllerTest < ActionController::TestCase
        end
 
        teardown do
-         Post.destroy_all
+         Album.destroy_all
        end
 
        should_redirect_to "Admin::Albums#show" do
-         admin_post_path(Album.first)
+         admin_album_path(Album.first)
        end
 
        should "create album" do
@@ -70,12 +70,12 @@ class Admin::AlbumsControllerTest < ActionController::TestCase
 
       context "on PUT to :update" do
       setup do
-        @post = Factory(:album, :title => "old")
+        @ulbum = Factory(:album, :title => "old")
         put :update, :id => @album.id, :album => {:title => "new"}
       end
 
       should_redirect_to "Admin::Album#show" do
-        admin_post_path(@album)
+        admin_album_path(@album)
       end
 
       should "update album" do
@@ -94,7 +94,7 @@ class Admin::AlbumsControllerTest < ActionController::TestCase
        end
 
        should_redirect_to "Admin::Album#index" do
-         admin_posts_path
+         admin_albums_path
        end
      end
 

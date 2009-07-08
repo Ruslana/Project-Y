@@ -1,8 +1,17 @@
 require 'test_helper'
 
 class ReviewsControllerTest < ActionController::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  setup do
+    @album = Factory(:album)
   end
+
+   context "on GET :index" do
+     setup do
+       get :index
+     end
+
+     should_respond_with :success
+     should_assign_to :reviews
+     should_render_template :index
+   end
 end

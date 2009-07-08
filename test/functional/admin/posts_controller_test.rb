@@ -5,6 +5,7 @@ class Admin::PostsControllerTest < ActionController::TestCase
 
      setup do
       @post = Factory(:post)
+      @album = Factory(:album)
      end
 
      context "on GET to :new" do

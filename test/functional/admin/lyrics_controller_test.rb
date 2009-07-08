@@ -25,7 +25,7 @@ class Admin::LyricsControllerTest < ActionController::TestCase
        end
 
        should "create lyric" do
-         assert Lyric.exists?(:title => 'lyric')
+         assert Lyric.exists?(:title => 'title')
        end
      end
 
@@ -46,7 +46,7 @@ class Admin::LyricsControllerTest < ActionController::TestCase
        end
 
        should_respond_with :success
-       should_assign_to :lyric
+       should_assign_to :lyrics
        should_render_template :index
      end
 

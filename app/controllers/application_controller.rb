@@ -9,4 +9,11 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  
+  def last_album
+    @last_album = Album.first
+  end
+  
+  helper_method :last_album
+  
 end

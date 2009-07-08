@@ -1,18 +1,19 @@
 	<!-- home body -->
-	<div id="content-lyrics">
-	  <h3 title="Album(s)">Album(s)</h3>
+<div id="content-lyrics">
+  <h3 title="Album(s)">Album(s)</h3>
 	  <div id="links">
 		  <h4><%= @album.title %></h4>
 		  <% for lyric in @album.lyrics %>
-			<p><a href="#" title=<%= lyric.title %>><%= lyric.title %>
-		  <span><strong><%= lyric.title %></strong><br /><br />
-				<%= lyric.text_song %><br />
-				[Jack Howard]
-							</span>	
-			</a>
+			<p>
+				<a href="#" title=<%= lyric.title %>><%= lyric.title %>
+		  		<span>
+					<strong><%= lyric.title %></strong><br />
+					<%= lyric.text_song %><br />
+					[Jack Howard]
+		  		</span>	
+				</a>
 			</p>
 		  <% end %>
 		</div>
-		
-		<div class="cleaner"></div>	
-	</div>
+	<div class="cleaner"></div>	
+</div>

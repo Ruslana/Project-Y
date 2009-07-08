@@ -1,0 +1,22 @@
+<% form_for [:admin, @post] do |f| %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+	
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.text_field :date %>
+  </div>
+
+  <div class="submit">
+    <%= f.submit "Go" %>
+  </div>
+  
+<% end %>

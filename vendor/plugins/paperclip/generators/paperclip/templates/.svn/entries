@@ -1,0 +1,40 @@
+8
+
+dir
+56
+http://ruslana.svn.beanstalkapp.com/vshoc/trunk/vendor/plugins/paperclip/generators/paperclip/templates
+http://ruslana.svn.beanstalkapp.com/vshoc
+
+
+
+2009-03-17T09:59:55.090354Z
+38
+ilya
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b6c2b205-308d-4929-96ea-503a66dc544f
+
+paperclip_migration.rb.erb
+file
+
+
+
+
+2009-04-21T14:18:46.000000Z
+50da9b492b4ed21f7b510ae44c8d03e9
+2009-03-17T09:59:55.090354Z
+38
+ilya
+

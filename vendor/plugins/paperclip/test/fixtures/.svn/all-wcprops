@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/vshoc/!svn/ver/38/trunk/vendor/plugins/paperclip/test/fixtures
+END
+12k.png
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/vshoc/!svn/ver/38/trunk/vendor/plugins/paperclip/test/fixtures/12k.png
+END
+5k.png
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/vshoc/!svn/ver/38/trunk/vendor/plugins/paperclip/test/fixtures/5k.png
+END
+text.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/vshoc/!svn/ver/38/trunk/vendor/plugins/paperclip/test/fixtures/text.txt
+END
+50x50.png
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/vshoc/!svn/ver/38/trunk/vendor/plugins/paperclip/test/fixtures/50x50.png
+END
+bad.png
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/vshoc/!svn/ver/38/trunk/vendor/plugins/paperclip/test/fixtures/bad.png
+END
+twopage.pdf
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/vshoc/!svn/ver/38/trunk/vendor/plugins/paperclip/test/fixtures/twopage.pdf
+END

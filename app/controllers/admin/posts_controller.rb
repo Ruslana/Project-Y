@@ -28,7 +28,7 @@ class Admin::PostsController < ProtectedController
   def update
     @post = Post.find(params[:id])
     if @post.update_attributes(params[:post])
-      redirect_to admin_posts_path
+      redirect_to admin_post_path(@post)
     else
       redirect_to :action => 'edit'
     end

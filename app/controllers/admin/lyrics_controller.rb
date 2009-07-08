@@ -27,7 +27,7 @@ class Admin::LyricsController < ProtectedController
    def update
      @lyric = Lyric.find(params[:id])
      if @lyric.update_attributes(params[:lyric])
-       redirect_to admin_lyrics_path
+       redirect_to admin_lyric_path(@lyric)
      else
        redirect_to :action => 'edit'
      end

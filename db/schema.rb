@@ -9,12 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090703151456) do
+ActiveRecord::Schema.define(:version => 20090707145740) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "description"
   end
 
   create_table "lyrics", :force => true do |t|
@@ -32,6 +33,10 @@ ActiveRecord::Schema.define(:version => 20090703151456) do
     t.string   "title_photo_big"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "file_file_name"
+    t.string   "file_file_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
   end
 
   create_table "posts", :force => true do |t|

@@ -24,7 +24,7 @@ class LyricsControllerTest < ActionController::TestCase
        end
 
        should_respond_with :success
-       should_assign_to :lyric
+       should_assign_to :lyrics
        should_render_template :index
      end
    end

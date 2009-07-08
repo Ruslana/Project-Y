@@ -15,6 +15,7 @@ class Admin::AlbumsController < ProtectedController
 
    def show
      @album = Album.find(params[:id])
+     @lyrics = @album.lyrics
    end
 
    def index
@@ -29,7 +30,7 @@ class Admin::AlbumsController < ProtectedController
    def update
      @album = Album.find(params[:id])
      if @album.update_attributes(params[:album])
-       redirect_to admin_albums_path
+       redirect_to admin_album_path(@album)
      else
        redirect_to :action => 'edit'
      end

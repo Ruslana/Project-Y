@@ -20,7 +20,7 @@ class Admin::AlbumsControllerTest < ActionController::TestCase
 
      context "on POST to :create" do
        setup do
-         post :create, :album => {:title => 'album'}
+         post :create, :album => {:title => 'album', :description => 'description'}
        end
 
        teardown do
@@ -38,6 +38,7 @@ class Admin::AlbumsControllerTest < ActionController::TestCase
 
      context "on GET to :show" do
        setup do
+         @album = Factory(:album)
          get :show, :id => @album.id
        end
 
@@ -70,8 +71,8 @@ class Admin::AlbumsControllerTest < ActionController::TestCase
 
       context "on PUT to :update" do
       setup do
-        @ulbum = Factory(:album, :title => "old")
-        put :update, :id => @album.id, :album => {:title => "new"}
+        @album = Factory(:album, :title => "old", :description => "description")
+        put :update, :id => @album.id, :album => {:title => "new", :description => "des"}
       end
 
       should_redirect_to "Admin::Album#show" do
@@ -81,6 +82,7 @@ class Admin::AlbumsControllerTest < ActionController::TestCase
       should "update album" do
         @album.reload
         assert_equal "new", @album.title
+        assert_equal "des", @album.description
       end
     end
 
@@ -97,7 +99,5 @@ class Admin::AlbumsControllerTest < ActionController::TestCase
          admin_albums_path
        end
      end
-
-   end
-  
+   end  
 end

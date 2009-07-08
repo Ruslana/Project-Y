@@ -2,6 +2,10 @@ require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
   context "Posts controller" do
+    setup do
+      @album = Factory(:album)
+     end
+     
     context "on GET to :show" do
       setup do
         @post = Factory(:post)

@@ -1,30 +1,14 @@
-<% form_for [:admin, @participant] do |f| %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :bio %><br />
-    <%= f.text_area :bio %>
-  </div>
-
-<div class="field">
-    <%= f.label :big_photo %><br />
-    <%= f.text_field :title_photo_big %>
-  </div>
-
-<div class="field">
-    <%= f.label :small_photo %><br />
-    <%= f.text_field :title_photo_small %>
-  </div>
-  <%= check_box_tag "small_photo", f.id %>
+<% form_for([:admin, @participant], :html => { :multipart => true }) do |form| %>
+	Грузим большие фотки для био:
+	<%= form.file_field :avatar %>
+	<div class="field">
+		<%= form.label :name %><br />
+		<%= form.text_field :name %>
+	</div>
+	<div class="field">
+	    <%= form.label :bio %><br />
+	    <%= form.text_area :bio %>
+	  </div>
 	
-  <%= render :partial => 'upload', :locals => {:participant => @participant} %>
-
-  <div class="submit">
-    <%= f.submit "Go" %>
-  </div>
-  
+	<p><%= form.submit "Upload file" %></p>
 <% end %>

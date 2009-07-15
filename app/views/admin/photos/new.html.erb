@@ -1,0 +1,7 @@
+<%= error_messages_for :photo %>
+<% form_for([:admin, @photo], :html => { :multipart => true }) do |form| %>
+	Грузим маленькие фотки:
+	<%= form.file_field :file %>
+	
+	<p><%= form.submit "Upload file" %></p>
+<% end %>

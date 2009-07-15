@@ -23,9 +23,7 @@ class Admin::ParticipantsControllerTest < ActionController::TestCase
        setup do
          post :create, :participant => {
            :name => 'thomas', 
-           :bio => 'bio', 
-           :title_photo_small => 'photochka', 
-           :title_photo_big => 'photisha'
+           :bio => 'bio'
            }
        end
 
@@ -34,7 +32,7 @@ class Admin::ParticipantsControllerTest < ActionController::TestCase
        end
 
        should_redirect_to "Admin::participants#show" do
-         edit_admin_participant_path(Participant.first)
+         admin_participant_path(Participant.first)
        end
 
        should "create participant" do
@@ -77,14 +75,10 @@ class Admin::ParticipantsControllerTest < ActionController::TestCase
       setup do
         @participant = Factory(:participant, 
                               :name => 'thomas', 
-                              :bio => "old", 
-                              :title_photo_small => 'photichka', 
-                              :title_photo_big => 'photisha')
+                              :bio => "old")
         put :update, :id => @participant.id, :participant => {
           :name => "max", 
-          :bio => "new", 
-          :title_photo_small => 'photka',
-          :title_photo_big => 'photo'
+          :bio => "new"
           }
         end
 
@@ -96,8 +90,6 @@ class Admin::ParticipantsControllerTest < ActionController::TestCase
         @participant.reload
         assert_equal "max", @participant.name
         assert_equal "new", @participant.bio
-        assert_equal "photka", @participant.title_photo_small
-        assert_equal "photo", @participant.title_photo_big
       end
     end
 

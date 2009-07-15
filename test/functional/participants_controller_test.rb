@@ -15,15 +15,5 @@ class ParticipantsControllerTest < ActionController::TestCase
       should_assign_to :participant
       should_render_template :show
     end
-
-    context "on GET :index" do
-      setup do
-        get :index
-      end
-
-      should_respond_with :success
-      should_assign_to :participants
-      should_render_template :index
-    end
     
 end

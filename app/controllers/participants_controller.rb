@@ -1,9 +1,7 @@
 class ParticipantsController < ApplicationController
-  def index
-    @participants = Participant.all
-  end
-  
+  layout "band3"
   def show
     @participant = Participant.find(params[:id]) 
+    
   end
 end

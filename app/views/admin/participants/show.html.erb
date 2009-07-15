@@ -1,5 +1,3 @@
-<%= @participant.name %>
-<%= @participant.bio %>
-<%= @participant.title_photo_big %>
-<%= @participant.title_photo_small %>
-<%= image_tag @participant.file.url %>
+<%= @participant.name %><br />
+<%= @participant.bio %><br />
+<%= image_tag(@participant.avatar.url) %><br />

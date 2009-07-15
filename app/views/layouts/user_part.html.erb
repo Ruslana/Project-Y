@@ -29,8 +29,8 @@
 				<!-- main navigation -->
 				<div id="main-nav">
 						<ul>
-							<li><a href="reviews.html" title="Reviews">Reviews</a></li>
-							<li><a href="band.html" title="Band">Band</a></li>
+							<li><%= link_to "Reviews", reviews_path %></li>
+							<li><%= link_to "Band", photos_path %></li>
 							<li><%= link_to "Discography", albums_path %></li>
 							<li><%= link_to "Lyrics", album_path(last_album) %></li>
 							<li><%= link_to "Blog", posts_path %></li>

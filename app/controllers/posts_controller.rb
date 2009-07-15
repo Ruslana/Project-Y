@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
   
-  def show
-     
-     @post = Post.find(params[:id])
+  def show     
+     @post = Post.last
      render :layout => "index"
    end
 

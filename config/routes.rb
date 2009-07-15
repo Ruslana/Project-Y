@@ -5,6 +5,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :participants
     admin.resources :posts
     admin.resources :reviews
+    admin.resources :photos
   end
   
   map.resources :albums
@@ -12,6 +13,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :participants
   map.resources :posts
   map.resources :reviews
+  map.resources :photos
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

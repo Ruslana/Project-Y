@@ -1,0 +1,51 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>JACK HOWARD &amp; The Long Lost Brothers</title>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1"/>
+<style type="text/css">
+	@import "stylesheets/styles.css";
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<div id="wrapper-in-sub-band1">
+		<!-- header -->
+		<div id="header">
+			<!-- top logo-->	
+			<h1 title="JACK HOWARD &amp; The Long Lost Brothers"><a href="index.html" title="JACK HOWARD &amp; The Long Lost Brothers">JACK HOWARD &amp; The Long Lost Brothers</a></h1>
+			<p class="flash"><img src="design/player.gif" alt="Temp Player" title="Temp Player" /></p>
+				<ul id="topnav">
+					<li><a href="index.html" title="Back to homepage"><img src="design/home.gif" alt="Homepage" title="Homepage" /></a></li>
+					<li><a href="contact.html" title="Contact Jack"><img src="design/email.gif" alt="Contact Jack" title="Contact Jack" /></a></li>
+				</ul>
+			<div class="cleaner"></div>
+			<!-- top nav -->
+			
+		</div>
+		<!-- end of header -->
+		<!-- main navigation -->
+		<div id="main-nav">
+				<ul>
+					<li><%= link_to "Reviews", reviews_path %></li>
+					<li><%= link_to "Band", photos_path %></li>
+					<li><%= link_to "Discography", albums_path %></li>
+					<li><%= link_to "Lyrics", album_path(last_album) %></li>
+					<li><%= link_to "Blog", posts_path %></li>
+					<li><a href="footy-songs.html" title="Footy Songs">Footy Songs</a></li>
+					<li><a href="downloads.html" title="Downloads">Downloads</a></li>
+				</ul>
+		</div>
+		<div class="cleaner"></div>
+		
+			<%= yield :layout %> 
+			
+			<!-- footer -->
+		<div id="footer">
+			<p><a href="#" title="Valid CSS">css</a><a href="#" title="Valid XHTML">xhtml</a></p>
+		</div>		
+	</div>
+</div>	
+</body>
+</html>

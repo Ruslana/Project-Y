@@ -2,7 +2,7 @@ class Admin::PhotosController < ApplicationController
   
   def new
     @photo = Photo.new
-   
+    render :layout => 'admin_part'
   end
   
   def create    

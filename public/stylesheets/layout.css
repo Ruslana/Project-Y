@@ -43,7 +43,7 @@ body{background:#101010 url(/design/body-background.jpg) repeat-x top left;color
 
 #header h2 span
 {
-	background:url(/_design/topimage.jpg) no-repeat top right;
+	background:url(/design/topimage.jpg) no-repeat top right;
 	display:block;width:455px;height:72px;
 	text-indent: -2000em;text-decoration: none;
 }
@@ -53,7 +53,7 @@ body{background:#101010 url(/design/body-background.jpg) repeat-x top left;color
 	display: block;
 	width: 199px;
 	height: 72px;
-	background: url(/_design/rightimage.jpg) no-repeat;
+	background: url(/design/rightimage.jpg) no-repeat;
 	text-indent: -2000em;
 	text-decoration: none;
 	padding:0;
@@ -62,14 +62,14 @@ body{background:#101010 url(/design/body-background.jpg) repeat-x top left;color
 #header h3{margin:0;padding:0;width:143px;height:38px;float:left}
 #header h3 span
 {
-	background:url(../_design/toptree.gif) no-repeat;
+	background:url(/design/toptree.gif) no-repeat;
 	display:block;width:143px;height:38px;
 	text-indent: -2000em;text-decoration: none;
 }
 #header h3.products{margin:0;padding:0;width:191px;height:38px;float:left}
 #header h3.products span
 {
-	background:url(../_design/products.jpg) no-repeat;
+	background:url(/design/products.jpg) no-repeat;
 	display:block;width:191px;height:38px;
 	text-indent: -2000em;text-decoration: none;
 }
@@ -96,7 +96,7 @@ body{background:#101010 url(/design/body-background.jpg) repeat-x top left;color
 #content-sub a{text-decoration:none;}
 #content-listing{float:left;width:775px;text-align:center;margin:0;padding:0px 0 20px 0;}
 
-#reviews-home{float:right;width:350px;text-align:center;margin:0;padding:0px 0 20px 0;background:url(../design/horizontal-rule.gif) no-repeat bottom center;}
+#reviews-home{float:right;width:350px;text-align:center;margin:0;padding:0px 0 20px 0;background:url(/design/horizontal-rule.gif) no-repeat bottom center;}
 #reviews-home p{padding:12px 0 0 0px;margin:0;color:white;font: 16px Georgia,Serif;font-weight:normal;text-align:left;}
 #reviews-home p em{font-weight:bold;}
 #reviews-home p span{font-weight:bold;padding:8px 0 0 100px;font-style:italic}
@@ -120,7 +120,7 @@ body{background:#101010 url(/design/body-background.jpg) repeat-x top left;color
 #downloads-tables{margin:0;padding:0 10px 20px 10px}
 #downloads-tables h3{margin:0;padding:10px 6px 2px 6px;border-top:1px solid #CDCDCD;border-right:1px solid #CDCDCD;border-left:1px solid #CDCDCD;font:18px Georgia,Serif;font-weight:bold;text-align:left;color:#C78C03; background-color:#000;width:200px}
 
-#downloads-tables table{margin:0;padding:0;width:678px;background:url(../design/table-bg.jpg) no-repeat top;font:14px Georgia,Serif;}
+#downloads-tables table{margin:0;padding:0;width:678px;background:url(/design/table-bg.jpg) no-repeat top;font:14px Georgia,Serif;}
 #downloads-tables table th{margin:0;padding:17px 5px 6px 5px;color:white;font-weight:bold;border-top:1px solid #CDCDCD;border-bottom:1px solid #CDCDCD;}
 #downloads-tables table th.first{margin:0;padding:17px 5px 6px 5px;color:white;font-weight:bold;border-top:1px solid #CDCDCD;border-bottom:1px solid #CDCDCD;border-left:1px solid #CDCDCD;}
 #downloads-tables table th.last{margin:0;padding:17px 5px 6px 5px;color:white;font-weight:bold;border-top:1px solid #CDCDCD;border-bottom:1px solid #CDCDCD;border-right:1px solid #CDCDCD;}
@@ -223,7 +223,7 @@ a.tip:hover span p{font-size:11px;font-weight:normal;color:white;z-index:100}
 /* =============
    footer
    ============= */
-#footer{width:700px;height:25px;margin:0;padding:180px 0 25px 0;background:url(../design/bottom-jack.jpg) no-repeat top left}
+#footer{width:700px;height:25px;margin:0;padding:180px 0 25px 0;background:url(/design/bottom-jack.jpg) no-repeat top left}
 #footer p{float:right; margin:0; padding:0 20px 0 0}
 #footer p a{float:left;border:2px solid white; margin:0 5px 0 5px; padding:0px 1px 0px 1px; font-size:18px; font-weight:bold; color:#C78C03;text-decoration:none;}
 #footer p a:hover{color:#EBAD1C}

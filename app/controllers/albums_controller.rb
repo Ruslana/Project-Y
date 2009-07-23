@@ -6,7 +6,6 @@ class AlbumsController < ApplicationController
    end
 
    def index
-     @albums = Album.all(:limit => 10, :order => 'created_at DESC')
      @albums = Album.paginate :page => params[:page], :per_page => 3
    end
   

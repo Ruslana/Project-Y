@@ -10,10 +10,16 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
   
-  def last_album
-    @last_album = Album.first
+  def var_layouts
+    "wrapper-in"
   end
   
-  helper_method :last_album
+  def last_album
+    @last_album ||= Album.first
+  end
+  
+  helper_method :last_album, :var_layouts
   
 end
+
+

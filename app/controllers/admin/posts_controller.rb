@@ -5,7 +5,7 @@ class Admin::PostsController < ProtectedController
   
   def create
     @post = Post.new(params[:post])
-    if @post.save!
+    if @post.save
       redirect_to admin_post_path(@post)
     else
       render new_admin_post_path
@@ -17,7 +17,6 @@ class Admin::PostsController < ProtectedController
   end
   
   def index
-    @posts = Post.all(:limit => 10, :order => 'created_at DESC')
     @posts = Post.paginate :page => params[:page], :per_page => 3
   end
   

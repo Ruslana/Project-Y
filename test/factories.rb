@@ -21,6 +21,3 @@ Factory.define :participant do |p|
   p.name "joy"
   p.bio "bio"
 end
-Factory.define :photo do |p|
-  p.name "name"
-end

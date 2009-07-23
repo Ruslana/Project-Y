@@ -3,10 +3,6 @@ require 'test_helper'
 class Admin::AlbumsControllerTest < ActionController::TestCase
   context "Admin Albums controller" do
 
-     setup do
-      @album = Factory(:album)
-     end
-
      context "on GET to :new" do
        setup do
          get :new
@@ -60,6 +56,7 @@ class Admin::AlbumsControllerTest < ActionController::TestCase
 
      context "on GET to :edit" do
         setup do
+          @album = Factory(:album)
           get :edit, :id => @album.id
         end
 
@@ -88,6 +85,7 @@ class Admin::AlbumsControllerTest < ActionController::TestCase
 
      context "on DELETE to :destroy" do
        setup do
+         @album = Factory(:album)
          delete :destroy, :id => @album.id
        end
 

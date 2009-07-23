@@ -4,23 +4,11 @@ class Admin::ParticipantsControllerTest < ActionController::TestCase
   context "Admin Participants controller" do
 
      setup do
-      @participant = Factory(:participant)
-      @album = Factory(:album)
-     end
-
-     context "on GET to :new" do
-       setup do
-         get :new
-       end
-
-       should_respond_with :success
-       should_assign_to :participant
-       should_render_template :new
-       should_render_a_form
+      @album = Factory(:album)      
      end
 
      context "on Participant to :create" do
-       setup do
+       setup do       
          post :create, :participant => {
            :name => 'thomas', 
            :bio => 'bio'
@@ -32,7 +20,7 @@ class Admin::ParticipantsControllerTest < ActionController::TestCase
        end
 
        should_redirect_to "Admin::participants#show" do
-         admin_participant_path(Participant.first)
+         admin_participant_path(Participant.last)
        end
 
        should "create participant" do
@@ -42,6 +30,7 @@ class Admin::ParticipantsControllerTest < ActionController::TestCase
 
      context "on GET to :show" do
        setup do
+         @participant = Factory(:participant)
          get :show, :id => @participant.id
        end
 
@@ -62,6 +51,7 @@ class Admin::ParticipantsControllerTest < ActionController::TestCase
 
      context "on GET to :edit" do
         setup do
+          @participant = Factory(:participant)
           get :edit, :id => @participant.id
         end
 
@@ -95,6 +85,7 @@ class Admin::ParticipantsControllerTest < ActionController::TestCase
 
      context "on DELETE to :destroy" do
        setup do
+         @participant = Factory(:participant)
          delete :destroy, :id => @participant.id
        end
 

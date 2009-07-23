@@ -5,7 +5,7 @@ class Admin::ReviewsController < ProtectedController
   
   def create
     @review = Review.new(params[:review])
-    if @review.save!
+    if @review.save
       redirect_to admin_review_path(@review)
     else
       render new_admin_review_path
@@ -17,7 +17,6 @@ class Admin::ReviewsController < ProtectedController
   end
   
   def index
-    @reviews = Review.all(:limit => 10, :order => 'created_at DESC')
     @reviews = Review.paginate :page => params[:page], :per_page => 3
   end
   

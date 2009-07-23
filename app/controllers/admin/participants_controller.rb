@@ -5,7 +5,7 @@ class Admin::ParticipantsController < ProtectedController
   
   def create    
      @participant = Participant.create(params[:participant])
-    if @participant.save!
+    if @participant.save
       redirect_to admin_participant_path(@participant)
     else
       render :action => "new"

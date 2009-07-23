@@ -1,8 +1,6 @@
 	<!-- home body -->
 <div id="content-band">
-	
-	<h3><%= @participant.name %></h3>
-	<p><img src="/design/aidanbio.jpg" alt="Aidan" title="Aidan" class="biophoto" /></p>
-	
+	<% name = String.new("aidan") %>
+	<%= render :partial => "#{name}" %>
 	<div class="cleaner"></div>
 </div>

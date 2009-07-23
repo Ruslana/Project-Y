@@ -4,7 +4,7 @@ class Admin::LyricsController < ProtectedController
      @lyric = Lyric.new(params[:lyric])
      @album = Album.find(params[:lyric][:album_id])
      @lyric.album = @album
-     if @lyric.save!
+     if @lyric.save
        redirect_to admin_lyric_path(@lyric)
      else
        render new_admin_lyric_path
@@ -16,7 +16,6 @@ class Admin::LyricsController < ProtectedController
    end
 
    def index
-     @lyrics = Lyric.all(:limit => 10, :order => 'created_at DESC')
      @lyrics = Lyric.paginate :page => params[:page], :per_page => 3
    end
 

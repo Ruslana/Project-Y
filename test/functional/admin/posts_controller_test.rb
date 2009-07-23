@@ -4,7 +4,6 @@ class Admin::PostsControllerTest < ActionController::TestCase
   context "Admin Posts controller" do
 
      setup do
-      @post = Factory(:post)
       @album = Factory(:album)
      end
 
@@ -39,6 +38,7 @@ class Admin::PostsControllerTest < ActionController::TestCase
 
      context "on GET to :show" do
        setup do
+         @post = Factory(:post)
          get :show, :id => @post.id
        end
 
@@ -59,6 +59,7 @@ class Admin::PostsControllerTest < ActionController::TestCase
 
      context "on GET to :edit" do
         setup do
+          @post = Factory(:post)
           get :edit, :id => @post.id
         end
 
@@ -70,8 +71,8 @@ class Admin::PostsControllerTest < ActionController::TestCase
 
       context "on PUT to :update" do
       setup do
-        @post = Factory(:post, :title => "old", :body => "old", :date => Date.new(2009,6,24))
-        put :update, :id => @post.id, :post => {:title => "new", :body => "new", :date => Date.new(2008,5,23)}
+        @post = Factory(:post, :title => "old", :body => "old")
+        put :update, :id => @post.id, :post => {:title => "new", :body => "new"}
       end
 
       should_redirect_to "Admin::Post#show" do
@@ -82,12 +83,12 @@ class Admin::PostsControllerTest < ActionController::TestCase
         @post.reload
         assert_equal "new", @post.title
         assert_equal "new", @post.body
-        assert_equal Date.new(2008,5,23), @post.date
       end
     end
 
      context "on DELETE to :destroy" do
        setup do
+         @post = Factory(:post)
          delete :destroy, :id => @post.id
        end
 

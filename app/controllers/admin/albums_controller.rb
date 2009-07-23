@@ -6,7 +6,7 @@ class Admin::AlbumsController < ProtectedController
 
    def create
      @album = Album.new(params[:album])
-     if @album.save!
+     if @album.save
        redirect_to admin_album_path(@album)
      else
        render new_admin_album_path
@@ -19,7 +19,6 @@ class Admin::AlbumsController < ProtectedController
    end
 
    def index
-     @albums = Album.all(:limit => 10, :order => 'created_at DESC')
      @albums = Album.paginate :page => params[:page], :per_page => 3
    end
 

@@ -5,7 +5,6 @@ class Admin::ReviewsControllerTest < ActionController::TestCase
 
      setup do
       @album = Factory(:album)
-      @review = Factory(:review)
      end
 
      context "on GET to :new" do
@@ -19,9 +18,12 @@ class Admin::ReviewsControllerTest < ActionController::TestCase
        should_render_a_form
      end
 
-     context "on review to :create" do
+     context "on POST to :create" do
        setup do
-         post :create, :review => {:title => 'review', :body => 'body_review', :date => Date.new(2009,6,25), :author => "author"}
+         post :create, :review => {:title => 'review', 
+                                   :body => 'body_review', 
+                                   :date => Date.new(2009,6,25), 
+                                   :author => "author"}
        end
 
        teardown do
@@ -29,7 +31,7 @@ class Admin::ReviewsControllerTest < ActionController::TestCase
        end
 
        should_redirect_to "Admin::reviews#show" do
-         admin_review_path(@review)
+         admin_review_path(Review.first)
        end
 
        should "create review" do
@@ -39,6 +41,7 @@ class Admin::ReviewsControllerTest < ActionController::TestCase
 
      context "on GET to :show" do
        setup do
+         @review = Factory(:review)
          get :show, :id => @review.id
        end
 
@@ -59,6 +62,7 @@ class Admin::ReviewsControllerTest < ActionController::TestCase
 
      context "on GET to :edit" do
         setup do
+          @review = Factory(:review)
           get :edit, :id => @review.id
         end
 
@@ -70,8 +74,12 @@ class Admin::ReviewsControllerTest < ActionController::TestCase
 
       context "on PUT to :update" do
       setup do
-        @review = Factory(:review, :title => "old", :body => "old", :date => '1.1.1', :author => "Thomas")
-        put :update, :id => @review.id, :review => {:title => "new", :body => "new", :date => '2.2.2', :author => "Max"}
+        @review = Factory(:review, :title => "old", 
+                                   :body => "old"
+                                   )
+        put :update, :id => @review.id, :review => {:title => "new", 
+                                                    :body => "new" 
+                                                    }
       end
 
       should_redirect_to "Admin::review#show" do
@@ -82,13 +90,12 @@ class Admin::ReviewsControllerTest < ActionController::TestCase
         @review.reload
         assert_equal "new", @review.title
         assert_equal "new", @review.body
-        assert_equal '2.2.2', @review.date
-        assert_equal "Max", @review.author
       end
     end
 
      context "on DELETE to :destroy" do
        setup do
+         @review = Factory(:review)
          delete :destroy, :id => @review.id
        end
 

@@ -1,5 +1,5 @@
 <% form_for([:admin, @participant]) do |form| %>
-
+	
 	<div class="field">
 		<%= form.label :name %><br />
 		<%= form.text_field :name %>
@@ -9,5 +9,5 @@
 	    <%= form.text_area :bio %>
 	  </div>
 	
-	<p><%= form.submit "create" %></p>
+	<p><%= form.submit "Upload file" %></p>
 <% end %>

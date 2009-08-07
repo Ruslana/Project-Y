@@ -13,7 +13,7 @@ class PostsControllerTest < ActionController::TestCase
       end
      
       should_respond_with :success
-      should_assign_to :post
+      should_assign_to :current_post
       should_render_template :show
     end
     

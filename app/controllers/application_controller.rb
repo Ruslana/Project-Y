@@ -10,15 +10,21 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
   
+  def current_post
+    @current_post ||= Post.find_or_create("Пост", "blabla", Date.new)
+  end
+  
   def var_layouts
-    "wrapper-in"
+    "wrapper-in" if controller_name == "posts"
+    #{}"wrapper-in-sub-band" if controller_name == "reviews" || "lyrics" || "albums" || "posts"
+    #{}"wrapper-in-sub-band1" if controller_name == "participants"
   end
   
   def last_album
-    @last_album ||= Album.first
+    @last_album ||= Album.find_or_create("title", "description")
   end
   
-  helper_method :last_album, :var_layouts
+  helper_method :last_album, :var_layouts, :current_post
   
 end
 

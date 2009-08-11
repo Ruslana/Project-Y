@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   
   def show     
-     current_post = Post.last
+     @post ||= Post.find_or_create("Пост", "blabla", Date.new)
    end
 
    def index

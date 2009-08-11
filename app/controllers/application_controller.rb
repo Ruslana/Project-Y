@@ -10,10 +10,6 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
   
-  def current_post
-    @current_post ||= Post.find_or_create("Пост", "blabla", Date.new)
-  end
-  
   def var_layouts
     case controller_name
      when "posts" 

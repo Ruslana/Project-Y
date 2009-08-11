@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   
   def show     
      current_post = Post.last
-     #render :layout => "index"
    end
 
    def index

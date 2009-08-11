@@ -9,13 +9,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090717051249) do
+ActiveRecord::Schema.define(:version => 20090811090851) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "description"
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.string   "some_contact"
+    t.string   "your_name"
+    t.string   "your_email"
+    t.string   "your_message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "lyrics", :force => true do |t|

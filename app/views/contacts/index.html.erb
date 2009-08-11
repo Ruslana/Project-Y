@@ -1,0 +1,10 @@
+<!-- home body -->
+<div id="content-blog">
+			<h3 title="Contact Jack and the Long Lost Brothers">Contact Jack and the Long Lost Brothers</h3>
+			<% for contact in @contacts %>
+				<%= contact.some_contact %>
+			<% end %>
+<hr />
+<p><strong>Or use online contact form</strong></p>
+<%= render :partial => 'form', :locals => {:contact => @contact} %>
+</div>

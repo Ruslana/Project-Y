@@ -1,0 +1,22 @@
+
+<% form_for contact do |f| %>
+
+  <p>
+    <%= f.label :Your_Name %>
+    <%= f.text_field :your_name %>
+  </p>
+  <p>
+    <%= f.label :Your_Email %>
+    <%= f.text_field :your_email %>
+  </p>
+
+  <p>
+    <%= f.label :Your_Message_for_me %>
+    <%= f.text_field :your_name %>
+  </p>
+
+  <p>
+    <%= f.submit "Let it flow" %>
+  </p>
+  
+<% end %>

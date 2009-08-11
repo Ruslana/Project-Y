@@ -15,9 +15,18 @@ class ApplicationController < ActionController::Base
   end
   
   def var_layouts
-    "wrapper-in" if controller_name == "posts"
-    #{}"wrapper-in-sub-band" if controller_name == "reviews" || "lyrics" || "albums" || "posts"
-    #{}"wrapper-in-sub-band1" if controller_name == "participants"
+    case controller_name
+     when "posts" 
+       if action_name == "show"
+         "wrapper-in"
+       else
+         "wrapper-in-sub-band"
+       end
+     when "participants"
+       "wrapper-in-sub-band1"
+     else 
+       "wrapper-in-sub-band"
+    end
   end
   
   def last_album

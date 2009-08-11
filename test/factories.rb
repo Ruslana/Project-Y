@@ -21,3 +21,9 @@ Factory.define :participant do |p|
   p.name "joy"
   p.bio "bio"
 end
+Factory.define :contact do |p|
+  p.some_contact "contact"
+  p.your_name "name"
+  p.your_email "email"
+  p.your_message "message"
+end

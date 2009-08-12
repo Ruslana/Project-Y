@@ -1,6 +1,16 @@
+<%= link_to "create new review", new_admin_review_path %><br />
+<br />
 <% for review in @reviews %>
-	<%= review.title %>
-	<%= review.date %>
-	<%= review.author %>
-	<%= review.body %>
+	<%= review.title %><br />
+	<%= review.date.strftime("%A, %d %B %Y") %><br />
+	<%= review.author %><br />
+	<%= review.body %><br />
+	<%= link_to "show", admin_review_path(review) %>
+	<%= link_to "edit", edit_admin_review_path(review) %>
+	<%= link_to "destroy", [:admin, review], 
+			:confirm => 'Are you sure?', 
+			:method => :delete
+			%>
+	<br /><br />
 <% end %>
+<%= will_paginate @reviews %>

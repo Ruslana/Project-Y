@@ -5,7 +5,7 @@ class Admin::LyricsController < ProtectedController
      @album = Album.find(params[:lyric][:album_id])
      @lyric.album = @album
      if @lyric.save
-       redirect_to admin_lyric_path(@lyric)
+       redirect_to admin_lyrics_path
      else
        render new_admin_lyric_path
      end
@@ -16,7 +16,7 @@ class Admin::LyricsController < ProtectedController
    end
 
    def index
-     @lyrics = Lyric.paginate :page => params[:page], :per_page => 3
+     @lyrics = Lyric.all
    end
 
    def edit

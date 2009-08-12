@@ -3,8 +3,18 @@
 <html>
 	<head> 
  		<title>My Blog</title> 
+		<%= stylesheet_link_tag "admin", :media => "all" %>
 	</head> 
 	<body>
+		<div id="list">
+			<h1>
+			<%= link_to "posts", admin_posts_path %><br />
+			<%= link_to "albums", admin_albums_path %><br />
+			<%= link_to "reviews", admin_reviews_path %><br />
+			<%= link_to "contacts", admin_contacts_path %><br />
+			<%= link_to "lyrics" %>
+			</h1>
+		</div>
 		
 		<%= yield :layout %> 
 	

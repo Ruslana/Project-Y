@@ -1,1 +1,14 @@
+<%= link_to "create new album", new_admin_album_path %><br />
+<br />
+<% for album in @albums %>
+	<%= album.title %><br />
+	<%= album.description %><br />
+	<%= link_to "show", admin_album_path(album) %>
+	<%= link_to "edit", edit_admin_album_path(album) %>
+	<%= link_to "destroy", [:admin, album], 
+			:confirm => 'Are you sure?', 
+			:method => :delete
+			%>
+	<br /><br />
+<% end %>
 <%= will_paginate @album %>

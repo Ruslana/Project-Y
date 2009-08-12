@@ -10,10 +10,7 @@
     <%= f.text_area :body %>
   </div>
 	
-  <div class="field">
-    <%= f.label :date %><br />
-    <%= f.text_field :date %>
-  </div>
+  <%= date_select :review, :date %>
 
   <div class="field">
     <%= f.label :author %><br />

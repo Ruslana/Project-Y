@@ -1,0 +1,9 @@
+<h2><%= @album.title %></h2>
+<%= @lyric.title %>
+<%= @lyric.text_song %>
+<%= link_to "back", admin_lyrics_path %>
+<%= link_to "edit", edit_admin_lyric_path(@lyric) %>
+<%= link_to "destroy", [:admin, @lyric], 
+		:confirm => 'Are you sure?', 
+		:method => :delete
+		%>

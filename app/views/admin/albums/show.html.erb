@@ -1,2 +1,13 @@
-<%= @album.title %>
+<h2><%= @album.title %></h2>
+<% for lyric in @album.lyrics %>
+	<%= lyric.title %><br />
+	<%= lyric.text_song %>
+<% end %>
+<%= link_to "back", admin_albums_path %>
+<%= link_to "edit", edit_admin_album_path(@album) %>
+<%= link_to "destroy", [:admin, @album], 
+		:confirm => 'Are you sure?', 
+		:method => :delete
+		%>
+<h3>Liryc:</h3>
 <%= render :partial => 'admin/lyrics/form' %>

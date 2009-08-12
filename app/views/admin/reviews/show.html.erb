@@ -1,4 +1,10 @@
-<%= @review.title %>
-<%= @review.body %>
-<%= @review.date %>
+<h2><%= @review.title %></h2>
+<%= @review.body %><br />
+<%= @review.date.strftime("%A, %d %B %Y") %>
+<%= link_to "back", admin_reviews_path %>
+<%= link_to "edit", edit_admin_review_path(@review) %>
+<%= link_to "destroy", [:admin, @review], 
+		:confirm => 'Are you sure?', 
+		:method => :delete
+		%>
 

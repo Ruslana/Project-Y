@@ -1,5 +1,11 @@
-<%= @post.title %>
-<%= @post.body %>
-<%= @post.date %>
+<h2><%= @post.title %></h2>
+<%= @post.body %><br />
+<%= @post.date.strftime("%A, %d %B %Y") %><br />
+<%= link_to "back", admin_posts_path %>
+<%= link_to "edit", edit_admin_post_path(@post) %>
+<%= link_to "destroy", [:admin, @post], 
+		:confirm => 'Are you sure?', 
+		:method => :delete
+		%>
 
 

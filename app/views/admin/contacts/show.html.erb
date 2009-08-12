@@ -1,2 +1,7 @@
 <%= @contact.some_contact %>
-<%= @contact.your_name %>
+<%= link_to "back", admin_contacts_path %>
+<%= link_to "edit", edit_admin_contact_path(@contact) %>
+<%= link_to "destroy", [:admin, @contact], 
+		:confirm => 'Are you sure?', 
+		:method => :delete
+		%>

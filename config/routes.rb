@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.root :controller => "posts", :action => "show"
+  map.root :controller => "home"
   map.login 'admin', :controller => "admin/home", :action => "title"
   
   map.namespace :admin do |admin|

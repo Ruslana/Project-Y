@@ -2,20 +2,20 @@
 	<div id="content-band">
 		
 		<div class="card" style="margin-top:25px;">
-			<p class="card-photo"><%= link_to(image_tag("/images/aidan.jpg"), participants_path) %></p>
+			<p class="card-photo"><%= link_to(image_tag("/images/aidan.jpg"), participant_path(:aidan)) %></p>
 		</div>
 		<div class="card">
-			<p class="card-photo"><a href="bio-barry.html" title="Barry's Bio"><img src="/images/barry.jpg" alt="Barry" title="Barry" width="240" height="175" /></a></p>
+			<p class="card-photo"><%= link_to(image_tag("/images/barry.jpg"), participant_path(:barry)) %></p>
 		</div>
 		<div class="card" style="margin-top:15px;">
 			<p class="card-photo"><img src="/images/jack.jpg" alt="Jack" title="Jack" width="206" height="250" /></p>
 		</div>
 		<div class="cleaner"></div>
 		<div class="card" style="margin-top:25px;margin-right:80px;margin-left:30px;">
-			<p class="card-photo"><a href="bio-nicky.html" title="Nicky's Bio"><img src="/images/nicky.jpg" alt="Nicky" title="Nicky" width="196" height="250" /></a></p>
+			<p class="card-photo"><%= link_to(image_tag("nicky.jpg"), participant_path(:nicky)) %></p>
 		</div>
 		<div class="card" style="margin-top:35px;">
-			<p class="card-photo"><a href="bio-sharky.html" title="Sharky's Bio"><img src="/images/sharky.jpg" alt="Sharky" title="Sharky" width="256" height="190" /></a></p>
+			<p class="card-photo"><%= link_to(image_tag("sharky.jpg"), participant_path(:sharky)) %></p>
 		</div>
 		
 		<div class="cleaner"></div>

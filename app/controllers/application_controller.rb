@@ -12,12 +12,8 @@ class ApplicationController < ActionController::Base
   
   def var_layouts
     case controller_name
-     when "posts" 
-       if action_name == "show"
+     when "home" 
          "wrapper-in"
-       else
-         "wrapper-in-sub-band"
-       end
      when "participants"
        "wrapper-in-sub-band1"
      else 

@@ -1,6 +1,6 @@
 <h2><%= @review.title %></h2>
 <%= @review.body %><br />
-<%= @review.date.strftime("%A, %d %B %Y") %>
+<%= @review.date.strftime("%A, %d %B %Y") %><br />
 <%= link_to "back", admin_reviews_path %>
 <%= link_to "edit", edit_admin_review_path(@review) %>
 <%= link_to "destroy", [:admin, @review], 

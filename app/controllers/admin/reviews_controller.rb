@@ -6,8 +6,10 @@ class Admin::ReviewsController < ProtectedController
   def create
     @review = Review.new(params[:review])
     if @review.save
+      flash[:notice] = "Обзор создан"
       redirect_to admin_review_path(@review)
     else
+      flash[:notice] = "Извините, обзор не создан"
       render new_admin_review_path
     end
   end

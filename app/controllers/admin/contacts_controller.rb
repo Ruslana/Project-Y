@@ -6,8 +6,10 @@ class Admin::ContactsController < ProtectedController
   def create
     @contact = Contact.new(params[:contact])
     if @contact.save
+      flash[:notice] = "Контакт создан"
       redirect_to admin_contact_path(@contact)
     else
+      flash[:notice] = "Контакт не создан"
       render new_admin_contact_path
     end
   end

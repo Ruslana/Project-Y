@@ -1,6 +1,5 @@
 	<!-- home body -->
 <div id="content-band">
-	<% name = String.new("aidan") %>
-	<%= render :partial => "#{name}" %>
+	<%= render_partial_for_participant(params[:id]) %>
 	<div class="cleaner"></div>
 </div>

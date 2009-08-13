@@ -1,0 +1,30 @@
+<!-- home body -->
+<div id="content-home">
+	<!-- home reviews -->
+	<div id="reviews-home">
+		<p>&ldquo;<img src="/images/star.gif" alt="star" /><img src="/images/star.gif" alt="star" /><img src="/images/star.gif" alt="star" /><img src="/images/star.gif" alt="star" /> &nbsp;<em>real songs, real music, fantastic playing &rdquo;</em><br /><span>- Sunday Herald Sun</span></p>
+		<p>&ldquo;<img src="/images/star.gif" alt="star" /><img src="/images/star.gif" alt="star" /><img src="/images/star.gif" alt="star" /> &nbsp;<em>highly impressive songwriting &rdquo;</em><br /><span>- EG</span></p>
+		<p>&ldquo;&nbsp;<em>an unexpected treasure &rdquo;</em><br /><span>- Barfly</span></p>
+		<p>&ldquo;&nbsp;<em>tells it like it is warts and all &rdquo;</em><br /><span>- Ipress</span></p>
+	</div>
+	<!-- home news -->
+	<div id="news-home">
+		<p><a href="#" title="Buy a new CD of Jack Howard and The Long Lost Brothers"><img src="/images/buy-now.gif" alt="Buy a CD" /></a></p>
+		<% unless @post == nil %>
+			<h3>Latest News</h3>
+			<p>
+			<strong><%= @post.title %></strong><br />
+			<%= @post.date.strftime("%A, %d %B %Y") %></p>
+			<p>
+			<%= @post.body %>
+		<% end %>
+		<p><a href="#" title="more news">more news ....	</a></p>
+	</div>
+	<!-- home footy songs area -->
+	<div id="footy-home">
+		<p><img src="/images/footy-songs-ball.gif" alt="Footy Songs" /></p>
+		<div class="cleaner"></div>
+	</div>
+	<div class="cleaner"></div>
+		
+</div>

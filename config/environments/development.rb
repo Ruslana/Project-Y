@@ -15,3 +15,15 @@ config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
+
+config.after_initialize do 
+  ActiveMerchant::Billing::Base.mode = :test 
+end
+ 
+config.to_prepare do 
+  OrderTransaction.gateway = 
+    ActiveMerchant::Billing::BraintreeGateway.new( 
+      :login    => ‘demo’, 
+      :password => ‘password’ 
+    ) 
+end 

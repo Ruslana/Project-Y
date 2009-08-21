@@ -19,12 +19,12 @@ class ContactsControllerTest < ActionController::TestCase
         Contact.destroy_all
       end
 
-      should_redirect_to "Admin::Contacts#show" do
-        admin_contact_path(Contact.first)
+      should_redirect_to "Contacts#index" do
+        contacts_path
       end
 
       should "create contact" do
-        assert Contact.exists?(:some_contact => 'contact')
+        assert Contact.exists?(:your_name => 'name')
       end
     end
 

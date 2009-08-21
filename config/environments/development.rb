@@ -23,7 +23,7 @@ end
 config.to_prepare do 
   OrderTransaction.gateway = 
     ActiveMerchant::Billing::BraintreeGateway.new( 
-      :login    => ‘demo’, 
-      :password => ‘password’ 
+      :login    => 'demo', 
+      :password => 'password' 
     ) 
 end 

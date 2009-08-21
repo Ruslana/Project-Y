@@ -7,13 +7,13 @@ class ActiveSupport::TestCase
   include ActiveMerchant::Billing 
   
   def credit_card_hash(options = {}) 
-    { :number     => ‘1’, 
-      :first_name => ‘Cody’, 
-      :last_name  => ‘Fauser’, 
-      :month      => ‘8’, 
-      :year       => “#{ Time.now.year + 1 }”, 
-      :verification_value => ‘123’, 
-      :type       => ‘visa’ 
+    { :number     => '1',
+      :first_name => 'Cody', 
+      :last_name  => 'Fauser', 
+      :month      => '8', 
+      :year       => "#{ Time.now.year + 1 }", 
+      :verification_value => '123', 
+      :type       => 'visa' 
     }.update(options) 
   end
    

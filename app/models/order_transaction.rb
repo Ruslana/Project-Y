@@ -5,13 +5,13 @@ class OrderTransaction < ActiveRecord::Base
 
   class << self 
     def authorize(amount, credit_card, options = {}) 
-      process(‘authorization’, amount) do |gw| 
+      process('authorization', amount) do |gw| 
         gw.authorize(amount, credit_card, options) 
       end 
     end 
 
     def capture(amount, authorization, options = {}) 
-      process(‘capture’, amount) do |gw| 
+      process('capture', amount) do |gw| 
         gw.capture(amount, authorization, options) 
       end 
     end 

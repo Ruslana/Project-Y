@@ -20,8 +20,8 @@ class Admin::LyricsControllerTest < ActionController::TestCase
          Lyric.destroy_all
        end
 
-       should_redirect_to "Admin::Lyric#show" do
-         admin_lyric_path(Lyric.first)
+       should_redirect_to "Admin::Lyric#index" do
+         admin_lyrics_path
        end
 
        should "create lyric" do

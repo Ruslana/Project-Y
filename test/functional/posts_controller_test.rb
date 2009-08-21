@@ -5,17 +5,6 @@ class PostsControllerTest < ActionController::TestCase
     setup do
       @album = Factory(:album)
      end
-     
-    context "on GET to :show" do
-      setup do
-        @post = Factory(:post)
-        get :show, :id => @post.id
-      end
-     
-      should_respond_with :success
-      should_assign_to :current_post
-      should_render_template :show
-    end
     
     context "on GET to :index" do
       setup do

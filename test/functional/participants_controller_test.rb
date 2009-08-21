@@ -12,8 +12,7 @@ class ParticipantsControllerTest < ActionController::TestCase
       end
 
       should_respond_with :success
-      should_assign_to :participant
       should_render_template :show
-    end
+  end
     
 end

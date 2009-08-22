@@ -1,0 +1,12 @@
+<% for message in @messages %>
+	<%= message.your_name %><br />	
+	<%= message.your_email %><br />
+	<%= message.your_message %><br />
+	<%= link_to "destroy", [:admin, message], 
+			:confirm => 'Are you sure?', 
+			:method => :delete
+			%>
+	<br /><br />
+<% end %>
+
+<%= will_paginate @messages %>

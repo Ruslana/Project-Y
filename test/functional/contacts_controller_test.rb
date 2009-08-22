@@ -6,27 +6,6 @@ class ContactsControllerTest < ActionController::TestCase
     setup do
       @album = Factory(:album)
      end
-     
-    context "on POST to :create" do
-      setup do
-        post :create, :contact => {:your_name => 'name', 
-                                   :your_email => 'email',
-                                   :your_message => 'message'
-                                   }
-      end
-
-      teardown do
-        Contact.destroy_all
-      end
-
-      should_redirect_to "Contacts#index" do
-        contacts_path
-      end
-
-      should "create contact" do
-        assert Contact.exists?(:your_name => 'name')
-      end
-    end
 
     context "on GET :index" do
       setup do

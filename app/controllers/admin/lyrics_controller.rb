@@ -7,7 +7,7 @@ class Admin::LyricsController < ProtectedController
      if @lyric.save
        redirect_to admin_lyrics_path
      else
-       render new_admin_lyric_path
+       render admin_albums_path
      end
    end
 

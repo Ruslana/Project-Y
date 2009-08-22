@@ -10,8 +10,9 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :posts
     admin.resources :reviews
     admin.resources :contacts
-    admin.resources :order
-    admin.resources :order_transaction
+    admin.resources :orders
+    admin.resources :order_transactions
+    admin.resources :messages
   end
   
   map.resources :albums
@@ -20,8 +21,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :posts
   map.resources :reviews
   map.resources :contacts
-  map.resources :order
-  map.resources :order_transaction
+  map.resources :orders
+  map.resources :order_transactions
+  map.resources :messages
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

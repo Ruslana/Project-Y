@@ -23,6 +23,8 @@ Factory.define :participant do |p|
 end
 Factory.define :contact do |p|
   p.some_contact "contact"
+end
+Factory.define :message do |p|
   p.your_name "name"
   p.your_email "email"
   p.your_message "message"

@@ -24,6 +24,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :orders
   map.resources :order_transactions
   map.resources :messages
+  map.resources :sessions
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

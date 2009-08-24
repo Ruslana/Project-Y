@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-  layout "session"
+  
+  layout 'session'
 
   skip_before_filter :authorize
 

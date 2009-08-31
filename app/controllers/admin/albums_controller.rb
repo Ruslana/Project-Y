@@ -7,10 +7,10 @@ class Admin::AlbumsController < ProtectedController
    def create
      last_album = Album.new(params[:album])
      if last_album.save
-       flash[:notice] = "Альбомчик создан" 
+       flash[:notice] = "Album created" 
        redirect_to admin_album_path(last_album)
      else
-       flash[:notice] = "Извините, альбомчик не создан" 
+       flash[:notice] = "Sorry, album don't created" 
        render new_admin_album_path
      end
    end

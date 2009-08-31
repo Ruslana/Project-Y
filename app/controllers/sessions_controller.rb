@@ -12,16 +12,16 @@ class SessionsController < ApplicationController
       user = User.authenticate(params[:password], params[:name])
       if user
         session[:user_id] = user.id
-        redirect_to :controller => 'admin/posts', :action => 'index'
+        redirect_to :controller => "admin/home", :action => "title"
       else      
         flash[:note] = "Invalid user name/password"
-        redirect_to :action => 'new'
+        redirect_to new_session_path
       end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to :controller => "sessions", :action => "new"
+    redirect_to new_session_path
   end
 
   

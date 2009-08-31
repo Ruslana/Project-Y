@@ -1,9 +1,8 @@
-<h1>Admins</h1>
+<%= link_to "Create new user", new_admin_user_path %>
 <% for user in @users %>
 <h2><%= user.name %></h2>
-<%= link_to 'Delete admin', [user, :admin], 
+<%= link_to 'Delete user', [:admin, user], 
 	:confirm => 'Are you sure?', 
 	:method => :delete
 %>
 <% end %>
-<p><%= link_to 'Back', admin_posts_path %></p>

@@ -6,7 +6,7 @@ class Admin::UsersController < ProtectedController
   def create
     @user = User.new(params[:user])
     @user.save
-    redirect_to :action => 'index'
+    redirect_to admin_users_path
   end
 
   def index
@@ -20,6 +20,6 @@ class Admin::UsersController < ProtectedController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to :action => 'index'
+    redirect_to admin_users_path
   end
 end

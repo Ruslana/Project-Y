@@ -1,4 +1,5 @@
 <div id="content-blog">
+	<%= link_to "RSS Feed", formatted_posts_url(:rss) %>
 	<h3 title="Blog Entries">Blog Entries</h3>
 	<% for post in @posts %>
 		<h4><%= post.title %></h4>

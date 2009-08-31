@@ -5,8 +5,10 @@ class Admin::LyricsController < ProtectedController
      @album = Album.find(params[:lyric][:album_id])
      @lyric.album = @album
      if @lyric.save
+       flash[:notice] = "Lyric created"
        redirect_to admin_lyrics_path
      else
+       flash[:notice] = "Sorry, lyric don't created"
        render admin_albums_path
      end
    end

@@ -6,10 +6,9 @@ class Admin::PostsController < ProtectedController
   def create
     @post = Post.new(params[:post])
     if @post.save
-      flash[:notice] = "Заметка создана"
+      flash[:notice] = "Post created"
       redirect_to admin_post_path(@post)
     else
-      flash[:notice] = "Извините, заметка не создана"
       render new_admin_post_path
     end
   end

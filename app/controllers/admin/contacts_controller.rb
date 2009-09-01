@@ -9,7 +9,6 @@ class Admin::ContactsController < ProtectedController
       flash[:notice] = "Contact created"
       redirect_to admin_contact_path(@contact)
     else
-      flash[:error] = "Sorry, contacts don't created"
       render new_admin_contact_path
     end
   end

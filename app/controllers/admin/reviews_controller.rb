@@ -9,7 +9,7 @@ class Admin::ReviewsController < ProtectedController
       flash[:notice] = "Reviews created"
       redirect_to admin_review_path(@review)
     else
-      flash[:notice] = "Sorry, reviews don't created"
+      flash[:error] = "Sorry, reviews don't created"
       render new_admin_review_path
     end
   end

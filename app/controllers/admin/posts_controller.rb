@@ -9,6 +9,7 @@ class Admin::PostsController < ProtectedController
       flash[:notice] = "Post created"
       redirect_to admin_post_path(@post)
     else
+      flash[:error] = "Sorry, posts don't created"
       render new_admin_post_path
     end
   end

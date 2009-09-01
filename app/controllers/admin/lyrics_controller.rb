@@ -8,7 +8,7 @@ class Admin::LyricsController < ProtectedController
        flash[:notice] = "Lyric created"
        redirect_to admin_lyrics_path
      else
-       flash[:notice] = "Sorry, lyric don't created"
+       flash[:error] = "Sorry, lyrics don't created"
        render admin_albums_path
      end
    end

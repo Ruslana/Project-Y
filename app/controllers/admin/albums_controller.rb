@@ -10,7 +10,7 @@ class Admin::AlbumsController < ProtectedController
        flash[:notice] = "Album created" 
        redirect_to admin_album_path(last_album)
      else
-       flash[:notice] = "Sorry, album don't created" 
+       flash[:error] = "Sorry, albums don't created"
        render new_admin_album_path
      end
    end

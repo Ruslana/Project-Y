@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   def var_layouts
     case controller_name
      when "home" 
-         "wrapper-in"
+       "wrapper-in"
      when "participants"
        "wrapper-in-sub-band1"
      else 
@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   end
   
   def last_album
-    @last_album ||= Album.find_or_create("title", "description")
+    @last_album ||= Album.find_or_create
   end
   
   helper_method :last_album, :var_layouts, :current_post

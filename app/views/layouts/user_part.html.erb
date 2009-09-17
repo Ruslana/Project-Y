@@ -31,7 +31,7 @@
 							<li><%= link_to "Discography", albums_path %></li>
 							<li><%= link_to "Lyrics", album_path(last_album) %></li>
 							<li><%= link_to "Blog", posts_path %></li>
-							<li><a href="footy-songs.html" title="Footy Songs">Footy Songs</a></li>
+							<li><%= link_to "Footy-songs", :controller => 'static_pages', :action => 'footy_songs' %></li>
 							<li><a href="downloads.html" title="Downloads">Downloads</a></li>
 						</ul>
 				</div>

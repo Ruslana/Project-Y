@@ -1,4 +1,4 @@
-require 'test_helper'
+require File.dirname(__FILE__) + '/../../test_helper'
 
 class Admin::AlbumsControllerTest < ActionController::TestCase
   context "Admin Albums controller" do
@@ -24,6 +24,7 @@ class Admin::AlbumsControllerTest < ActionController::TestCase
        end
 
        should_redirect_to "Admin::Albums#show" do
+         Album.create!(:title => 'album', :description => 'description')
          admin_album_path(Album.first)
        end
 

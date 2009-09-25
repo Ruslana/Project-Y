@@ -1,4 +1,4 @@
-require 'test_helper'
+require File.dirname(__FILE__) + '/../../test_helper'
 
 class Admin::MessagesControllerTest < ActionController::TestCase
   context "Admin Messages contreller" do

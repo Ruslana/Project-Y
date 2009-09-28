@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/../../test_helper'
+require File.dirname(__FILE__) + '/../test_helper'
 
 class PostsControllerTest < ActionController::TestCase
   context "Posts controller" do

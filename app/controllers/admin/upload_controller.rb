@@ -1,3 +1,3 @@
-class Admin::UploadController < ApplicationController
+class Admin::UploadController < ProtectedController
   
 end

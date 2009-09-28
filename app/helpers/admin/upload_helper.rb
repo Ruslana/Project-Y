@@ -1,2 +1,0 @@
-module Admin::UploadHelper
-end

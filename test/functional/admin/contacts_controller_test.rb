@@ -5,6 +5,8 @@ class Admin::ContactsControllerTest < ActionController::TestCase
   context "Admin Contacts controller" do
     setup do
       @album = Factory(:album)
+      @user = Factory(:user)
+      session[:user_id] = @user.id
      end
      
      context "on GET to :new" do

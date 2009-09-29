@@ -2,6 +2,12 @@ require File.dirname(__FILE__) + '/../../test_helper'
 
 class Admin::MessagesControllerTest < ActionController::TestCase
   context "Admin Messages contreller" do
+    
+    setup do
+      @user = Factory(:user)
+      session[:user_id] = @user.id
+    end
+    
     context "on GET :index" do
       setup do
         get :index

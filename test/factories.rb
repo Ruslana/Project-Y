@@ -29,3 +29,8 @@ Factory.define :message do |p|
   p.your_email "email"
   p.your_message "message"
 end
+Factory.define :user do |p|
+  p.name "name"
+  p.hashed_password "bla"
+  p.salt "salt"
+end

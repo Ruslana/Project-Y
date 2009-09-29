@@ -4,7 +4,9 @@ class Admin::ParticipantsControllerTest < ActionController::TestCase
   context "Admin Participants controller" do
 
      setup do
-      @album = Factory(:album)      
+      @album = Factory(:album)  
+      @user = Factory(:user)
+      session[:user_id] = @user.id    
      end
 
      context "on Participant to :create" do

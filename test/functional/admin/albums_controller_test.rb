@@ -2,6 +2,11 @@ require File.dirname(__FILE__) + '/../../test_helper'
 
 class Admin::AlbumsControllerTest < ActionController::TestCase
   context "Admin Albums controller" do
+    
+    setup do
+      @user = Factory(:user)
+      session[:user_id] = @user.id
+    end
 
      context "on GET to :new" do
        setup do

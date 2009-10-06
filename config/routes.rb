@@ -14,6 +14,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :order_transactions
     admin.resources :messages
     admin.resources :users
+    admin.resources :uploads
   end
   
   map.resources :albums

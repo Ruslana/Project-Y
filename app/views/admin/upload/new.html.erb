@@ -1,0 +1,8 @@
+<%#= error_messages_for :upload %>
+
+<% form_for([:admin, @upload], :html => { :multipart => true }) do |form| %>
+		
+	<%= form.file_field :file %>
+		
+	<p><%= form.submit "Upload file" %></p>
+<% end %>

@@ -34,3 +34,6 @@ Factory.define :user do |p|
   p.hashed_password "bla"
   p.salt "salt"
 end
+Factory.define :upload do |p|
+  p.file_name "file_name"
+end

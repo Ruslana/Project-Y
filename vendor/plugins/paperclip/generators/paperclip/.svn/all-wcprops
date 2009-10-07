@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/vshoc/!svn/ver/38/trunk/vendor/plugins/paperclip/generators/paperclip
+END
+USAGE
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/vshoc/!svn/ver/38/trunk/vendor/plugins/paperclip/generators/paperclip/USAGE
+END
+paperclip_generator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/vshoc/!svn/ver/38/trunk/vendor/plugins/paperclip/generators/paperclip/paperclip_generator.rb
+END

@@ -2,7 +2,7 @@
 
 <% form_for([:admin, @upload], :html => { :multipart => true }) do |form| %>
 		
-	<%= form.file_field :file %>
+	<%= form.file_field :music %>
 		
 	<p><%= form.submit "Upload file" %></p>
 <% end %>

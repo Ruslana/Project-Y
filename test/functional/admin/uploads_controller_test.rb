@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../../test_helper'
 
-class Admin::UploadControllerTest < ActionController::TestCase
-  context "Admin Upload controller" do
+class Admin::UploadsControllerTest < ActionController::TestCase
+  context "Admin Uploads controller" do
 
     setup do
       @album = Factory(:album)

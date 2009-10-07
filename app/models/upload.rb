@@ -2,7 +2,7 @@ class Upload < ActiveRecord::Base
   
   after_create :rename_file
   
-  #has_attached_file :file
+  has_attached_file :music
   
   protected
   

@@ -22,7 +22,7 @@ class Admin::UploadsControllerTest < ActionController::TestCase
 
    context "on POST to :create" do
      setup do
-       post :create, :upload => {:name => 'name', :size => '11', :file_name => 'file_name'}
+       post :create, :upload => {:name => 'name'}
      end
 
      teardown do
@@ -34,7 +34,7 @@ class Admin::UploadsControllerTest < ActionController::TestCase
      end
 
      should "create upload" do
-       assert Upload.exists?(:file_name => 'file_name')
+       assert Upload.exists?(:name => 'name')
      end
    end
 
@@ -48,17 +48,17 @@ class Admin::UploadsControllerTest < ActionController::TestCase
      should_assign_to :upload
      should_render_template :show
    end
-=begin
+
    context "on GET :index" do
      setup do
        get :index
      end
 
      should_respond_with :success
-     should_assign_to :posts
+     should_assign_to :uploads
      should_render_template :index
    end
-
+=begin
    context "on GET to :edit" do
       setup do
         @post = Factory(:post)
@@ -87,21 +87,21 @@ class Admin::UploadsControllerTest < ActionController::TestCase
       assert_equal "new", @post.body
     end
   end
-
+=end
    context "on DELETE to :destroy" do
      setup do
-       @post = Factory(:post)
-       delete :destroy, :id => @post.id
+       @upload = Factory(:upload)
+       delete :destroy, :id => @upload.id
      end
 
-     should "destroy post" do
-       assert ! Post.exists?(@post.id)
+     should "destroy upload" do
+       assert ! Upload.exists?(@upload.id)
      end
 
-     should_redirect_to "Admin::Post#index" do
-       admin_posts_path
+     should_redirect_to "Admin::Upload#index" do
+       admin_uploads_path
      end
    end
-=end
+   
    end
 end

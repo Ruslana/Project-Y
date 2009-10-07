@@ -35,5 +35,5 @@ Factory.define :user do |p|
   p.salt "salt"
 end
 Factory.define :upload do |p|
-  p.file_name "file_name"
+  p.name "name"
 end

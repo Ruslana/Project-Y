@@ -18,6 +18,13 @@ class Admin::UploadsController < ProtectedController
   end
   
   def index
+    @uploads = Upload.paginate :page => params[:page], :per_page => 20
   end
   
+  def destroy
+     @upload = Upload.find(params[:id])
+     @upload.destroy
+     redirect_to :action => 'index'
+   end
+   
 end

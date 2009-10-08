@@ -18,7 +18,7 @@ class Admin::UploadsController < ProtectedController
   end
   
   def index
-    @uploads = Upload.paginate :page => params[:page], :per_page => 20
+    @uploads = Upload.paginate :page => params[:page], :per_page => 10
   end
   
   def destroy

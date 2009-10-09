@@ -9,13 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091009064620) do
+ActiveRecord::Schema.define(:version => 20091009092045) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "description"
+  end
+
+  create_table "albums_uploads", :id => false, :force => true do |t|
+    t.integer "album_id"
+    t.integer "upload_id"
   end
 
   create_table "contacts", :force => true do |t|

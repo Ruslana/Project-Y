@@ -15,6 +15,7 @@ class Admin::UploadsController < ProtectedController
   
   def edit
     @upload = Upload.find(params[:id])
+    @albums = Album.find(:all)
   end
   
   def show

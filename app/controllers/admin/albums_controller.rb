@@ -17,6 +17,7 @@ class Admin::AlbumsController < ProtectedController
    def show
      @album = Album.find(params[:id])
      @lyrics = @album.lyrics
+     @uploads = @album.uploads
    end
 
    def index

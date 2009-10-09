@@ -1,7 +1,14 @@
 <% form_for([:admin, @upload], :html => { :multipart => true }) do |form| %>
 
 	<%=  link_to @upload.name, @upload.music.url %><br /><br />
-	<%= form.file_field :file %><br />
+	<%= form.file_field :file %><br /><br />
+	<strong>Albums:</strong>
+	<br />
+	<% for album in @albums %>
+		<%= check_box_tag "upload[album_ids][]", album.id, @upload.albums.include?(album) %>
+		<%= album.title %>
+		<br />
+	<% end %>
 		
 	<p><%= form.submit "Upload file" %></p>
 <% end %>

@@ -1,14 +1,19 @@
 <h2><%= flash[:notice] %></h2>
 <h2><%= @album.title %></h2>
-<% for lyric in @album.lyrics %>
-	<%= lyric.title %><br />
-	<%= lyric.text_song %>
-<% end %>
-<%= link_to "back", admin_albums_path %>
-<%= link_to "edit", edit_admin_album_path(@album) %>
-<%= link_to "destroy", [:admin, @album], 
-		:confirm => 'Are you sure?', 
-		:method => :delete
-		%>
-<h3>Liryc:</h3>
+	<%= link_to "back", admin_albums_path %> |
+	<%= link_to "edit album", edit_admin_album_path(@album) %> |
+	<%= link_to "delete album", [:admin, @album], 
+			:confirm => 'Are you sure?', 
+			:method => :delete
+			%><br /><br />
+	<strong>Songs:</strong><br />
+	<% for upload in @uploads %>
+		<%= upload.name %><br />
+	<% end %><br />
+	<strong>Lirycs:</strong>
+	<% for lyric in @album.lyrics %>
+		<%= lyric.title %><br />
+		<%= lyric.text_song %>
+	<% end %>
+<h3>New Liryc:</h3>
 <%= render :partial => 'admin/lyrics/form' %>

@@ -36,4 +36,5 @@ Factory.define :user do |p|
 end
 Factory.define :upload do |p|
   p.name "name"
+  p.title "title"
 end

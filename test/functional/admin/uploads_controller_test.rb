@@ -22,7 +22,7 @@ class Admin::UploadsControllerTest < ActionController::TestCase
 
    context "on POST to :create" do
      setup do
-       post :create, :upload => {:name => 'name'}
+       post :create, :upload => {:name => 'name', :title => 'title'}
      end
 
      teardown do
@@ -58,50 +58,50 @@ class Admin::UploadsControllerTest < ActionController::TestCase
      should_assign_to :uploads
      should_render_template :index
    end
-=begin
+
    context "on GET to :edit" do
       setup do
-        @post = Factory(:post)
-        get :edit, :id => @post.id
+        @upload = Factory(:upload)
+        get :edit, :id => @upload.id
       end
 
       should_respond_with :success
-      should_assign_to :post
+      should_assign_to :upload
       should_render_template :edit
       should_render_a_form
     end
 
     context "on PUT to :update" do
     setup do
-      @post = Factory(:post, :title => "old", :body => "old")
-      put :update, :id => @post.id, :post => {:title => "new", :body => "new"}
+      @upload = Factory(:upload, :name => "old", :title => "old")
+      put :update, :id => @upload.id, :upload => {:name => "new", :title => "new"}
     end
 
-    should_redirect_to "Admin::Post#show" do
-      admin_post_path(@post)
+    should_redirect_to "Admin::Upload#show" do
+      admin_upload_path(@upload)
     end
 
-    should "update post" do
-      @post.reload
-      assert_equal "new", @post.title
-      assert_equal "new", @post.body
+    should "update upload" do
+      @upload.reload
+      assert_equal "new", @upload.name
+      assert_equal "new", @upload.title
     end
   end
-=end
-   context "on DELETE to :destroy" do
-     setup do
-       @upload = Factory(:upload)
-       delete :destroy, :id => @upload.id
-     end
 
-     should "destroy upload" do
-       assert ! Upload.exists?(@upload.id)
-     end
-
-     should_redirect_to "Admin::Upload#index" do
-       admin_uploads_path
-     end
+  context "on DELETE to :destroy" do
+   setup do
+     @upload = Factory(:upload)
+     delete :destroy, :id => @upload.id
    end
+
+   should "destroy upload" do
+     assert ! Upload.exists?(@upload.id)
+   end
+
+   should_redirect_to "Admin::Upload#index" do
+     admin_uploads_path
+   end
+  end
    
-   end
+ end
 end

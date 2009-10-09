@@ -12,33 +12,14 @@
 					<th class="last" style="text-align:center">Sample</th>
 				</tr>
 				<tr class="one">
-					<td><strong>Let's Fall in Love</strong></td>
-					<td><input type="checkbox" class="box" name="song" value="El Magnifico" id="El Magnifico" /> <label for="El Magnifico"><strong>El Magnifico</strong></label></td>
-					<td><span>4:00</span></td>
-					<td>$1.00</td>
-					<td style="text-align:center"><a href="#" title="Listen to sample"><img src="images/speaker.gif" alt="Listen to sample" title="Listen to sample" /></a></td>
+					<% for upload in @album.uploads %>
+					<td><strong><%= @album.title %></strong></td>
+					<td><%= check_box_tag :name => "song", :value => upload.title, :id => upload.title %><strong><%= upload.title %></strong></td>
+					<td><span><%= upload.time %></span></td>
+					<td><%= upload.price %></td>
+					<td style="text-align:center"><%=link_to image_tag("/images/speaker.gif"), upload.file.url %></td>
 				</tr>
-				<tr class="two">
-					<td><strong>Let's Fall in Love</strong></td>
-					<td><input type="checkbox" class="box" name="song" value="Pendulum" id="Pendulum" /> <label for="Pendulum"><strong>Pendulum</strong></label></td>
-					<td><span>3:36</span></td>
-					<td>$1.00</td>
-					<td style="text-align:center"><a href="#" title="Listen to sample"><img src="images/speaker.gif" alt="Listen to sample" title="Listen to sample" /></a></td>
-				</tr>
-				<tr class="one">
-					<td><strong>Let's Fall in Love</strong></td>
-					<td><input type="checkbox" class="box" name="song" value="On and On" id="On and On" /> <label for="On and On"><strong>On and On</strong></label></td>
-					<td><span>2:59</span></td>
-					<td>$1.00</td>
-					<td style="text-align:center"><a href="#" title="Listen to sample"><img src="images/speaker.gif" alt="Listen to sample" title="Listen to sample" /></a></td>
-				</tr>
-				<tr class="two">
-					<td><strong>Let's Fall in Love</strong></td>
-					<td><input type="checkbox" class="box" name="song" value="I Just dont Understand" id="I Just dont Understand" /> <label for="I Just dont Understand"><strong>I Just don't Understand</strong></label></td>
-					<td><span>3:01</span></td>
-					<td>$1.00</td>
-					<td style="text-align:center"><a href="#" title="Listen to sample"><img src="images/speaker.gif" alt="Listen to sample" title="Listen to sample" /></a></td>
-				</tr>
+				<% end %>			
 				<tr><td class="two-last" colspan="5"></td></tr>
 				<tr class="two">
 					<td><strong>Total Ttrack(s)</strong></td>

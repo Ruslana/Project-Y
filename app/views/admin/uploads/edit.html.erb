@@ -1,6 +1,10 @@
 <% form_for([:admin, @upload], :html => { :multipart => true }) do |form| %>
 
 	<%=  link_to @upload.name, @upload.music.url %><br /><br />
+	<%= form.label :time %>:
+	<%= form.text_field :time %><br />
+	<%= form.label :price %>:
+	<%= form.text_field :price %><br /><br />
 	<%= form.file_field :file %><br /><br />
 	<strong>Albums:</strong>
 	<br />

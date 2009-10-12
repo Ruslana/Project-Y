@@ -17,7 +17,7 @@
 					<td><%= check_box_tag :name => "song", :value => upload.title, :id => upload.title %><strong><%= upload.title %></strong></td>
 					<td><span><%= upload.time %></span></td>
 					<td><%= upload.price %></td>
-					<td style="text-align:center"><%=link_to image_tag("/images/speaker.gif"), upload.file.url %></td>
+					<td style="text-align:center"><%=link_to image_tag("/images/speaker.gif"), upload.file.url, alt="Listen to sample" title="Listen to sample" %></td>
 				</tr>
 				<% end %>			
 				<tr><td class="two-last" colspan="5"></td></tr>

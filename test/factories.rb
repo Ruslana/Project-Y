@@ -37,4 +37,6 @@ end
 Factory.define :upload do |p|
   p.name "name"
   p.title "title"
+  p.time "3:00"
+  p.price "$1"
 end

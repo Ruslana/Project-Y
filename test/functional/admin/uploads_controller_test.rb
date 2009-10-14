@@ -22,7 +22,13 @@ class Admin::UploadsControllerTest < ActionController::TestCase
 
    context "on POST to :create" do
      setup do
-       post :create, :upload => {:name => 'name', :title => 'title'}
+       post :create, :upload => {:file => fixture_file_upload('/files/rails.png', 'image/png'),
+                                 :name => "name",
+                                 :title => "title",
+                                 :time => "3:00",
+                                 :price => "$1"
+                                 }
+                     
      end
 
      teardown do
@@ -34,7 +40,7 @@ class Admin::UploadsControllerTest < ActionController::TestCase
      end
 
      should "create upload" do
-       assert Upload.exists?(:name => 'name')
+       assert Upload.exists?(:name => 'name' )
      end
    end
 

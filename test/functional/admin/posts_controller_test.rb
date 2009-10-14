@@ -22,7 +22,9 @@ class Admin::PostsControllerTest < ActionController::TestCase
 
      context "on POST to :create" do
        setup do
-         post :create, :post => {:title => 'post', :body => 'body_post', :date => Date.new(2009,6,25)}
+         post :create, :post => {:title => 'post', 
+                                 :body => 'body_post',
+                                 :date => Date.new(2009,6,25)}
        end
 
        teardown do

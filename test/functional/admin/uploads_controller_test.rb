@@ -23,10 +23,9 @@ class Admin::UploadsControllerTest < ActionController::TestCase
    context "on POST to :create" do
      setup do
        post :create, :upload => {:file => fixture_file_upload('/files/rails.png', 'image/png'),
-                                 :time => "3:00",
-                                 :price => "$1"
-                                 }
-                     
+              :time => "3:00",
+              :price => "$1"
+              }                     
      end
 
      teardown do
@@ -78,7 +77,10 @@ class Admin::UploadsControllerTest < ActionController::TestCase
     context "on PUT to :update" do
     setup do
       @upload = Factory(:upload, :price => "old", :time => "old")
-      put :update, :id => @upload.id, :upload => {:price => "new", :time => "new"}
+      put :update, :id => @upload.id, :upload => {:price => "new",
+         :time => "new",
+         :file => fixture_file_upload('/files/rails.png', 'image/png')
+         }
     end
 
     should_redirect_to "Admin::Upload#show" do

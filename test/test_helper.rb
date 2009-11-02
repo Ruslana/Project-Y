@@ -21,6 +21,17 @@ class ActiveSupport::TestCase
     ActiveMerchant::Billing::CreditCard.new( credit_card_hash(options) ) 
   end 
   
+  def address(options = {})
+    { :name       => 'Ruslana',
+      :address1   => 'vaterberk',
+      :address2   => '298 sudabek',
+      :city       => 'Santy-panty',
+      :state      => 'Lya-lya',
+      :country    => 'Russia',
+      :zip        => '56723'
+    }.update(options)
+  end
+  
   self.use_transactional_fixtures = true
 
   self.use_instantiated_fixtures  = false

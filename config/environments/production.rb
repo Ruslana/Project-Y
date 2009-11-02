@@ -12,9 +12,9 @@ config.after_initialize do
   ActiveMerchant::Billing::Base.mode = :production 
   
   OrderTransaction.gateway = 
-    ActiveMerchant::Billing::BraintreeGateway.new( 
-      :login => ‘LIVE_LOGIN’, 
-      :password => ‘LIVE_PASSWORD’ 
+    ActiveMerchant::Billing::PaypalGateway.new( 
+      :login => 'LIVE_LOGIN', 
+      :password => 'LIVE_PASSWORD' 
     ) 
 end 
 

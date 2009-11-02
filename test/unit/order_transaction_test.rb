@@ -15,4 +15,15 @@ class OrderTransactionTest < ActiveSupport::TestCase
     assert_equal BogusGateway::SUCCESS_MESSAGE, auth.message 
     assert_equal BogusGateway::AUTHORIZATION, auth[:reference] 
   end
+  
+  def test_failed_authorization
+    auth = OrderTransaction.authorize(
+              @amount,
+              credit_card(:number => '2')
+            )
+    assert !auth.success
+    assert_equal 'authorization', auth.action
+    assert_equal BogusGateway::FAILURE_MESSAGE, auth.message
+  end
+  
 end

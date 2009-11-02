@@ -22,8 +22,9 @@ end
  
 config.to_prepare do 
   OrderTransaction.gateway = 
-    ActiveMerchant::Billing::BraintreeGateway.new( 
-      :login    => 'demo', 
-      :password => 'password' 
+    ActiveMerchant::Billing::PaypalGateway.new( 
+      :login    => 'ruslan', 
+      :password => '256742258',
+      :signature => 'ruslan_1256742325_per@gmail.com'
     ) 
 end 

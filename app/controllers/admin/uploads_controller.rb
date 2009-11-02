@@ -4,7 +4,7 @@ class Admin::UploadsController < ProtectedController
   end
   
   def create
-    @upload = Upload.create(params[:upload])
+    @upload = Upload.create(params[:upload]
     if @upload.save
       flash[:notice] = "File uploaded"
       redirect_to admin_upload_path(@upload)

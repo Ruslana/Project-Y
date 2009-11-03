@@ -43,4 +43,34 @@ class OrderTest < ActiveSupport::TestCase
     end
   end
   
+  def test_successful_payment_capture 
+    order = orders(:authorized) 
+
+    assert_difference 'order.transactions.count' do 
+      capture = order.capture_payment 
+      assert order.paid? 
+      assert capture.success? 
+    end 
+  end 
+  
+  def test_failed_payment_capture 
+    order = orders(:uncapturable) 
+
+    assert_difference 'order.transactions.count' do 
+      capture = order.capture_payment 
+      assert order.authorized? 
+      assert !capture.success? 
+    end 
+  end 
+  
+  def test_error_during_payment_capture 
+    order = orders(:uncapturable_error) 
+
+    assert_difference 'order.transactions.count' do 
+      capture = order.capture_payment 
+      assert order.authorized? 
+      assert !capture.success? 
+    end 
+  end 
+  
 end

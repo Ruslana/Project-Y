@@ -1,11 +1,22 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  description: MyString
-  amount: 1
-  state: MyString
-
-two:
-  description: MyString
-  amount: 1
-  state: MyString
+pending: 
+  description: pending order 
+  amount: 100 
+  state: pending 
+  
+authorized: 
+  description: authorized order 
+  amount: 100 
+  state: authorized 
+  
+uncapturable: 
+  description: authorized, but uncapturable 
+  amount: 100 
+  state: authorized 
+  
+uncapturable_error:
+  description: authorized, but uncapturable due to error 
+  amount: 100 
+  state: authorized 
+    

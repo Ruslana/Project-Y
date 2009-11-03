@@ -55,5 +55,17 @@ class Order < ActiveRecord::Base
     end 
   end 
   
-    
+  def capture_payment(options = {}) 
+    transaction do 
+      capture = OrderTransaction.capture(amount, authorization_reference, options) 
+      transactions.push(capture) 
+      if capture.success? 
+        payment_captured! 
+      else 
+        transaction_declined!
+      end 
+      capture 
+    end 
+  end 
+      
 end

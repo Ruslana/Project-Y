@@ -8,12 +8,12 @@ class ActiveSupport::TestCase
   
   def credit_card_hash(options = {}) 
     { :number     => '1',
-      :first_name => 'Cody', 
-      :last_name  => 'Fauser', 
-      :month      => '8', 
+      :first_name => 'Ruslana', 
+      :last_name  => 'Kiverskaya', 
+      :month      => '11', 
       :year       => "#{ Time.now.year + 1 }", 
       :verification_value => '123', 
-      :type       => 'visa' 
+      :type       => 'visa'
     }.update(options) 
   end
    
@@ -25,10 +25,10 @@ class ActiveSupport::TestCase
     { :name       => 'Ruslana',
       :address1   => 'vaterberk',
       :address2   => '298 sudabek',
-      :city       => 'Santy-panty',
-      :state      => 'Lya-lya',
-      :country    => 'Russia',
-      :zip        => '56723'
+      :city       => 'Beverly',
+      :state      => 'CA',
+      :country    => 'US',
+      :zip        => '90210'
     }.update(options)
   end
   

@@ -13,8 +13,9 @@ config.after_initialize do
   
   OrderTransaction.gateway = 
     ActiveMerchant::Billing::PaypalGateway.new( 
-      :login => 'LIVE_LOGIN', 
-      :password => 'LIVE_PASSWORD' 
+     :login    => 'ruslan_1257315837_biz_api1.gmail.com', 
+     :password => '1257315903',
+     :signature => 'AFcWxV21C7fd0v3bYYYRCpSSRl31AwI3GB8u9URGrjFPwoZvZzN3nQNT'
     ) 
 end 
 

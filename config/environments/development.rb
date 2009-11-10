@@ -17,11 +17,16 @@ config.action_controller.perform_caching             = false
 config.action_mailer.raise_delivery_errors = false
 
 config.after_initialize do 
-  ActiveMerchant::Billing::Base.mode = :test
-    ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+  ActiveMerchant::Billing::Base.mode = :test 
+end 
+
+config.to_prepare do 
+  OrderTransaction.gateway = 
+    ActiveMerchant::Billing::PaypalExpressGateway.new( 
       :login    => 'ruslan_1257315837_biz_api1.gmail.com', 
       :password => '1257315903',
       :signature => 'AFcWxV21C7fd0v3bYYYRCpSSRl31AwI3GB8u9URGrjFPwoZvZzN3nQNT'
-    )
-end
- 
+    ) 
+end 
+
+

@@ -11,7 +11,7 @@ class ActiveSupport::TestCase
       :first_name => 'Ruslana', 
       :last_name  => 'Kiverskaya', 
       :month      => '11', 
-      :year       => "#{ Time.now.year + 1 }", 
+      :year       => "2019", 
       :verification_value => '123', 
       :type       => 'visa'
     }.update(options) 
@@ -22,9 +22,9 @@ class ActiveSupport::TestCase
   end 
   
   def address(options = {})
-    { :name       => 'Ruslana',
+    { :name       => 'Bebeka',
       :address1   => 'vaterberk',
-      :address2   => '298 sudabek',
+     # :address2   => '298 sudabek',
       :city       => 'Beverly',
       :state      => 'CA',
       :country    => 'US',

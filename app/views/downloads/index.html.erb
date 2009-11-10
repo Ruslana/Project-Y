@@ -11,21 +11,23 @@
 					<th>Price</th>
 					<th class="last" style="text-align:center">Sample</th>
 				</tr>
-				<tr class="one">
-					<% for upload in @album.uploads %>
+				<% for upload in @album.uploads %>
+					<tr class="one">
 					<td><strong><%= @album.title %></strong></td>
 					<td><%= check_box_tag :name => "song", :value => upload.title, :id => upload.title %><strong><%= upload.title %></strong></td>
 					<td><span><%= upload.time %></span></td>
 					<td><%= upload.price %></td>
-					<td style="text-align:center"><%= link_to image_tag("/images/speaker.gif"), upload.file.url %></td>
-				</tr>
-				<% end %>			
+					<td style="text-align:center"><%= link_to image_tag("/images/speaker.gif"), upload.file.url %></td>		
+					</tr>
+				<% end %>	
 				<tr><td class="two-last" colspan="5"></td></tr>
 				<tr class="two">
 					<td><strong>Total Ttrack(s)</strong></td>
 					<td colspan="2"><strong style="float:right;padding-right:25px;">Total price</strong><input type="text" name="total" value="3" id="total" style="width:40px" /></td>
 					<td> $3.00</td>
-					<td style="text-align:center"><input type="submit" name="buy" value="&nbsp;" class="buy" /></td>
+					<td style="text-align:center">
+						<%#= link_to image_tag("/images/buy-button.gif"), :action => 'checkout' %>
+						<input type="submit" name="buy" value="&nbsp;" class="buy" /></td>
 				</tr>			
 				</table>
 				</form>

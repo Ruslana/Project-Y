@@ -4,8 +4,8 @@ class OrderTransaction < ActiveRecord::Base
   cattr_accessor :gateway 
 
   class << self 
-    def authorize(amount, credit_card, options = {}) 
-      process('authorization', amount) do |gw| 
+    def authorize(money, options = {}) 
+      process('authorization', money) do |gw| 
         gw.authorize(amount, credit_card, options) 
       end 
     end 
@@ -18,9 +18,9 @@ class OrderTransaction < ActiveRecord::Base
 
     private 
 
-    def process(action, amount = nil) 
+    def process(action, money = nil) 
       result = OrderTransaction.new 
-      result.amount = amount 
+      result.money = money 
       result.action = action 
       begin 
         response = yield gateway 

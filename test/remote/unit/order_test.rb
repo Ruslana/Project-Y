@@ -2,14 +2,15 @@ require File.dirname(__FILE__) + '/../../test_helper'
 
 class OrderIntegrationTest < ActiveSupport::TestCase  
   def setup 
-    OrderTransaction.gateway = PaypalGateway.new( 
+    OrderTransaction.gateway = PaypalExpressGateway.new( 
                                  :login    => 'ruslan_1257315837_biz_api1.gmail.com', 
                                  :password => '1257315903',
                                  :signature => 'AFcWxV21C7fd0v3bYYYRCpSSRl31AwI3GB8u9URGrjFPwoZvZzN3nQNT' 
                                ) 
     
     @order = orders(:pending) 
-    @credit_card = credit_card(:number => '4224645442396111') 
+    @money = '12'
+    @credit_card = credit_card(:number => '4224645442396895') 
     @options = { :description => 'A store purchase', 
                  :billing_address => address,
                  :ip => '127.0.0.1'
@@ -18,7 +19,7 @@ class OrderIntegrationTest < ActiveSupport::TestCase
   
   def test_successful_order_authorization 
     assert_difference '@order.transactions.count' do 
-      authorization = @order.authorize_payment(@credit_card, @options) 
+      authorization = @order.authorize_payment(@money, @options) 
       assert_equal authorization.reference, 
                    @order.authorization_reference 
       assert authorization.success? 

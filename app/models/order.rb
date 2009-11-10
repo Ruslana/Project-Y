@@ -31,10 +31,10 @@ class Order < ActiveRecord::Base
                 :to   => :authorized 
   end 
   
-  def authorize_payment(credit_card, options = {}) 
+  def authorize_payment(money, options = {}) 
     options[:order_id] = number 
     transaction do 
-      authorization = OrderTransaction.authorize(amount, credit_card, options) 
+      authorization = OrderTransaction.authorize(money, options) 
       transactions.push(authorization) 
       if authorization.success? 
         payment_authorized! 

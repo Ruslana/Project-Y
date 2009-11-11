@@ -23,12 +23,9 @@ class Admin::UploadsControllerTest < ActionController::TestCase
    context "on POST to :create" do
      setup do
        post :create, :upload => {:file => fixture_file_upload('/files/rails.png', 'image/png'),
-                                 :name => "name",
-                                 :title => "title",
-                                 :time => "3:00",
-                                 :price => "$1"
-                                 }
-                     
+              :time => "3:00",
+              :price => "$1"
+              }                     
      end
 
      teardown do
@@ -39,8 +36,8 @@ class Admin::UploadsControllerTest < ActionController::TestCase
        admin_upload_path(Upload.first)
      end
 
-     should "create upload" do
-       assert Upload.exists?(:name => 'name' )
+     should "create upload" do       
+       assert Upload.exists?(:price => "$1" )
      end
    end
 
@@ -79,8 +76,11 @@ class Admin::UploadsControllerTest < ActionController::TestCase
 
     context "on PUT to :update" do
     setup do
-      @upload = Factory(:upload, :name => "old", :title => "old")
-      put :update, :id => @upload.id, :upload => {:name => "new", :title => "new"}
+      @upload = Factory(:upload, :price => "old", :time => "old")
+      put :update, :id => @upload.id, :upload => {:price => "new",
+         :time => "new",
+         :file => fixture_file_upload('/files/rails.png', 'image/png')
+         }
     end
 
     should_redirect_to "Admin::Upload#show" do
@@ -89,8 +89,8 @@ class Admin::UploadsControllerTest < ActionController::TestCase
 
     should "update upload" do
       @upload.reload
-      assert_equal "new", @upload.name
-      assert_equal "new", @upload.title
+      assert_equal "new", @upload.price
+      assert_equal "new", @upload.time
     end
   end
 

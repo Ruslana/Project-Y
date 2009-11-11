@@ -4,8 +4,12 @@ class Admin::UploadsController < ProtectedController
   end
   
   def create
+<<<<<<< HEAD:app/controllers/admin/uploads_controller.rb
     @upload = Upload.create(params[:upload]
     if @upload.save
+=======
+    if @upload = Upload.create(params[:upload])
+>>>>>>> be858547170d4ef0558b23a6619b61266190d6eb:app/controllers/admin/uploads_controller.rb
       flash[:notice] = "File uploaded"
       redirect_to admin_upload_path(@upload)
     else

@@ -8,15 +8,7 @@ config.cache_classes = true
 config.action_controller.consider_all_requests_local = false
 config.action_controller.perform_caching             = true
 config.action_view.cache_template_loading            = true
-config.after_initialize do 
-  ActiveMerchant::Billing::Base.mode = :production 
-  
-  OrderTransaction.gateway = 
-    ActiveMerchant::Billing::BraintreeGateway.new( 
-      :login => ‘LIVE_LOGIN’, 
-      :password => ‘LIVE_PASSWORD’ 
-    ) 
-end 
+
 
 
 # See everything in the log (default is :info)

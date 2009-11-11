@@ -7,8 +7,7 @@ RAILS_GEM_VERSION = '2.3.2' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
-  require 'rubygems'
-  require 'active_merchant'
+  config.gem "activemerchant", :lib => "active_merchant", :version => "1.4.2"
   
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers

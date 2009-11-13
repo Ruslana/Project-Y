@@ -29,9 +29,3 @@ config.action_mailer.delivery_method = :test
 config.gem "thoughtbot-shoulda", :lib => "shoulda", :source => "http://gems.github.com"
 config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :source => "http://gems.github.com"
 
-config.after_initialize do 
-  ActiveMerchant::Billing::Base.mode = :test 
-  
-  OrderTransaction.gateway = 
-    ActiveMerchant::Billing::BogusGateway.new 
-end 

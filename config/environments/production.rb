@@ -8,16 +8,7 @@ config.cache_classes = true
 config.action_controller.consider_all_requests_local = false
 config.action_controller.perform_caching             = true
 config.action_view.cache_template_loading            = true
-config.after_initialize do 
-  ActiveMerchant::Billing::Base.mode = :production 
-  
-  OrderTransaction.gateway = 
-    ActiveMerchant::Billing::PaypalExpressGateway.new( 
-     :login    => 'ruslan_1257315837_biz_api1.gmail.com', 
-     :password => '1257315903',
-     :signature => 'AFcWxV21C7fd0v3bYYYRCpSSRl31AwI3GB8u9URGrjFPwoZvZzN3nQNT'
-    ) 
-end 
+
 
 
 # See everything in the log (default is :info)

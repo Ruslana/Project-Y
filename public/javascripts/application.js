@@ -1,2 +1,21 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+function recalculate_totals(){
+	recalculate_total_amount();
+	recalculate_total_price();
+}
+
+function recalculate_total_amount(){
+	$("total_tracks").value = checked_checkboxes().size();
+}
+
+function recalculate_total_price(){
+	var sum = checked_checkboxes().inject(0, function(sum, n){
+		return sum + parseFloat(n.value);
+	})
+	$('total_price').innerHTML = sum;
+}
+
+function checked_checkboxes(){
+	return $$(".track_checkbox").findAll(function(n){
+		return n.checked;
+	})
+}

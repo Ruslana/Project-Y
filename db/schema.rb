@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091009145258) do
+ActiveRecord::Schema.define(:version => 20091114084610) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
@@ -25,13 +25,6 @@ ActiveRecord::Schema.define(:version => 20091009145258) do
 
   create_table "contacts", :force => true do |t|
     t.string   "some_contact"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "downloads", :force => true do |t|
-    t.string   "title_whole_music"
-    t.string   "title_cut_music"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -52,25 +45,15 @@ ActiveRecord::Schema.define(:version => 20091009145258) do
     t.datetime "updated_at"
   end
 
-  create_table "order_transactions", :force => true do |t|
-    t.integer  "order_id"
+  create_table "orders", :force => true do |t|
     t.integer  "amount"
-    t.boolean  "success"
-    t.string   "reference"
-    t.string   "message"
-    t.string   "action"
-    t.text     "params"
-    t.boolean  "test"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "orders", :force => true do |t|
-    t.string   "description"
-    t.integer  "amount"
-    t.string   "state",       :default => "pending"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "orders_uploads", :id => false, :force => true do |t|
+    t.integer "order_id"
+    t.integer "upload_id"
   end
 
   create_table "participants", :force => true do |t|

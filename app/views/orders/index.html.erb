@@ -1,9 +1,8 @@
-<!-- home body -->
 <div id="content-sub">
 	<div id="downloads-tables">
 		<h3 title="Download Tracks">Download Tracks</h3>
 		
-		<form action="downloads/checkout" method="post">
+		<% form_for :order, :url => {:action => "before_purchase"} do |form| %>
 			<table cellpadding="0" cellspacing="0" summary="List of downloadable songs">
 				<tr>
 					<th class="first">Album Title</th>
@@ -12,13 +11,13 @@
 					<th>Price</th>
 					<th class="last" style="text-align:center">Sample</th>
 				</tr>
-				
+			
 				<% for upload in @album.uploads %>
 					<tr class="one">
 					<td><strong><%= @album.title %></strong></td>
 					<td>
-						<%= check_box_tag "upload[album_ids][]", album.id, @upload.albums.include?(album) %>
-						<%= check_box_tag("song", upload.title, false, {:value => upload.price, :onchange => "recalculate_totals();", :class => 'track_checkbox'}) %>
+						<%= check_box_tag( "order[upload_ids][]", upload.id, false, {:value => upload.price, :onchange => "recalculate_totals();", :class => 'track_checkbox'} ) %>
+						<%#= check_box_tag("song", upload.title, false, {:value => upload.price, :onchange => "recalculate_totals();", :class => 'track_checkbox'}) %>
 						<strong><%= upload.title %></strong>
 					</td>
 					<td><span><%= upload.time %></span></td>
@@ -39,10 +38,11 @@
 					</td>
 					<td id="total_price">0.00</td> 
 					<td style="text-align:center">
-						<input type="submit" name="buy" value="&nbsp;" class="buy" />
+						<%= form.submit "buy" %>
 					</td>
 				</tr>			
 			</table>
-		</form>
+	
+		<% end %>
 	</div>	 	
 </div>

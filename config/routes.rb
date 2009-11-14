@@ -10,8 +10,6 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :posts
     admin.resources :reviews
     admin.resources :contacts
-    admin.resources :orders
-    admin.resources :order_transactions
     admin.resources :messages
     admin.resources :users
     admin.resources :uploads
@@ -23,8 +21,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :posts
   map.resources :reviews
   map.resources :contacts
-  map.resources :orders
-  map.resources :order_transactions
   map.resources :messages
   map.resources :sessions
   

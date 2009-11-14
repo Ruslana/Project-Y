@@ -7,9 +7,7 @@ class DownloadsController < ApplicationController
   
   def confirm
     redirect_to :action => 'index' unless params[:token]
-
     details_response = gateway.details_for(params[:token])
-
     if !details_response.success?
       @message = details_response.message
       render :action => 'error'
@@ -23,7 +21,7 @@ class DownloadsController < ApplicationController
   end
 
   def complete
-    purchase = gateway.purchase(5000,
+    purchase = gateway.purchase(money,
       :ip       => request.remote_ip,
       :payer_id => params[:payer_id],
       :token    => params[:token]
@@ -37,7 +35,7 @@ class DownloadsController < ApplicationController
   end
   
   def checkout
-    setup_response = gateway.setup_purchase(5000,
+    setup_response = gateway.setup_purchase(money,
       :ip                => request.remote_ip,
       :return_url        => url_for(:action => 'confirm', :only_path => false),
       :cancel_return_url => url_for(:action => 'index', :only_path => false)

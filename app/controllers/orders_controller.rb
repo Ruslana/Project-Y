@@ -13,6 +13,7 @@ class OrdersController < ApplicationController
    end
 
    def confirm
+     @order = Order.find(params[:id])
      redirect_to :action => 'index' unless params[:token]
      details_response = gateway.details_for(params[:token])
      if !details_response.success?
@@ -28,7 +29,8 @@ class OrdersController < ApplicationController
    end
 
    def complete
-     purchase = gateway.purchase(5000,
+     @order = Order.find(params[:id])
+     purchase = gateway.purchase(@order.amount,
        :ip       => request.remote_ip,
        :payer_id => params[:payer_id],
        :token    => params[:token]
@@ -42,9 +44,10 @@ class OrdersController < ApplicationController
    end
 
    def checkout
-     setup_response = gateway.setup_purchase(5000,
+     @order = Order.find(params[:id])
+     setup_response = gateway.setup_purchase(@order.amount,
        :ip                => request.remote_ip,
-       :return_url        => url_for(:action => 'confirm', :only_path => false),
+       :return_url        => url_for(:action => 'confirm', :id => @order.id, :only_path => false),
        :cancel_return_url => url_for(:action => 'index', :only_path => false)
      )
      redirect_to gateway.redirect_url_for(setup_response.token)
@@ -53,6 +56,7 @@ class OrdersController < ApplicationController
    private
 
    def gateway
+     PaypalExpressGateway.ssl_strict = false
      @gateway ||= PaypalExpressGateway.new(
        :login    => 'ruslan_1257315837_biz_api1.gmail.com', 
        :password => '1257315903',

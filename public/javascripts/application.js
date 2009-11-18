@@ -9,7 +9,7 @@ function recalculate_total_amount(){
 
 function recalculate_total_price(){
 	var sum = checked_checkboxes().inject(0, function(sum, n){
-		return sum + parseFloat(n.value);
+		return sum + parseFloat(n.getAttribute("rel"));
 	})
 	$('total_price').innerHTML = sum;
 }

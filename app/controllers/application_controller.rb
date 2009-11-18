@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     case controller_name
      when "home" 
        "wrapper-in"
-     when "participants"
+     when "participants", "orders"
        "wrapper-in-sub-band1"
      else 
        "wrapper-in-sub-band"

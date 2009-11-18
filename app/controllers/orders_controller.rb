@@ -7,7 +7,9 @@ class OrdersController < ApplicationController
    end
    
    def before_purchase
-    raise params.inspect
+     @order = Order.new(params[:order])
+     @order.amount = Order.calculate_sum(@order)
+     @order.save
    end
 
    def confirm
@@ -26,7 +28,7 @@ class OrdersController < ApplicationController
    end
 
    def complete
-     purchase = gateway.purchase(50,
+     purchase = gateway.purchase(5000,
        :ip       => request.remote_ip,
        :payer_id => params[:payer_id],
        :token    => params[:token]
@@ -40,7 +42,7 @@ class OrdersController < ApplicationController
    end
 
    def checkout
-     setup_response = gateway.setup_purchase(50,
+     setup_response = gateway.setup_purchase(5000,
        :ip                => request.remote_ip,
        :return_url        => url_for(:action => 'confirm', :only_path => false),
        :cancel_return_url => url_for(:action => 'index', :only_path => false)

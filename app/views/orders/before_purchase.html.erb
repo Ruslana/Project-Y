@@ -5,8 +5,6 @@
 	<%= upload.name %><br />
 	<% end %>
 <p>Your order total is <%= @order.amount %></p>
-<p>Enter your email please:</p>
-<% form_tag :%>
 <p>
   <%= link_to image_tag('https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif'), :action => 'checkout', :id => @order %>
 </p>

@@ -11,6 +11,10 @@
   <tr><td>Zip</td><td><%= @address['zip'] %></td></tr>
 </table>
 
-<% form_tag :action => 'complete', :id => @order.id, :token => params[:token], :payer_id => params[:PayerID] do %>
+<% form_tag :action => 'complete', :id => @order.id, 
+																	 :token => params[:token], 
+																	 :payer_id => params[:PayerID] do %>
+	<p>Enter your email please:</p>
+	<p><%= @order.text_field :email %></p>																															
   <%= submit_tag 'Complete Payment' %>
 <% end %>

@@ -14,7 +14,18 @@ config.action_view.debug_rjs                         = true
 config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
-config.action_mailer.raise_delivery_errors = false
+config.action_mailer.raise_delivery_errors = true
+
+config.action_mailer.perform_deliveries = true
+
+config.action_mailer.smtp_settings = { 
+  :address => "domain.of.smtp.host.net", 
+  :port => 25, 
+  :domain => "domain.of.sender.net", 
+  :authentication => :login, 
+  :user_name => "dave", 
+  :password => "secret" 
+} 
 
 config.after_initialize do
   ActiveMerchant::Billing::Base.mode = :test

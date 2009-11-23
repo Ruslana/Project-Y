@@ -8,7 +8,8 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
   config.gem "activemerchant", :lib => "active_merchant", :version => "1.4.2"
-  #config.active_record.observers = :user_observer
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_charset = "utf-8"
   
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers

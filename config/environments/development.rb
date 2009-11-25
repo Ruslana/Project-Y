@@ -19,12 +19,8 @@ config.action_mailer.raise_delivery_errors = true
 config.action_mailer.perform_deliveries = true
 
 config.action_mailer.smtp_settings = { 
-  :address => "domain.of.smtp.host.net", 
-  :port => 25, 
-  :domain => "domain.of.sender.net", 
-  :authentication => :login, 
-  :user_name => "dave", 
-  :password => "secret" 
+  :address => "localhost", 
+  :port => 25
 } 
 
 config.after_initialize do

@@ -9,7 +9,12 @@ class OrdersController < ApplicationController
    def before_purchase
      @order = Order.new(params[:order])
      @order.amount = Order.calculate_sum(@order)
+     @order.secret_hash = rand.to_s
      @order.save
+   end
+   
+   def download
+     @order = Order.find_by_secret_hash(:secret_hash)
    end
 
    def confirm
@@ -41,6 +46,7 @@ class OrdersController < ApplicationController
       render :action => 'error'
       return
     end
+    redirect_to :controller => "send_mail", :action => "create_order", :id => @order.id
    end
 
    def checkout

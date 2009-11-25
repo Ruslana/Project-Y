@@ -1,0 +1,3 @@
+<% for upload in @order.uploads %>
+	<p><%= link_to upload.name, upload.music.url %></p>
+<% end %>

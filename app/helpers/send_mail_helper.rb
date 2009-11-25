@@ -1,0 +1,2 @@
+module SendMailHelper
+end

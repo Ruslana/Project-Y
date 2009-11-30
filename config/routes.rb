@@ -23,6 +23,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :contacts
   map.resources :messages
   map.resources :sessions
+  map.resources :orders
+  map.resources :tracks
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

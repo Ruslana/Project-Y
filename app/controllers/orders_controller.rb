@@ -2,15 +2,11 @@ class OrdersController < ApplicationController
   include ActiveMerchant::Billing
 
    def index
-     @album = Album.last
-     @order = Order.new
+     @orders = Order.all
    end
    
-   def before_purchase
-     @order = Order.new(params[:order])
-     @order.amount = Order.calculate_sum(@order)
-     @order.secret_hash = rand.to_s
-     @order.save
+   def creat
+     @order = Order.create params[:order]
    end
    
    def download

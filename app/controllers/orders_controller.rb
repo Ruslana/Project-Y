@@ -15,7 +15,7 @@ class OrdersController < ApplicationController
    end
    
    def confirm
-     @order = Order.find(params[:id])
+     @order = Order.find_by_secret_hash(params[:id])
      redirect_to :action => 'index' unless params[:token]
      details_response = gateway.details_for(params[:token])
      if !details_response.success?
@@ -31,7 +31,7 @@ class OrdersController < ApplicationController
    end
 
    def complete
-     @order = Order.find(params[:id])
+     @order = Order.find_by_secret_hash(params[:id])
      purchase = gateway.purchase(@order.amount,
        :ip       => request.remote_ip,
        :payer_id => params[:payer_id],
@@ -42,17 +42,17 @@ class OrdersController < ApplicationController
       @message = purchase.message
       @order.payment_error!
     else
-      OrderMailer.deliver_confirmation(@order)
+      OrderMailer.deliver_confirm(@order)
       @order.complete!
     end
-    redirect_to @order, :id => @order.secret_hash
+    redirect_to :action => 'show', :id => @order.secret_hash
    end
 
    def checkout
-     @order = Order.find(params[:id])
+     @order = Order.find_by_secret_hash(params[:id])
      setup_response = gateway.setup_purchase(@order.amount,
        :ip                => request.remote_ip,
-       :return_url        => url_for(:action => 'confirm', :id => @order.id, :only_path => false),
+       :return_url        => url_for(:action => 'confirm', :id => @order.secret_hash, :only_path => false),
        :cancel_return_url => url_for(:action => 'index', :only_path => false)
      )
      redirect_to gateway.redirect_url_for(setup_response.token)

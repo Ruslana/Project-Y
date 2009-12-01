@@ -5,14 +5,15 @@ class OrdersController < ApplicationController
      @orders = Order.all
    end
    
-   def creat
+   def create
      @order = Order.create params[:order]
+     redirect_to order_path(:id => @order.secret_hash)
    end
    
-   def download
-     @order = Order.find_by_secret_hash(:secret_hash)
+   def show
+     @order = Order.find_by_secret_hash(params[:id])
    end
-
+   
    def confirm
      @order = Order.find(params[:id])
      redirect_to :action => 'index' unless params[:token]
@@ -39,10 +40,12 @@ class OrdersController < ApplicationController
 
     if !purchase.success?
       @message = purchase.message
-      render :action => 'error'
-      return
+      @order.payment_error!
+    else
+      OrderMailer.deliver_confirmation(@order)
+      @order.complete!
     end
-    redirect_to :controller => "send_mail", :action => "create_order", :id => @order.id
+    redirect_to @order, :id => @order.secret_hash
    end
 
    def checkout

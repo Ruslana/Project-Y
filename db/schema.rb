@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091125175901) do
+ActiveRecord::Schema.define(:version => 20091130103748) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(:version => 20091125175901) do
     t.datetime "updated_at"
     t.string   "email"
     t.string   "secret_hash"
+    t.boolean  "complete",      :default => false
+    t.boolean  "gateway_error", :default => false
   end
 
   create_table "orders_uploads", :id => false, :force => true do |t|

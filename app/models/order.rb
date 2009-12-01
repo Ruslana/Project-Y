@@ -13,6 +13,14 @@ class Order < ActiveRecord::Base
     end
   end
   
+  def complete!
+    update_attribute :complete, true
+  end
+  
+  def payment_error!
+    update_attribute :gateway_error, true
+  end
+  
 private
 
   def generate_secret_hash

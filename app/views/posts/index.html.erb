@@ -3,10 +3,11 @@
 	<h3 title="Blog Entries">Blog Entries</h3>
 	<% for post in @posts %>
 		<h4><%= post.title %></h4>
-		<p><%= post.date.strftime("%A, %d %B %Y") %><br />
+		<p><%= post.published_at.strftime("%A, %d %B %Y") %><br />
 		<%= post.body %>
 		<hr />
 	<% end %>
+
 </div>
 
 <%= will_paginate @posts %>

@@ -1,7 +1,9 @@
 <div id="content-reviews">
+
 	<% for review in @reviews %>
 		<h3><a href="" title="Read the review" class="tip"><%= review.title %><span><strong><%= review.title %></strong><br /><br />
-			<%= review.date %><br /><%= review.body %></span></a></h3>
-			<p><%= review.date %><br /><em><%= review.author %></em></p>
+			<%= review.date.strftime("%A, %d %B %Y") %><br /><%= review.body %></span></a></h3>
+			<p><%= review.date.strftime("%A, %d %B %Y") %><br /><em><%= review.author %></em></p>
 	<% end %>
+
 </div>

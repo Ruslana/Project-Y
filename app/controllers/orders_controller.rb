@@ -20,14 +20,10 @@ class OrdersController < ApplicationController
      details_response = gateway.details_for(params[:token])
      if !details_response.success?
        @message = details_response.message
-       render :action => 'error'
        return
      end
 
     @address = details_response.address
-   end
-
-   def error
    end
 
    def complete
@@ -45,7 +41,7 @@ class OrdersController < ApplicationController
       OrderMailer.deliver_confirm(@order)
       @order.complete!
     end
-    redirect_to :action => 'show', :id => @order.secret_hash
+    redirect_to @order, :id => @order.secret_hash
    end
 
    def checkout

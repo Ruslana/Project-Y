@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @post = Post.last
+    @posts = Post.all :order => "published_at DESC"
   end
 end

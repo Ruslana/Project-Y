@@ -10,15 +10,22 @@
 	<!-- home news -->
 	<div id="news-home">
 		<p><a href="#" title="Buy a new CD of Jack Howard and The Long Lost Brothers"><img src="/images/buy-now.gif" alt="Buy a CD" /></a></p>
-		<% unless @post == nil %>
+		<% post = @posts.first %>
+		<% unless post == nil %>
+		
 			<h3>Latest News</h3>
 			<p>
-			<strong><%= @post.title %></strong><br />
-			<%= @post.date.strftime("%A, %d %B %Y") %></p>
+				<strong><%= post.title %></strong><br />
+				<%= post.published_at.strftime("%A, %d %B %Y") %>
+			</p>
 			<p>
-			<%= @post.body %>
+				<%= post.body %>
+			</p>
+			
 		<% end %>
-		<p><a href="#" title="more news">more news ....	</a></p>
+		
+		<p><%= link_to "more news ...", posts_path %></p>
+		
 	</div>
 	<!-- home footy songs area -->
 	<div id="footy-home">

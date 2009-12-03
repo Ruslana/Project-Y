@@ -2,6 +2,10 @@ require 'digest/sha1'
 
 class Order < ActiveRecord::Base
   
+  def to_param
+    secret_hash
+  end
+  
   before_create :calculate_sum
   before_create :generate_secret_hash
     

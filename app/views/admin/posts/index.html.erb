@@ -3,7 +3,7 @@
 <% for post in @posts %>
 	<%= post.title %><br />
 	<%= post.body %><br />
-	<%= post.date.strftime("%A, %d %B %Y") %><br />
+	<%= post.published_at.strftime("%A, %d %B %Y") %><br />
 	<%= link_to "show", admin_post_path(post) %>
 	<%= link_to "edit", edit_admin_post_path(post) %>
 	<%= link_to "destroy", [:admin, post], 

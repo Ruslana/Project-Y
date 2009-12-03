@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091130103748) do
+ActiveRecord::Schema.define(:version => 20091203101011) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(:version => 20091130103748) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
-    t.datetime "date"
+    t.datetime "published_at"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"

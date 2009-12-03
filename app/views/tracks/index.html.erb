@@ -12,11 +12,9 @@
 					<th class="last" style="text-align:center">Sample</th>
 				</tr>
 			
-				<% for upload in @uploads %>
+				<% for upload in @album.uploads %>
 					<tr class="one">
-					<% for album in @albums %>
-					<td><strong><%= album.title %></strong></td>
-					<% end %>
+					<td><strong><%= @album.title %></strong></td>
 					<td>
 						<%= check_box_tag("order[upload_ids][]", upload.id, false, {:value => upload.id, :rel => upload.price, :onchange => "recalculate_totals();", :class => 'track_checkbox'} ) %>
 						<strong><%= upload.title %></strong>
@@ -32,7 +30,7 @@
 				</tr>
 				
 				<tr class="two">
-					<td><strong>Total Ttrack(s)</strong></td>
+					<td><strong>Total Track(s)</strong></td>
 					<td colspan="2">
 						<strong style="float:right;padding-right:25px;">Total price</strong>
 						<input type="text" name="total" value="0" id="total_tracks" style="width:40px" /> 

@@ -1,6 +1,7 @@
 <!-- home body -->
 <div id="content-blog">
 			<h3 title="Contact Jack and the Long Lost Brothers">Contact Jack and the Long Lost Brothers</h3>
+			<strong><%= flash[:notice] %></strong><br/>
 			<% for contact in @contacts %>
 				<%= contact.some_contact %>
 			<% end %>

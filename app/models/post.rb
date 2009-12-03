@@ -1,4 +1,4 @@
 class Post < ActiveRecord::Base  
-  validates_presence_of :title, :date, :body
+  validates_presence_of :title, :published_at, :body
   
 end

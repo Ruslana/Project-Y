@@ -1,6 +1,6 @@
 class ProtectedController < ApplicationController
   
-  layout "admin_part"
+  layout "admin"
   before_filter :authorize
   
   filter_parameter_logging :password, :password_confirmation

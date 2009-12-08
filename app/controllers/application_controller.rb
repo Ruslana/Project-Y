@@ -1,31 +1,16 @@
-# Filters added to this controller apply to all controllers in the application.
-# Likewise, all the methods added will be available for all controllers.
-
 class ApplicationController < ActionController::Base
+ 
+  helper :all 
+  protect_from_forgery 
+  filter_parameter_logging :password
   
-  layout "user_part"
-  helper :all # include all helpers, all the time
-  protect_from_forgery # See ActionController::RequestForgeryProtection for details
-  filter_parameter_logging :card_number, :card_verification
-  # Scrub sensitive parameters from your log
-  # filter_parameter_logging :password
-  
-  def var_layouts
-    case controller_name
-     when "home" 
-       "wrapper-in"
-     when "participants", "orders"
-       "wrapper-in-sub-band1"
-     else 
-       "wrapper-in-sub-band"
-    end
-  end
+  layout "public"
   
   def last_album
-    @last_album ||= Album.find_or_create
+    Album.last
   end
   
-  helper_method :last_album, :var_layouts, :current_post
+  helper_method :last_album
   
 end
 

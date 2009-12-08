@@ -1,4 +1,4 @@
-body{background:#101010 url(/images/body-background.jpg) repeat-x top left;color:white;margin:0;padding:0;text-align:center;}
+body{background:#101010 repeat-x top left;color:white;margin:0;padding:0;text-align:center;}
 #wrapper{margin:0 auto;padding:0;width:700px;border-left:#151515 solid 1px;border-right:#151515 solid 1px;}
 #wrapper-in{background:#000 url(/images/big-jack-bg.jpg) no-repeat top right; background-position:0px 120px;margin:0 auto;padding:0;width:700px;float:left}
 /* for IE, with IE5/Mac backslash filter \*/

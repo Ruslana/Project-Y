@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div id="wrapper">
-			<div id="<%= var_layouts %>">
+			<div id="<%= wrapper_css_class %>">
 				<!-- header -->
 				<div id="header">
 					<!-- top logo-->	
@@ -30,9 +30,9 @@
 							<li><%= link_to "Reviews", reviews_path %></li>
 							<li><%= link_to "Band", participants_path %></li>
 							<li><%= link_to "Discography", albums_path %></li>
-							<li><%= link_to "Lyric", album_path(last_album) %></li>
+							<li><%= link_to "Lyric", album_path(last_album) unless last_album == nil %></li>
 							<li><%= link_to "Blog", posts_path %></li>
-							<li><%= link_to "Footy-songs", :controller => 'static_pages', :action => 'footy_songs' %></li>
+							<li><%= link_to "Footy-songs", footy_songs_path %></li>
 							<li><%= link_to "Downloads", tracks_path %></li>
 						</ul>
 				</div>

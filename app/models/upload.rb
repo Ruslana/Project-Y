@@ -1,7 +1,7 @@
 class Upload < ActiveRecord::Base
-  has_and_belongs_to_many :albums, :join_table => 'albums_uploads'
-  has_and_belongs_to_many :orders, :join_table => 'orders_uploads'
   
+  belongs_to :track
+   
   before_save :rename_file
   
   has_attached_file :music

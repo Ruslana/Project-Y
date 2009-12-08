@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091203101011) do
+ActiveRecord::Schema.define(:version => 20091208181927) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(:version => 20091203101011) do
     t.string   "description"
   end
 
-  create_table "albums_uploads", :id => false, :force => true do |t|
+  create_table "albums_tracks", :id => false, :force => true do |t|
     t.integer "album_id"
-    t.integer "upload_id"
+    t.integer "track_id"
   end
 
   create_table "contacts", :force => true do |t|
@@ -55,9 +55,9 @@ ActiveRecord::Schema.define(:version => 20091203101011) do
     t.boolean  "gateway_error", :default => false
   end
 
-  create_table "orders_uploads", :id => false, :force => true do |t|
+  create_table "orders_tracks", :id => false, :force => true do |t|
     t.integer "order_id"
-    t.integer "upload_id"
+    t.integer "track_id"
   end
 
   create_table "participants", :force => true do |t|
@@ -84,21 +84,23 @@ ActiveRecord::Schema.define(:version => 20091203101011) do
     t.datetime "updated_at"
   end
 
+  create_table "tracks", :force => true do |t|
+    t.string   "title_full_file"
+    t.string   "title_cut_file"
+    t.string   "price"
+    t.string   "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "uploads", :force => true do |t|
-    t.string   "name"
     t.integer  "music_file_size"
     t.string   "music_file_name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "music_content_type"
     t.datetime "music_updated_at"
-    t.string   "file_file_name"
-    t.integer  "file_file_size"
-    t.datetime "file_updated_at"
-    t.string   "file_content_type"
-    t.string   "title"
-    t.string   "time"
-    t.string   "price"
+    t.integer  "track_id"
   end
 
   create_table "users", :force => true do |t|

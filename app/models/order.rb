@@ -2,14 +2,14 @@ require 'digest/sha1'
 
 class Order < ActiveRecord::Base
   
-  def to_param
-    secret_hash
-  end
-  
   before_create :calculate_sum
   before_create :generate_secret_hash
     
-  has_and_belongs_to_many :uploads, :join_table => 'orders_uploads'
+  has_and_belongs_to_many :tracks, :join_table => 'orders_uploads'
+  
+  def to_param
+    secret_hash
+  end
   
   def calculate_sum
     self.amount = uploads.inject(0) do |sum, track|

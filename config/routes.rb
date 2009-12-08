@@ -13,6 +13,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :messages
     admin.resources :users
     admin.resources :uploads
+    admin.resources :tracks
   end
   
   map.resources :albums
@@ -25,7 +26,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :sessions
   map.resources :orders
   map.resources :tracks
-  #map.resources :order, :member => { :confirm => :get }
+  
+  map.resources :orders, :member => { :confirm => :get }
+  map.footy_songs "/footy_songs", :controller => "static_pages", :action => "footy_songs"
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

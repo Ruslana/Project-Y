@@ -14,7 +14,7 @@
 			
 				<% for upload in @album.uploads %>
 					<tr class="one">
-					<td><strong><%= @album.title %></strong></td>
+					<td><strong><%= upload.albums.first.title %></strong></td>
 					<td>
 						<%= check_box_tag("order[upload_ids][]", upload.id, false, {:value => upload.id, :rel => upload.price, :onchange => "recalculate_totals();", :class => 'track_checkbox'} ) %>
 						<strong><%= upload.title %></strong>

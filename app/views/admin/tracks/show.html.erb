@@ -1,0 +1,12 @@
+Title_full_file: <%= @track.title_full_file %><br />
+Title_cut_file: <%= @track.title_cut_file %><br />
+Time: <%= @track.time %><br />
+Price: <%= @track.price %><br />
+<%= link_to "back", admin_tracks_path %>
+<%= link_to "edit", edit_admin_track_path(@track) %>
+<%= link_to "destroy", [:admin, @track], 
+		:confirm => 'Are you sure?', 
+		:method => :delete
+		%>
+<br /><br />
+<%= link_to "Upload file", new_admin_upload_path %>

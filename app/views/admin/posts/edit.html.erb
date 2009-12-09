@@ -1,22 +1,5 @@
-<% form_for [:admin, @post] do |f| %>
+<h2>Editing post</h2>
+<%= error_messages_for :post %>
+<%= render :partial => 'form', :locals => {:post => @post} %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </div>
-	
-  <div class="field">
-    <%= date_select :post, :published_at %>
-  </div>
-
-  <div class="submit">
-    <%= f.submit "Save" %>
-  </div>
-  
-<% end %>
 <%= link_to "back", admin_posts_path %>

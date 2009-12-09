@@ -1,0 +1,13 @@
+<%= link_to "create new track", new_admin_track_path %><br />
+<br />
+<% for track in @tracks %>
+	<%= track.title_full_file %><br />
+	<%= link_to "show", admin_track_path(track) %>
+	<%= link_to "edit", edit_admin_track_path(track) %>
+	<%= link_to "destroy", [:admin, track], 
+			:confirm => 'Are you sure?', 
+			:method => :delete
+			%>
+	<br /><br />
+<% end %>
+<%= will_paginate @tracks %>

@@ -2,10 +2,10 @@ class Upload < ActiveRecord::Base
   
   belongs_to :track
    
-  before_save :rename_file
+  #before_save :rename_file
   
   has_attached_file :music
-  has_attached_file :file
+  
   
   protected
   

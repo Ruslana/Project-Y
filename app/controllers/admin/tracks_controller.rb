@@ -2,6 +2,7 @@ class Admin::TracksController < ProtectedController
   
   def new
     @track = Track.new
+    @album = Album.all
   end
   
   def create
@@ -15,7 +16,7 @@ class Admin::TracksController < ProtectedController
   
   def edit
     @track = Track.find(params[:id])
-    @albums = Album.find(:all)
+    @albums = Album.all
   end
   
   def show

@@ -1,9 +1,9 @@
-Whole song: <%= link_to @upload.name, @upload.music.url %><br />
-Size: <%= @upload.music_file_size %><br />
-Time: <%= @upload.time %><br />
-Price: <%= @upload.price %><br />
-Cut song: <%= link_to @upload.title, @upload.file.url %><br />
-Size: <%= @upload.file_file_size %><br />
+File: <%= link_to @upload.music_file_name, @upload.music.url %><br />
+Size: <%= @upload.music_file_size %><br /><br />
+
+	<%= link_to "audio_file_full" %>
+	<%= link_to "audio_file_cut" %>
+
 <%= link_to "back", admin_uploads_path %>
 <%= link_to "edit", edit_admin_upload_path(@upload) %>
 <%= link_to "destroy", [:admin, @upload], 

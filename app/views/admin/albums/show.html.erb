@@ -6,10 +6,7 @@
 			:confirm => 'Are you sure?', 
 			:method => :delete
 			%><br /><br />
-	<strong>Songs:</strong><br />
-	<% for upload in @uploads %>
-		<%= upload.name %><br />
-	<% end %><br />
+	
 	<strong>Lirycs:</strong>
 	<% for lyric in @album.lyrics %>
 		<%= lyric.title %><br />

@@ -1,7 +1,9 @@
-Title_full_file: <%= @track.title_full_file %><br />
-Title_cut_file: <%= @track.title_cut_file %><br />
+Full_file:
+<%= link_to @track.title_full_file, @track.audio_file_full.music.url %><br /><br />
+Title_cut_file:
+<%= link_to @track.title_cut_file, @track.audio_file_cut.music.url %><br /><br />
 Time: <%= @track.time %><br />
-Price: <%= @track.price %><br />
+Price: <%= @track.price %><br /><br />
 <%= link_to "back", admin_tracks_path %>
 <%= link_to "edit", edit_admin_track_path(@track) %>
 <%= link_to "destroy", [:admin, @track], 
@@ -9,4 +11,4 @@ Price: <%= @track.price %><br />
 		:method => :delete
 		%>
 <br /><br />
-<%= link_to "Upload file", new_admin_upload_path %>
+<%= link_to "Upload file", new_admin_upload_path(:id => @track.id) %>

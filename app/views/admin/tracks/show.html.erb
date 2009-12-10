@@ -11,4 +11,4 @@ Price: <%= @track.price %><br /><br />
 		:method => :delete
 		%>
 <br /><br />
-<%= link_to "Upload file", new_admin_upload_path(:id => @track.id) %>
+<%= link_to "Upload file", new_admin_uploaded_file_path(:id => @track.id) %>

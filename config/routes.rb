@@ -12,7 +12,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :contacts
     admin.resources :messages
     admin.resources :users
-    admin.resources :uploads
+    admin.resources :uploaded_files
     admin.resources :tracks
   end
   

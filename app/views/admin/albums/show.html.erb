@@ -7,10 +7,6 @@
 			:method => :delete
 			%><br /><br />
 	
-	<strong>Lirycs:</strong>
-	<% for lyric in @album.lyrics %>
-		<%= lyric.title %><br />
-		<%= lyric.text_song %>
+	<% for track in @album.tracks %>
+		<%= link_to track.title_full_file, track.audio_file_full.music.url %><br />
 	<% end %>
-<h3>New Liryc:</h3>
-<%= render :partial => 'admin/lyrics/form' %>

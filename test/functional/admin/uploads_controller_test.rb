@@ -33,7 +33,7 @@ class Admin::UploadsControllerTest < ActionController::TestCase
      end
 
      should_redirect_to "Admin::Upload#show" do
-       admin_upload_path(Upload.first)
+       admin_uploaded_file_path(Upload.first)
      end
 
      should "create upload" do       
@@ -84,7 +84,7 @@ class Admin::UploadsControllerTest < ActionController::TestCase
     end
 
     should_redirect_to "Admin::Upload#show" do
-      admin_upload_path(@upload)
+      admin_uploaded_file_path(@upload)
     end
 
     should "update upload" do
@@ -105,7 +105,7 @@ class Admin::UploadsControllerTest < ActionController::TestCase
    end
 
    should_redirect_to "Admin::Upload#index" do
-     admin_uploads_path
+     admin_uploaded_files_path
    end
   end
    

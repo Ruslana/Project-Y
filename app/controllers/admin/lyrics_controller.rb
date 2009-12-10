@@ -2,8 +2,8 @@ class Admin::LyricsController < ProtectedController
   
    def create
      @lyric = Lyric.new(params[:lyric])
-     @album = Album.find(params[:lyric][:album_id])
-     @lyric.album = @album
+     @track = Track.find(params[:lyric][:track_id])
+     @lyric.track = @track
      if @lyric.save
        flash[:notice] = "Lyric created"
        redirect_to admin_lyrics_path

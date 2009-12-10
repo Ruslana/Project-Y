@@ -5,7 +5,7 @@ class Order < ActiveRecord::Base
   before_create :calculate_sum
   before_create :generate_secret_hash
     
-  has_and_belongs_to_many :tracks, :join_table => 'orders_uploads'
+  has_and_belongs_to_many :tracks, :join_table => 'orders_tracks'
   
   def to_param
     secret_hash

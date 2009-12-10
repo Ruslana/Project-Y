@@ -1,6 +1,5 @@
 <%= link_to "create new album", new_admin_album_path %><br />
 <br />
-<%= error_messages_for :lyric %>
 <% for album in @albums %>
 	<%= album.title %><br />
 	<%= album.description %><br />

@@ -1,4 +1,4 @@
-class Admin::UploadsController < ProtectedController
+class Admin::UploadedFilesController < ProtectedController
   
   def new
     @track = Track.find(params[:id])
@@ -8,9 +8,9 @@ class Admin::UploadsController < ProtectedController
   def create
     if @upload = UploadedFile.create(params[:upload])
       flash[:notice] = "File uploaded"
-      redirect_to admin_upload_path(@upload)
+      redirect_to admin_uploaded_file_path(@upload)
     else
-      render new_admin_upload_path
+      render new_admin_uploaded_file_path
     end
   end
   
@@ -20,7 +20,7 @@ class Admin::UploadsController < ProtectedController
   end
   
   def show
-    @upload = Uploadedfile.find(params[:id])
+    @upload = UploadedFile.find(params[:id])
   end
   
   def index
@@ -30,7 +30,7 @@ class Admin::UploadsController < ProtectedController
   def update
     @upload = UploadedFile.find(params[:id])
     if @upload.update_attributes(params[:upload])
-      redirect_to admin_upload_path(@upload)
+      redirect_to admin_uploaded_file_path(@upload)
     else
       redirect_to :action => 'edit'
     end

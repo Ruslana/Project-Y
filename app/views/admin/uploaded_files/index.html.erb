@@ -1,9 +1,9 @@
-<%= link_to "new uploads", new_admin_upload_path %><br /><br />
+<%= link_to "new uploads", new_admin_uploaded_file_path %><br /><br />
 <% for upload in @uploads %>
-	<%= link_to upload.name, upload.music.url %><br />
-	<%= link_to "show", admin_upload_path(upload) %>
-	<%= link_to "edit", edit_admin_upload_path(upload) %>
-	<%= link_to "delete file", [:admin, upload], 
+	<%#= link_to upload.name, upload.music.url %><br />
+	<%#= link_to "show", admin_uploaded_file_path(upload) %>
+	<%#= link_to "edit", edit_admin_uploaded_file_path(upload) %>
+	<%#= link_to "delete file", [:admin, upload], 
 			:confirm => 'Are you sure?', 
 			:method => :delete
 			%>

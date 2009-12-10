@@ -1,5 +1,5 @@
 class Album < ActiveRecord::Base
-  has_many :lyrics
+  
   has_and_belongs_to_many :tracks, :join_table => 'albums_tracks'
   
   validates_presence_of :title

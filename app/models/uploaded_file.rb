@@ -1,4 +1,4 @@
-class Upload < ActiveRecord::Base
+class UploadedFile < ActiveRecord::Base
   
   belongs_to :track
    

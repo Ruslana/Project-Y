@@ -1,10 +1,12 @@
 class Admin::UploadsController < ProtectedController
+  
   def new
-    @upload = Upload.new
+    @track = Track.find(params[:id])
+    @upload = UploadedFile.new
   end
   
   def create
-    if @upload = Upload.create(params[:upload])
+    if @upload = UploadedFile.create(params[:upload])
       flash[:notice] = "File uploaded"
       redirect_to admin_upload_path(@upload)
     else
@@ -13,20 +15,20 @@ class Admin::UploadsController < ProtectedController
   end
   
   def edit
-    @upload = Upload.find(params[:id])
+    @upload = UploadedFile.find(params[:id])
     @albums = Album.find(:all)
   end
   
   def show
-    @upload = Upload.find(params[:id])
+    @upload = Uploadedfile.find(params[:id])
   end
   
   def index
-    @uploads = Upload.paginate :page => params[:page], :per_page => 10
+    @uploads = UploadedFile.paginate :page => params[:page], :per_page => 10
   end
   
   def update
-    @upload = Upload.find(params[:id])
+    @upload = UploadedFile.find(params[:id])
     if @upload.update_attributes(params[:upload])
       redirect_to admin_upload_path(@upload)
     else
@@ -35,7 +37,7 @@ class Admin::UploadsController < ProtectedController
   end
   
   def destroy
-     @upload = Upload.find(params[:id])
+     @upload = UploadedFile.find(params[:id])
      @upload.destroy
      redirect_to :action => 'index'
    end

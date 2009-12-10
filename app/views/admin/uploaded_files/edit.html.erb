@@ -6,13 +6,6 @@
 	<%= form.label :price %>:
 	<%= form.text_field :price %><br /><br />
 	<%= form.file_field :file %><br /><br />
-	<strong>Albums:</strong>
-	<br />
-	<% for album in @albums %>
-		<%= check_box_tag "upload[album_ids][]", album.id, @upload.albums.include?(album) %>
-		<%= album.title %>
-		<br />
-	<% end %>
 		
 	<p><%= form.submit "Upload file" %></p>
 <% end %>

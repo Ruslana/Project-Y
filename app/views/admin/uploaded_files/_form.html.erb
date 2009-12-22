@@ -1,9 +1,9 @@
-<%= error_messages_for :upload %>
+<%= error_messages_for :uploaded_file %>
 
-<% form_for([:admin, UploadedFile.new], :html => { :multipart => true }) do |form| %>
+<% form_for([:admin, upload], :html => { :multipart => true }) do |form| %>
 		
 	<%= form.file_field :music %><br />
-	<%= form.hidden_field :track_id, :value => @track.id %>
+	<%= form.hidden_field :track_id, :value => track.id %>
 		
 	<p><%= form.submit "Upload files" %></p>
 	

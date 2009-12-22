@@ -1,5 +1,7 @@
 <h2>Editing track</h2>
+
 <%= error_messages_for :track %>
+
 <%= render :partial => 'form', :locals => {:track => @track, :albums => @albums} %>
 
 <%= link_to "back", admin_tracks_path %>

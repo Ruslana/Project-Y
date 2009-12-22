@@ -1,9 +1,19 @@
 Full_file:
-<%= link_to @track.title_full_file, @track.audio_file_full.music.url %><br /><br />
-Title_cut_file:
-<%= link_to @track.title_cut_file, @track.audio_file_cut.music.url %><br /><br />
+<%= link_to @track.title_full_file, @track.audio_file_full.music.url if @track.audio_file_full != nil %><br />
+
+<% if @track.lyric != nil %>
+	(<%= link_to "show lyric", admin_lyric_path(:id => @track.lyric.id)%>)
+<% else %>
+	(<%= link_to "create lyric", new_admin_lyric_path(:id => @track.id) %>)
+<% end %>
+<br /><br />
+
+Cut_file:
+<%= link_to @track.title_cut_file, @track.audio_file_cut.music.url if @track.audio_file_cut != nil %><br /><br />
+
 Time: <%= @track.time %><br />
 Price: <%= @track.price %><br /><br />
+
 <%= link_to "back", admin_tracks_path %>
 <%= link_to "edit", edit_admin_track_path(@track) %>
 <%= link_to "destroy", [:admin, @track], 
@@ -11,4 +21,5 @@ Price: <%= @track.price %><br /><br />
 		:method => :delete
 		%>
 <br /><br />
+
 <%= link_to "Upload file", new_admin_uploaded_file_path(:id => @track.id) %>

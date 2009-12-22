@@ -18,13 +18,6 @@ config.action_mailer.raise_delivery_errors = true
 
 config.action_mailer.perform_deliveries = true
 
-=begin
-config.action_mailer.smtp_settings = { 
-  :address => "localhost", 
-  :port => 25
-}
-=end 
-
 config.after_initialize do
   ActiveMerchant::Billing::Base.mode = :test
 end

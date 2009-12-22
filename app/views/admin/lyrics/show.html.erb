@@ -1,6 +1,9 @@
-<h2><%= last_album.title %></h2>
-<%= @lyric.title %>
-<%= @lyric.text_song %>
+<h2><%= @track.title_full_file %></h2>
+
+<h3><%= @lyric.title %><br /></h3>
+
+<%= @lyric.text_song %><br /><br />
+
 <%= link_to "back", admin_lyrics_path %>
 <%= link_to "edit", edit_admin_lyric_path(@lyric) %>
 <%= link_to "destroy", [:admin, @lyric], 

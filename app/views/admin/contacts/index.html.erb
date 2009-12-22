@@ -1,7 +1,10 @@
 <%= link_to "create new contact", new_admin_contact_path %><br />
 <br />
+
 <% for contact in @contacts %>
+
 	<%= contact.some_contact %><br />	
+	
 	<%= link_to "show", admin_contact_path(contact) %>
 	<%= link_to "edit", edit_admin_contact_path(contact) %>
 	<%= link_to "destroy", [:admin, contact], 
@@ -9,6 +12,7 @@
 			:method => :delete
 			%>
 	<br /><br />
+	
 <% end %>
 
 <%= will_paginate @contacts %>

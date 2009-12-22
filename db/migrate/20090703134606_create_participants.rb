@@ -3,8 +3,6 @@ class CreateParticipants < ActiveRecord::Migration
     create_table :participants do |t|
       t.string :name
       t.text :bio
-      t.string :title_photo_small
-      t.string :title_photo_big
 
       t.timestamps
     end

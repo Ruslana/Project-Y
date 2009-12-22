@@ -3,6 +3,7 @@ class CreateLyrics < ActiveRecord::Migration
     create_table :lyrics do |t|
       t.string :title
       t.text :text_song
+      t.integer :track_id
 
       t.timestamps
     end

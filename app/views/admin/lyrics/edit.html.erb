@@ -1,18 +1,7 @@
-<% form_for [:admin, @lyric] do |f| %>
+<h2>Editing lyric</h2>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :text_song %><br />
-    <%= f.text_area :text_song %>
-  </div>
-	
-  <div class="submit">
-    <%= f.submit "Save" %>
-  </div>
-  
-<% end %>
+<%= error_messages_for :lyric %>
+
+<%= render :partial => 'form', :locals => {:lyric => @lyric, :track => @track} %>
+
 <%= link_to "back", admin_lyrics_path %>

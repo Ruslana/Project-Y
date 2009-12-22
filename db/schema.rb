@@ -9,13 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091210160222) do
+ActiveRecord::Schema.define(:version => 20091208155944) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
+    t.string   "descripttion"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "description"
   end
 
   create_table "albums_tracks", :id => false, :force => true do |t|
@@ -32,9 +32,9 @@ ActiveRecord::Schema.define(:version => 20091210160222) do
   create_table "lyrics", :force => true do |t|
     t.string   "title"
     t.text     "text_song"
+    t.integer  "track_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "track_id"
   end
 
   create_table "messages", :force => true do |t|
@@ -47,12 +47,12 @@ ActiveRecord::Schema.define(:version => 20091210160222) do
 
   create_table "orders", :force => true do |t|
     t.integer  "amount"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "email"
     t.string   "secret_hash"
     t.boolean  "complete",      :default => false
     t.boolean  "gateway_error", :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "orders_tracks", :id => false, :force => true do |t|
@@ -89,20 +89,20 @@ ActiveRecord::Schema.define(:version => 20091210160222) do
     t.string   "title_cut_file"
     t.string   "price"
     t.string   "time"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.integer  "full_version_audio_id"
     t.integer  "preview_id"
-  end
-
-  create_table "uploaded_files", :force => true do |t|
-    t.integer  "music_file_size"
-    t.string   "music_file_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "uploadeds_files", :force => true do |t|
+    t.string   "music_file_name"
+    t.integer  "music_file_size"
     t.string   "music_content_type"
     t.datetime "music_updated_at"
     t.integer  "track_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

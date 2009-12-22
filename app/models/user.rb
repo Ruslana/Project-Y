@@ -1,6 +1,7 @@
 require 'digest/sha1'
 
 class User < ActiveRecord::Base
+  
   attr_accessible :name, :password
   attr_accessor :password_confirmation
   

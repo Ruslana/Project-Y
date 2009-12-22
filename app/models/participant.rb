@@ -1,4 +1,3 @@
-class Participant < ActiveRecord::Base  
-  validates_presence_of :name, :bio
+class Participant < ActiveRecord::Base
   
 end

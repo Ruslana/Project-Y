@@ -1,6 +1,6 @@
 class TracksController < ApplicationController
   def index
-    @uploads = Upload.all
+    @tracks = Track.all
     @order = Order.new
   end
   

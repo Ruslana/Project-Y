@@ -1,6 +1,7 @@
 File: <%= link_to @upload.music_file_name, @upload.music.url %> 
- (<%= link_to "audio_file_full", admin_track_path(@upload.track_id, :full_version_audio_id => @upload.id) %> / 
- <%= link_to "audio_file_cut", admin_track_path(@upload.track_id, :preview_id => @upload.id) %>)<br /><br />
+ (<%#= link_to "audio_file_full", admin_track_path(:id => @upload.track_id, :full_version_audio_id => @upload.id) %> / 
+ <%#= link_to "audio_file_cut", admin_track_path(@upload.track_id, :preview_id => @upload.id) %>)<br /><br />
+
 Size: <%= @upload.music_file_size %><br /><br />
 
 <%= link_to "back", admin_uploaded_files_path %>

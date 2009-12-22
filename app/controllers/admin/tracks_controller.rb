@@ -2,7 +2,7 @@ class Admin::TracksController < ProtectedController
   
   def new
     @track = Track.new
-    @album = Album.all
+    @albums = Album.all
   end
   
   def create
@@ -21,8 +21,8 @@ class Admin::TracksController < ProtectedController
   
   def show
     @track = Track.find(params[:id])
-    @track.preview_id = params[:preview_id]
-    @track.full_version_audio_id = params[:full_version_audio_id]
+    #@track.preview_id = params[:preview_id]
+    #@track.full_version_audio_id = params[:full_version_audio_id]
     @track.save!
   end
   

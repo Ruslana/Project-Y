@@ -1,14 +1,5 @@
 <h2>New contact</h2>
+
 <%= error_messages_for :contact %>
-<% form_for [:admin, @contact] do |f| %>
 
-  <div class="field">
-    <%= f.label :some_contact %><br />
-    <%= f.text_area :some_contact %>
-  </div>
-
-  <div class="submit">
-    <%= f.submit "Save" %>
-  </div>
-  
-<% end %>
+<%= render :partial => "form", :locals => {:contact => @contact} %>

@@ -1,5 +1,10 @@
 class Admin::LyricsController < ProtectedController
   
+  def new
+    @lyric = Lyric.new
+    @track = Track.find(params[:id])
+  end
+  
    def create
      @lyric = Lyric.new(params[:lyric])
      @track = Track.find(params[:lyric][:track_id])
@@ -14,6 +19,7 @@ class Admin::LyricsController < ProtectedController
 
    def show
      @lyric = Lyric.find(params[:id])
+     @track = @lyric.track
    end
 
    def index
@@ -22,6 +28,7 @@ class Admin::LyricsController < ProtectedController
 
    def edit
      @lyric = Lyric.find(params[:id])
+     @track = @lyric.track
    end
 
    def update

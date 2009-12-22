@@ -1,12 +1,23 @@
-<h2><%= flash[:notice] %></h2>
+<h3><%= flash[:notice] %></h3>
+
 <h2><%= @album.title %></h2>
-	<%= link_to "back", admin_albums_path %> |
-	<%= link_to "edit album", edit_admin_album_path(@album) %> |
-	<%= link_to "delete album", [:admin, @album], 
-			:confirm => 'Are you sure?', 
-			:method => :delete
-			%><br /><br />
+		<%= @album.description %><br /><br />
+
+		<%= link_to "back", admin_albums_path %> |
+		<%= link_to "edit album", edit_admin_album_path(@album) %> |
+		<%= link_to "delete album", [:admin, @album], 
+				:confirm => 'Are you sure?', 
+				:method => :delete
+				%><br /><br />
+			
+		<% unless @album.tracks.empty? %>	
 	
-	<% for track in @album.tracks %>
-		<%= link_to track.title_full_file, track.audio_file_full.music.url %><br />
-	<% end %>
+			<% for track in @album.tracks %>
+				<%= link_to track.title_full_file, track.audio_file_full.music.url %><br />
+			<% end %>
+		
+		<% else %>
+	
+			<%= link_to "Create track", new_admin_track_path %>
+		
+		<% end %>

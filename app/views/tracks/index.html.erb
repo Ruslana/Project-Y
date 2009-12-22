@@ -12,16 +12,16 @@
 					<th class="last" style="text-align:center">Sample</th>
 				</tr>
 			
-				<% for upload in @uploads %>
+				<% for track in @tracks %>
 					<tr class="one">
-					<td><strong><%= upload.albums.first.title unless upload.albums.first == nil %></strong></td>
+					<td><strong><%= track.albums.first.title unless track.albums.first == nil %></strong></td>
 					<td>
-						<%= check_box_tag("order[upload_ids][]", upload.id, false, {:value => upload.id, :rel => upload.price, :onchange => "recalculate_totals();", :class => 'track_checkbox'} ) %>
-						<strong><%= upload.title %></strong>
+						<%= check_box_tag("order[track_ids][]", track.id, false, {:value => track.id, :rel => track.price, :onchange => "recalculate_totals();", :class => 'track_checkbox'} ) %>
+						<strong><%= track.title_full_file %></strong>
 					</td>
-					<td><span><%= upload.time %></span></td>
-					<td class="track_price"><%= upload.price %></td>
-					<td style="text-align:center"><%= link_to image_tag("/images/speaker.gif"), upload.file.url %></td>		
+					<td><span><%= track.time %></span></td>
+					<td class="track_price"><%= track.price %></td>
+					<td style="text-align:center"><%#= link_to image_tag("/images/speaker.gif"), track.audio_file_full.music.url %></td>		
 					</tr>
 				<% end %>	
 				

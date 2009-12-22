@@ -1,26 +1,30 @@
 <% form_for [:admin, track] do |f| %>
 
+  <%= f.label :title_full_file %>:
+  <%= f.text_field :title_full_file %><br /><br />
+  
+  <%= f.label :title_cut_file %>:
+  <%= f.text_field :title_cut_file %><br /><br />
  
-    <%= f.label :title_full_file %>:
-    <%= f.text_field :title_full_file %><br /><br />
-	  
-    <%= f.label :title_cut_file %>:
-    <%= f.text_field :title_cut_file %><br /><br />
-	 
-  	<%= f.label :time %>:
-		<%= f.text_field :time %><br />
-		
-		<%= f.label :price %>:
-		<%= f.text_field :price %><br /><br />
+ 	<%= f.label :time %>:
+	<%= f.text_field :time %><br />
+	
+	<%= f.label :price %>:
+	<%= f.text_field :price %><br /><br />
 
 	<% unless albums.empty? %>
+	
 		<strong>Albums:</strong><br />
+		
 		<% for album in albums %>
 			<%= check_box_tag "track[album_ids][]", album.id, track.albums.include?(album) %>
 			<%= album.title %><br />
 		<% end %>	
+		
 	<% else %>
+	
 		<%= link_to "Create album", new_admin_album_path %>
+		
 	<% end %>
 	<br />
 

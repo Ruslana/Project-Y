@@ -1,4 +1,4 @@
-<% form_for [:admin, Lyric.new] do |f| %>
+<% form_for [:admin, lyric] do |f| %>
 
   <div class="field">
     <%= f.label :title %><br />
@@ -10,7 +10,7 @@
     <%= f.text_area :text_song %>
   </div>
 
-	<%= f.hidden_field :album_id, :value => @album.id %>
+	<%= f.hidden_field :track_id, :value => track.id %>
 
   <div class="submit">
     <%= f.submit "Save" %>

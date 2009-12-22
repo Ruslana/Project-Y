@@ -16,7 +16,6 @@ class Admin::AlbumsController < ProtectedController
 
    def show
      @album = Album.find(params[:id])
-     @tracks = @album.tracks
    end
 
    def index

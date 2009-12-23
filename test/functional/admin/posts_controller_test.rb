@@ -4,7 +4,6 @@ class Admin::PostsControllerTest < ActionController::TestCase
   context "Admin Posts controller" do
 
      setup do
-      @album = Factory(:album)
       @user = Factory(:user)
       session[:user_id] = @user.id
      end
@@ -17,14 +16,13 @@ class Admin::PostsControllerTest < ActionController::TestCase
        should_respond_with :success
        should_assign_to :post
        should_render_template :new
-       should_render_a_form
      end
 
      context "on POST to :create" do
        setup do
          post :create, :post => {:title => 'post', 
                                  :body => 'body_post',
-                                 :date => Date.new(2009,6,25)}
+                                 :published_at => Date.new(2009,6,25)}
        end
 
        teardown do
@@ -70,7 +68,6 @@ class Admin::PostsControllerTest < ActionController::TestCase
         should_respond_with :success
         should_assign_to :post
         should_render_template :edit
-        should_render_a_form
       end
 
       context "on PUT to :update" do

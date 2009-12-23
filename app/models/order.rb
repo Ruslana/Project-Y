@@ -12,7 +12,7 @@ class Order < ActiveRecord::Base
   end
   
   def calculate_sum
-    self.amount = uploads.inject(0) do |sum, track|
+    self.amount = tracks.inject(0) do |sum, track|
       sum + track.price.to_i
     end
   end

@@ -16,7 +16,6 @@ class Admin::AlbumsControllerTest < ActionController::TestCase
        should_respond_with :success
        should_assign_to :album
        should_render_template :new
-       should_render_a_form
      end
 
      context "on POST to :create" do
@@ -46,7 +45,6 @@ class Admin::AlbumsControllerTest < ActionController::TestCase
 
        should_respond_with :success
        should_assign_to :album
-       should_assign_to :lyrics
        should_render_template :show
      end
 
@@ -69,7 +67,6 @@ class Admin::AlbumsControllerTest < ActionController::TestCase
         should_respond_with :success
         should_assign_to :album
         should_render_template :edit
-        should_render_a_form
       end
 
       context "on PUT to :update" do

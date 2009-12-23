@@ -4,7 +4,6 @@ class Admin::ReviewsControllerTest < ActionController::TestCase
   context "Admin reviews controller" do
 
      setup do
-      @album = Factory(:album)
       @user = Factory(:user)
       session[:user_id] = @user.id
      end
@@ -17,7 +16,6 @@ class Admin::ReviewsControllerTest < ActionController::TestCase
        should_respond_with :success
        should_assign_to :review
        should_render_template :new
-       should_render_a_form
      end
 
      context "on POST to :create" do
@@ -71,7 +69,6 @@ class Admin::ReviewsControllerTest < ActionController::TestCase
         should_respond_with :success
         should_assign_to :review
         should_render_template :edit
-        should_render_a_form
       end
 
       context "on PUT to :update" do

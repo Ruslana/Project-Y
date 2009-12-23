@@ -3,12 +3,12 @@
   <h3 title="Album(s)">Album(s)</h3>
 	  <div id="links">
 		  <h4><%= @album.title %></h4>
-		  <% for lyric in @album.lyrics %>
+		  <% for track in @album.tracks %>
 			<p>
-				<a href="#" title=<%= lyric.title %>><%= lyric.title %>
+				<a href="#" title=<%= track.title_full_file %>><%= track.title_full_file %>
 		  		<span>
-					<strong><%= lyric.title %></strong><br />
-					<%= lyric.text_song %><br />
+					<strong><%= track.title_full_file %></strong><br />
+					<%= track.lyric.text_song unless track.lyric == nil %><br />
 					[Jack Howard]
 		  		</span>	
 				</a>

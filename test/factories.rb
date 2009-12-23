@@ -1,7 +1,7 @@
 Factory.define :post do |p|
   p.title "Title"
   p.body "Body_post"
-  p.date Date.new(2009,6,25)
+  p.published_at Date.new(2009,6,25)
 end
 Factory.define :album do |p|
   p.title "Title"
@@ -30,12 +30,26 @@ Factory.define :message do |p|
   p.your_message "message"
 end
 Factory.define :user do |p|
-  p.name "name"
-  p.hashed_password "bla"
-  p.salt "salt"
+  p.name "Petya"
+  p.password "12345"
+  p.password_confirmation "12345"
 end
-Factory.define :upload do |p|
+Factory.define :user1 do |p|
+  p.name "Rusya"
+  p.password "12345"
+  p.password_confirmation "12345"
+end
+Factory.define :track do |p|
+  p.price "3"
+  p.time "2"
+  p.title_full_file "bla"
+  p.title_cut_file "blu"
+  p.full_version_audio_id "1"
+  p.preview_id "2"
+end
+Factory.define :order do |p|
+  p.email "rusya@mail.ru"
+end
+Factory.define :uploaded_file do |p|
   
-  p.time "3:00"
-  p.price "$1"
 end

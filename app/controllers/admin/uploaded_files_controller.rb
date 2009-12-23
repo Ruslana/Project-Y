@@ -6,7 +6,7 @@ class Admin::UploadedFilesController < ProtectedController
   end
   
   def create
-    if @upload = UploadedFile.create(params[:upload])
+    if @upload = UploadedFile.create(params[:uploaded_file])
       #raise params.inspect
       flash[:notice] = "File uploaded"
       redirect_to admin_uploaded_file_path(@upload)
@@ -17,7 +17,6 @@ class Admin::UploadedFilesController < ProtectedController
   
   def edit
     @upload = UploadedFile.find(params[:id])
-    @albums = Album.find(:all)
   end
   
   def show
@@ -30,7 +29,7 @@ class Admin::UploadedFilesController < ProtectedController
   
   def update
     @upload = UploadedFile.find(params[:id])
-    if @upload.update_attributes(params[:upload])
+    if @upload.update_attributes(params[:uploaded_file])
       redirect_to admin_uploaded_file_path(@upload)
     else
       redirect_to :action => 'edit'

@@ -4,7 +4,6 @@ class Admin::ContactsControllerTest < ActionController::TestCase
   # Replace this with your real tests.
   context "Admin Contacts controller" do
     setup do
-      @album = Factory(:album)
       @user = Factory(:user)
       session[:user_id] = @user.id
      end
@@ -17,7 +16,6 @@ class Admin::ContactsControllerTest < ActionController::TestCase
         should_respond_with :success
         should_assign_to :contact
         should_render_template :new
-        should_render_a_form
       end
 
       context "on POST to :create" do
@@ -68,7 +66,6 @@ class Admin::ContactsControllerTest < ActionController::TestCase
          should_respond_with :success
          should_assign_to :contact
          should_render_template :edit
-         should_render_a_form
        end
 
        context "on PUT to :update" do

@@ -9,13 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091208155944) do
+ActiveRecord::Schema.define(:version => 20091223072005) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
-    t.string   "descripttion"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "description"
   end
 
   create_table "albums_tracks", :id => false, :force => true do |t|
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(:version => 20091208155944) do
     t.datetime "updated_at"
   end
 
-  create_table "uploadeds_files", :force => true do |t|
+  create_table "uploaded_files", :force => true do |t|
     t.string   "music_file_name"
     t.integer  "music_file_size"
     t.string   "music_content_type"

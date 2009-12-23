@@ -1,5 +1,7 @@
 <h2>Editing post</h2>
+
 <%= error_messages_for :post %>
+
 <%= render :partial => 'form', :locals => {:post => @post} %>
 
 <%= link_to "back", admin_posts_path %>

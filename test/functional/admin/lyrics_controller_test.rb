@@ -4,7 +4,7 @@ class Admin::LyricsControllerTest < ActionController::TestCase
   context "Admin Lyrics controller" do
     
     setup do
-      @album = Factory(:album)
+      @track = Factory(:track)
       @user = Factory(:user)
       session[:user_id] = @user.id
     end
@@ -14,7 +14,7 @@ class Admin::LyricsControllerTest < ActionController::TestCase
          post :create, :lyric => {
            :title => 'title', 
            :text_song => 'text_song', 
-           :album_id => @album.id
+           :track_id => @track.id
            }
        end
 
@@ -61,7 +61,6 @@ class Admin::LyricsControllerTest < ActionController::TestCase
         should_respond_with :success
         should_assign_to :lyric
         should_render_template :edit
-        should_render_a_form
       end
 
       context "on PUT to :update" do

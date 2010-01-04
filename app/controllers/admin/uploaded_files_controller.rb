@@ -2,44 +2,43 @@ class Admin::UploadedFilesController < ProtectedController
   
   def new
     @track = Track.find(params[:id])
-    @upload = UploadedFile.new
+    @uploaded_file = UploadedFile.new
   end
   
   def create
-    if @upload = UploadedFile.create(params[:uploaded_file])
-      #raise params.inspect
+    if @uploaded_file = UploadedFile.create(params[:uploaded_file])
       flash[:notice] = "File uploaded"
-      redirect_to admin_uploaded_file_path(@upload)
+      redirect_to admin_uploaded_file_path(@uploaded_file)
     else
       render new_admin_uploaded_file_path
     end
   end
   
   def edit
-    @upload = UploadedFile.find(params[:id])
+    @uploaded_file = UploadedFile.find(params[:id])
   end
   
   def show
-    @upload = UploadedFile.find(params[:id])
+    @uploaded_file = UploadedFile.find(params[:id])
   end
   
   def index
-    @uploads = UploadedFile.paginate :page => params[:page], :per_page => 10
+    @uploaded_files = UploadedFile.paginate :page => params[:page], :per_page => 10
   end
   
   def update
-    @upload = UploadedFile.find(params[:id])
-    if @upload.update_attributes(params[:uploaded_file])
-      redirect_to admin_uploaded_file_path(@upload)
+    @uploaded_file = UploadedFile.find(params[:id])
+    if @uploaded_file.update_attributes(params[:uploaded_file])
+      redirect_to admin_uploaded_file_path(@uploaded_file)
     else
-      redirect_to :action => 'edit'
+      redirect_to edit_admin_uploaded_file_path(@uploaded_file)
     end
   end
   
   def destroy
-     @upload = UploadedFile.find(params[:id])
-     @upload.destroy
-     redirect_to :action => 'index'
+     @uploaded_file = UploadedFile.find(params[:id])
+     @uploaded_file.destroy
+     redirect_to admin_uploaded_files_path
    end
    
 end

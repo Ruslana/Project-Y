@@ -1,4 +1,5 @@
 class Admin::PostsController < ProtectedController
+  
   def new
     @post = Post.new
   end
@@ -30,14 +31,15 @@ class Admin::PostsController < ProtectedController
     if @post.update_attributes(params[:post])
       redirect_to admin_post_path(@post)
     else
-      redirect_to :action => 'edit'
+      redirect_to edit_admin_post_path(@post)
     end
   end
   
   def destroy
      @post = Post.find(params[:id])
      @post.destroy
-     redirect_to :action => 'index'
+     redirect_to admin_posts_path
    end
+   
 end
 

@@ -1,5 +1,6 @@
 class Admin::HomeController < ProtectedController
-  def title
-    
+  
+  def title    
   end
+  
 end

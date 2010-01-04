@@ -1,6 +1,6 @@
-<% form_for([:admin, @upload], :html => { :multipart => true }) do |form| %>
+<% form_for([:admin, @uploaded_file], :html => { :multipart => true }) do |form| %>
 
-	<%= @upload.music_file_name %><br /><br />
+	<%= @uploaded_file.music_file_name %><br /><br />
 	
 	<%= form.file_field :file %><br /><br />
 		

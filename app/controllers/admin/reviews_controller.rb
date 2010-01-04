@@ -1,4 +1,5 @@
 class Admin::ReviewsController < ProtectedController
+  
   def new
     @review = Review.new
   end
@@ -30,13 +31,14 @@ class Admin::ReviewsController < ProtectedController
     if @review.update_attributes(params[:review])
       redirect_to admin_review_path(@review)
     else
-      redirect_to :action => 'edit'
+      redirect_to edit_admin_review_path(@review)
     end
   end
   
   def destroy
      @review = Review.find(params[:id])
      @review.destroy
-     redirect_to :action => 'index'
+     redirect_to admin_reviews_path
    end
+   
 end

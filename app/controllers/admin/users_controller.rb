@@ -1,4 +1,5 @@
 class Admin::UsersController < ProtectedController
+  
   def new
     @user = User.new
   end
@@ -19,10 +20,10 @@ class Admin::UsersController < ProtectedController
   
   def update
     @user = User.find(params[:id])
-    if @user = User.update_attributes(params[:user])
+    if @user.update_attributes(params[:user])
       redirect_to admin_user_path(@user)
     else
-      redirect_to :action => 'edit'
+      redirect_to edit_admin_user_path(@user)
     end
   end
   
@@ -35,4 +36,5 @@ class Admin::UsersController < ProtectedController
     @user.destroy
     redirect_to admin_users_path
   end
+  
 end

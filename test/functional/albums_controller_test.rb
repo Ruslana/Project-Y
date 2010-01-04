@@ -13,7 +13,6 @@ class AlbumsControllerTest < ActionController::TestCase
 
      should_respond_with :success
      should_assign_to :album
-     should_assign_to :lyrics
      should_render_template :show
    end
 

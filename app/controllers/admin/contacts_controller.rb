@@ -1,4 +1,5 @@
 class Admin::ContactsController < ProtectedController
+  
   def new
     @contact = Contact.new
   end
@@ -30,7 +31,7 @@ class Admin::ContactsController < ProtectedController
     if @contact.update_attributes(params[:contact])
       redirect_to admin_contact_path(@contact)
     else
-      redirect_to :action => 'edit'
+      redirect_to edit_admin_contact_path(@contact)
     end
   end
   
@@ -39,4 +40,5 @@ class Admin::ContactsController < ProtectedController
      @contact.destroy
      redirect_to :action => 'index'
    end
+   
 end

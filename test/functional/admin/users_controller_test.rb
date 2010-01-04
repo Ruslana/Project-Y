@@ -35,7 +35,7 @@ context "Admin Users controller" do
     end
 
     should "create user" do
-      assert User.exists?(:name => 'Petya')
+      assert User.exists?(:name => 'Rusya')
     end
   end
 
@@ -73,8 +73,8 @@ context "Admin Users controller" do
 
    context "on PUT to :update" do
    setup do
-     @user = Factory(:user, :name => "old", :password => "12345")
-     put :update, :id => @user.id, :user => {:name => "new", :password => "new", :password_confirmation => "new"}
+     @user = Factory(:user, :name => "old")
+     put :update, :id => @user.id, :user => {:name => "new"}
    end
 
    should_redirect_to "Admin::User#show" do
@@ -84,7 +84,6 @@ context "Admin Users controller" do
    should "update user" do
      @user.reload
      assert_equal "new", @user.name
-     assert_equal "new", @user.password
    end
  end
 

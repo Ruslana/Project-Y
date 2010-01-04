@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+  
   def create
     @message = Message.new(params[:message])
     if @message.save
@@ -8,4 +9,5 @@ class MessagesController < ApplicationController
       render contacts_path
     end
   end
+  
 end

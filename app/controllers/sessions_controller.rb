@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       user = User.authenticate(params[:password], params[:name])
       if user
         session[:user_id] = user.id
-        redirect_to :controller => "admin/home", :action => "title"
+        redirect_to title_admin_home_path
       else      
         flash[:note] = "Invalid user name/password"
         redirect_to new_session_path
@@ -23,6 +23,5 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to new_session_path
   end
-
   
 end

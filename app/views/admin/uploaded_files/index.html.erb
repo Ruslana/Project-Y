@@ -1,6 +1,6 @@
 <%= link_to "Upload new file", new_admin_uploaded_file_path %><br /><br />
 
-<% for upload in @uploads %>
+<% for upload in @uploaded_files %>
 	<%= link_to upload.music_file_name, upload.music.url %><br />
 	
 	<%= link_to "show", admin_uploaded_file_path(upload) %>
@@ -13,4 +13,4 @@
 			
 <% end %>
 
-<%= will_paginate @uploads %>
+<%= will_paginate @uploaded_files %>

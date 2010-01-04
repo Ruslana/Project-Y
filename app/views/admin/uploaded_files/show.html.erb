@@ -1,12 +1,12 @@
-File: <%= link_to @upload.music_file_name, @upload.music.url %> 
- (<%#= link_to "audio_file_full", admin_track_path(:id => @upload.track_id, :full_version_audio_id => @upload.id) %> / 
- <%#= link_to "audio_file_cut", admin_track_path(@upload.track_id, :preview_id => @upload.id) %>)<br /><br />
+File: <%= link_to @uploaded_file.music_file_name, @uploaded_file.music.url %> 
+ (<%= link_to "audio_file_full", admin_track_path(:id => @uploaded_file.track_id, :full_version_audio_id => @uploaded_file.id) %> / 
+ <%= link_to "audio_file_cut", admin_track_path(@uploaded_file.track_id, :preview_id => @uploaded_file.id) %>)<br /><br />
 
-Size: <%= @upload.music_file_size %><br /><br />
+Size: <%= @uploaded_file.music_file_size %><br /><br />
 
 <%= link_to "back", admin_uploaded_files_path %>
-<%= link_to "edit", edit_admin_uploaded_file_path(@upload) %>
-<%= link_to "destroy", [:admin, @upload], 
+<%= link_to "edit", edit_admin_uploaded_file_path(@uploaded_file) %>
+<%= link_to "destroy", [:admin, @uploaded_file], 
 		:confirm => 'Are you sure?', 
 		:method => :delete
 		%>

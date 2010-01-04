@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../../test_helper'
 
-class Admin::UploadedfilesControllerTest < ActionController::TestCase
+class Admin::UploadedFilesControllerTest < ActionController::TestCase
   context "Admin uploaded_files controller" do
 
     setup do
@@ -11,7 +11,7 @@ class Admin::UploadedfilesControllerTest < ActionController::TestCase
 
     context "on GET to :new" do
       setup do
-        get :new
+        get :new, :id => @track.id
       end
 
      should_respond_with :success
@@ -21,19 +21,19 @@ class Admin::UploadedfilesControllerTest < ActionController::TestCase
 
    context "on POST to :create" do
      setup do
-       post :create, :uploaded_file => {:file => fixture_file_upload('/files/rails.png', 'image/png') }                     
+       post :create, :uploaded_file => {:music => fixture_file_upload('/files/rails.png', 'image/png') }                     
      end
 
      teardown do
-       Uploaded_file.destroy_all
+       UploadedFile.destroy_all
      end
 
      should_redirect_to "Admin::uploaded_file#show" do
-       admin_uploaded_file_path(Uploaded_file.first)
+       admin_uploaded_file_path(UploadedFile.first)
      end
 
      should "create uploaded_file" do       
-       assert Uploaded_file.exists?(:price => "$1" )
+       assert UploadedFile.exists?(:music_file_name => "rails.png" )
      end
    end
 
@@ -72,7 +72,7 @@ class Admin::UploadedfilesControllerTest < ActionController::TestCase
     context "on PUT to :update" do
     setup do
       @uploaded_file = Factory(:uploaded_file)
-      put :update, :id => @uploaded_file.id, :uploaded_file => {:file => fixture_file_upload('/files/girl.jpg', 'image/jpg')
+      put :update, :id => @uploaded_file.id, :uploaded_file => {:music => fixture_file_upload('/files/girl.jpg', 'image/jpg')
          }
     end
 
@@ -82,7 +82,7 @@ class Admin::UploadedfilesControllerTest < ActionController::TestCase
 
     should "update uploaded_file" do
       @uploaded_file.reload
-      assert_equal "2", @uploaded_file.track_id
+      assert_equal "girl.jpg", @uploaded_file.music_file_name
     end
   end
 
@@ -93,7 +93,7 @@ class Admin::UploadedfilesControllerTest < ActionController::TestCase
    end
 
    should "destroy uploaded_file" do
-     assert ! Uploaded_file.exists?(@uploaded_file.id)
+     assert ! UploadedFile.exists?(@uploaded_file.id)
    end
 
    should_redirect_to "Admin::uploaded_file#index" do

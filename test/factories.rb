@@ -10,6 +10,7 @@ end
 Factory.define :lyric do |p|
   p.title "Title"
   p.text_song "text_song"
+  p.track {Factory(:track)}
 end
 Factory.define :review do |p|
   p.title "Title"
@@ -29,15 +30,19 @@ Factory.define :message do |p|
   p.your_email "email"
   p.your_message "message"
 end
-Factory.define :user do |p|
-  p.name "Petya"
-  p.password "12345"
-  p.password_confirmation "12345"
+Factory.sequence :name do |n|
+  "Rusya#{n}"
 end
-Factory.define :user1 do |p|
-  p.name "Rusya"
-  p.password "12345"
-  p.password_confirmation "12345"
+Factory.sequence :password do |n|
+  "123#{n}"
+end
+Factory.sequence :password_confirmation do |n|
+  "123#{n}"
+end
+Factory.define :user do |p|
+  p.name {Factory.next(:name)}
+  p.password {Factory.next(:password)}
+  p.password_confirmation {Factory.next(:password_confirmation)}
 end
 Factory.define :track do |p|
   p.price "3"
@@ -51,5 +56,9 @@ Factory.define :order do |p|
   p.email "rusya@mail.ru"
 end
 Factory.define :uploaded_file do |p|
-  
+  p.music_file_name "music_name"
+  p.music_file_size "123"
+  p.music_content_type "audio/mpeg"
+  p.music_updated_at "2009-12-23 17:59:48"
+  p.track_id "1"
 end

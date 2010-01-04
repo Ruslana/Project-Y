@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  
   include ActiveMerchant::Billing
 
    def index

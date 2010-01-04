@@ -31,7 +31,7 @@ class Admin::AlbumsController < ProtectedController
      if @album.update_attributes(params[:album])
        redirect_to admin_album_path(@album)
      else
-       redirect_to :action => 'edit'
+       redirect_to edit_admin_album_path(@album)
      end
    end
 
@@ -40,4 +40,5 @@ class Admin::AlbumsController < ProtectedController
       @album.destroy
       redirect_to :action => 'index'
     end
+    
 end

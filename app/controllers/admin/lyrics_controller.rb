@@ -36,14 +36,14 @@ class Admin::LyricsController < ProtectedController
      if @lyric.update_attributes(params[:lyric])
        redirect_to admin_lyric_path(@lyric)
      else
-       redirect_to :action => 'edit'
+       redirect_to edit_admin_lyric_path(@lyric)
      end
    end
 
    def destroy
       @lyric = Lyric.find(params[:id])
       @lyric.destroy
-      redirect_to :action => 'index'
+      redirect_to admin_lyrics_path
     end
   
 end

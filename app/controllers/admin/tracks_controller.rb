@@ -21,8 +21,8 @@ class Admin::TracksController < ProtectedController
   
   def show
     @track = Track.find(params[:id])
-    #@track.preview_id = params[:preview_id]
-    #@track.full_version_audio_id = params[:full_version_audio_id]
+    @track.preview_id = params[:preview_id]
+    @track.full_version_audio_id = params[:full_version_audio_id]
     @track.save!
   end
   
@@ -35,14 +35,14 @@ class Admin::TracksController < ProtectedController
     if @track.update_attributes(params[:track])
       redirect_to admin_track_path(@track)
     else
-      redirect_to :action => 'edit'
+      redirect_to edit_admin_track_path(@track)
     end
   end
   
   def destroy
     @track = Track.find(params[:id])
     @track.destroy
-    redirect_to :action => 'index'
+    redirect_to admin_tracks_path
   end
   
 end

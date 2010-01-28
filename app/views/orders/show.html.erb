@@ -1,9 +1,9 @@
 <p><h2>Trecks:</h2></p>
-<% for upload in @order.uploads %>
+<% for track in @order.tracks %>
 	<% if @order.complete %>
-		<p><%= link_to upload.name, upload.music.url %></p>
+		<p><%= link_to track.title_full_file, track.audio_file_full.music.url %></p>
 	<% else %>
-		<p><%= upload.title %></p>
+		<p><%= track.title_full_file %></p>
 	<% end %>
 <% end %>
 <% unless @order.complete %>
